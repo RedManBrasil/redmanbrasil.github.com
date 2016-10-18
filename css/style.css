@@ -176,3 +176,9 @@ textarea {
   margin-top: -20px;
   text-align: right;
 }
+
+#status{
+  font-family: helvetica;
+  color: #a0b3b0;
+  font-size: 22px;
+}
