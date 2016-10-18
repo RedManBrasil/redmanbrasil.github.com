@@ -179,6 +179,26 @@ textarea {
 
 div #status{
   font-family: helvetica;
-  color: #a0b3b0;
+  color: white;
   font-size: 22px;
+}
+
+.btnn{
+    color: #fff;
+    background-color: #3b5998;
+    font-size: 22px;
+    line-height: 1.5;
+    border-radius: 500px;
+    padding: 7px 35px;
+    outline: none;
+    font-family: 'Titillium Web', sans-serif;
+    border-width: 0;
+    letter-spacing: 1.2px;
+    min-width: 130px;
+    white-space: normal;
+}
+
+.btnn:hover{
+    transition: .25s;
+    background-color: #3a61b3;
 }
