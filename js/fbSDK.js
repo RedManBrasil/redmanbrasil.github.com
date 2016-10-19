@@ -1,9 +1,9 @@
-// initialize and setup facebook js sdk
+		// initialize and setup facebook js sdk
 		window.fbAsyncInit = function() {
 		    FB.init({
-		      appId      : '1866035216951680',
+		      appId      : 'APP_ID',
 		      xfbml      : true,
-		      version    : 'v2.8'
+		      version    : 'v2.5'
 		    });
 		    FB.getLoginStatus(function(response) {
 		    	if (response.status === 'connected') {
@@ -20,7 +20,7 @@
 		    var js, fjs = d.getElementsByTagName(s)[0];
 		    if (d.getElementById(id)) {return;}
 		    js = d.createElement(s); js.id = id;
-		    js.src = "https://connect.facebook.net/en_US/sdk.js";
+		    js.src = "//connect.facebook.net/en_US/sdk.js";
 		    fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 		
@@ -41,19 +41,6 @@
 		// getting basic user info
 		function getInfo() {
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-				document.getElementById('status').innerHTML = response.name;
-		});
-	}
-
-		function getName() {
-			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-				document.getElementById('status').innerHTML = "Olá" + response.name + "!";
-		});
-	}
-
-		// getting basic user info
-		function getPhoto() {
-			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-				document.getElementById('status').innerHTML = response.id ;
+				document.getElementById('status').innerHTML = "<img src='" + response.picture.data.url + "'>";
 			});
 		}
