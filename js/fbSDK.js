@@ -1,5 +1,4 @@
-
-		// initialize and setup facebook js sdk
+// initialize and setup facebook js sdk
 		window.fbAsyncInit = function() {
 		    FB.init({
 		      appId      : '1866035216951680',
@@ -38,22 +37,23 @@
 		    	}
 			}, {scope: 'email'});
 		}
-
-		function getId() {
-			FB.api('/me', 'GET', {fields: 'id'}, function(response) {
-				document.getElementById('status').innerHTML = innerHTML + "\nSeu id é" + response.id;
-		}
-	}
 		
+		// getting basic user info
+		function getInfo() {
+			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+				document.getElementById('status').innerHTML = "Olá" + response.name + "!";
+			});
+		}
+		/*
 		function getName() {
-			FB.api('/me', 'GET', {fields: 'name'}, function(response) {
-				document.getElementById('status').innerHTML = innerHTML + "Olá" + response.name + "!";
+			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+				document.getElementById('status').innerHTML = "Olá" + response.name + "!";
 		}
 	}
 
 		// getting basic user info
 		function getPhoto() {
-			FB.api('/me', 'GET', {fields: 'picture.width(150).height(150)'}, function(response) {
-				document.getElementById('status').innerHTML = innerHTML + "\n<img src='" + response.picture.data.url + "'>";
+			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+				document.getElementById('status').innerHTML =response.id ;
 			});
-		}
+		}*/
