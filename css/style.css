@@ -225,3 +225,8 @@ div #status{
 #status{
   display: none;
 }
+
+#nameFBresp{
+  color:#0aa046;
+  font-size:44px;
+}
