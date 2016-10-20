@@ -206,3 +206,8 @@ div #status{
     transition: .25s;
     background-color: #3a61b3;
 }
+
+#resposta{
+  color:#0aa046;
+  font-size:44px;
+}
