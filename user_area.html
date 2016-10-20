@@ -18,8 +18,8 @@
     <br>
     <strong><center><button onclick="getPic()" class="btnn">WANT TO GET YOUT PROFILE PIC?</button></center></strong>
     <br>
-    <center><div id="resposta"></div></center>
-    <center><div id="status"></div></center>
+    <center><div id="resposta">!!</div></center>
+    <center><div id="status">!!</div></center>
 
     <script src='js/jquery-3.1.1.min.js'></script>
     <script src="js/index.js"></script>
@@ -29,7 +29,6 @@
             FB.login(function(response) {
                 if (response.status === 'connected') {
                     document.getElementById('status').innerHTML = 'We are connected.';
-                    document.getElementById('login').style.visibility = 'hidden';
                     function getName() {
             FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
                 document.getElementById('nameFBresp').innerHTML = "Hello " + response.name + "!";
