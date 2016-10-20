@@ -9,7 +9,7 @@
 		    	if (response.status === 'connected') {
 		    		document.getElementById('status').innerHTML = 'We are connected.';
 		    		document.getElementById('login').style.visibility = 'hidden';
-		    		window.location.href = "2.html";
+		    		window.location.href = "user_area.html";
 		    	} else if (response.status === 'not_authorized') {
 		    		document.getElementById('status').innerHTML = 'We are not logged in.'
 		    	} else {
@@ -31,7 +31,7 @@
 				if (response.status === 'connected') {
 		    		document.getElementById('status').innerHTML = 'We are connected.';
 		    		document.getElementById('login').style.visibility = 'hidden';
-		    		window.location.href = "2.html";
+		    		window.location.href = "user_area.html";
 		    	} else if (response.status === 'not_authorized') {
 		    		document.getElementById('status').innerHTML = 'We are not logged in.'
 		    	} else {
