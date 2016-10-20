@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/style.css">
         
   </head>
-  <h2 onload="SayName()" id="nameFBresp"><center></center></h2>
+  <h2 id="nameFBresp"><center></center></h2>
   <body>
   <br>
   <strong><center><button onclick="getName()" class="btnn">WANT KNOW YOUR NAME?</button></center></strong>
@@ -28,11 +28,7 @@
         <script src="js/index.js"></script>
         <script src="js/fbSDK.js"></script>
 <script type="text/javascript">
-  window.onload = function (){
-      FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-        document.getElementById('nameFBresp').innerHTML = "Hello " + response.name + "!";
-      });
-    }
+  window.onload = SayName ();
 </script>
 
   </body>
