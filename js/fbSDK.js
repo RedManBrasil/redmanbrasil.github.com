@@ -50,7 +50,7 @@
 						document.getElementById('resposta2').innerHTML = "Hello " + response.name + "!";
 		  				console.log(response);
 						});
-				} , 200);
+				} , 400);
 		}
 
 		function getId() {
