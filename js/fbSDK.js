@@ -44,10 +44,13 @@
 		
 		// getting basic user info
 		function getName() {
-			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-				document.getElementById('resposta').innerHTML = "Hello " + response.name + "!";
-  				console.log(response);
-				});
+  			setTimeout(
+				function () {
+					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+						document.getElementById('resposta').innerHTML = "Hello " + response.name + "!";
+		  				console.log(response);
+						});
+				} , 5000);
 		}
 
 		function getId() {
