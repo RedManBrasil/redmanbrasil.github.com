@@ -58,9 +58,3 @@
 				document.getElementById('resposta').innerHTML = "<img src='" + response.picture.data.url + "'>";
 			});
 		}
-
-		function SayName() {
-			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-				document.getElementById('resposta').innerHTML = "Hello " + response.name + "!";
-			});
-		}
