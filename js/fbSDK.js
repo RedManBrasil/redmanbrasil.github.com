@@ -48,6 +48,7 @@
 				document.getElementById('resposta2').innerHTML = "Hello " + response.name + "!";
 				});
 			FB.api('/me', {fields: 'last_name'}, function(response) {
+					alert(response.name);
   					console.log(response);
 			});
 		}
