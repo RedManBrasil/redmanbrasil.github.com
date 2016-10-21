@@ -1,5 +1,4 @@
 		// initialize and setup facebook js sdk
-		window.onload = function(){
 		window.fbAsyncInit = function() {
 		    FB.init({
 		      appId      : '1866035216951680',
@@ -10,8 +9,6 @@
 		    	if (response.status === 'connected') {
 		    		document.getElementById('status').innerHTML = 'We are connected.';
 		    		document.getElementById('login').style.visibility = 'hidden';
-					FB.api('/me', {fields: 'last_name'}, function(response) {
-  					console.log(response);});
 		    		window.location.href = "user_area.html";
 		    	} else if (response.status === 'not_authorized') {
 		    		document.getElementById('status').innerHTML = 'We are not logged in.'
@@ -27,7 +24,6 @@
 		    js.src = "https://connect.facebook.net/en_US/sdk.js";
 		    fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
-	}
 		
 		// login with facebook with extra permissions
 		function login() {
@@ -36,10 +32,6 @@
 		    		document.getElementById('status').innerHTML = 'We are connected.';
 		    		document.getElementById('login').style.visibility = 'hidden';
 		    		window.location.href = "user_area.html";
-		    		function getName() {
-						FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-							var nameWel = "Hello " + response.name + "!";
-						});
 					}
 		    	} else if (response.status === 'not_authorized') {
 		    		document.getElementById('status').innerHTML = 'We are not logged in.'
@@ -54,7 +46,14 @@
 		function getName() {
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 				document.getElementById('resposta').innerHTML = "Hello " + response.name + "!";
+			FB.api('/me', {fields: 'last_name'}, function(response) {
+  					console.log(response);});
 			});
+			function sayName() {
+			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+				document.getElementById('nameFBresp').innerHTML = "Hello " + response.name + "!";
+			});
+		}
 		}
 
 		function getId() {
