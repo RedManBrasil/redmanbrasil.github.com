@@ -46,23 +46,19 @@
 		}
 
 		function login1() {
-			FB.login(function(response) {
+			function(response) {
 				if (response.status === 'connected') {
-		    		document.getElementById('status').innerHTML = 'We are connected.';
-		    		document.getElementById('login').style.visibility = 'hidden';
 		    		function getName() {
 						FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 							var nameWel = "Hello " + response.name + "!";
 						});
 					}
 		    	} else if (response.status === 'not_authorized') {
-		    		document.getElementById('status').innerHTML = 'We are not logged in.'
 		    		window.location.href = "index.html";
 		    	} else {
-		    		document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
 		    		window.location.href = "index.html";
 		    	}
-			}, {scope: 'email'});
+			}, {scope: 'email'};
 		}
 		
 		// getting basic user info
