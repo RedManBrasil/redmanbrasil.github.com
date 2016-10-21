@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>User's 55Area</title>
+    <title>User's Area</title>
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
@@ -24,10 +24,12 @@
     <script src="js/index.js"></script>
     <script src="js/fbSDK.js"></script>
     <script type="text/javascript">
-        sayName();
-        FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-                document.getElementById('resposta').innerHTML = "Hello " + response.name + "!";
+        function testAPI(){
+            FB.api('/me', function(response){
+                $('#nameFBresp').append("<p>Hello "+response.name+"!</p>");
+                console.log(response);
             });
+        }
     </script>
   </body>
 </html>
