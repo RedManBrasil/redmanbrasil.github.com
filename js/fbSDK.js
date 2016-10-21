@@ -45,21 +45,6 @@
 			}, {scope: 'email'});
 		}
 
-		function login1() {
-			function(response) {
-				if (response.status === 'connected') {
-		    		function getName() {
-						FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-							var nameWel = "Hello " + response.name + "!";
-						});
-					}
-		    	} else if (response.status === 'not_authorized') {
-		    		window.location.href = "index.html";
-		    	} else {
-		    		window.location.href = "index.html";
-		    	}
-			}, {scope: 'email'};
-		}
 		
 		// getting basic user info
 		function getName() {
