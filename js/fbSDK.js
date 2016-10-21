@@ -33,7 +33,7 @@
 		    		document.getElementById('login').style.visibility = 'hidden';
 		    		window.location.href = "user_area.html";
 					}
-		    	} else if (response.status === 'not_authorized') {
+		        else if (response.status === 'not_authorized') {
 		    		document.getElementById('status').innerHTML = 'We are not logged in.'
 		    	} else {
 		    		document.getElementById('status').innerHTML = 'You are not logged into Facebook.';
