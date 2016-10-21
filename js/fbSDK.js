@@ -47,22 +47,22 @@
   			setTimeout(
 				function () {
 					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-						document.getElementById('resposta2').innerHTML = "Hello " + response.name + "!";
+						document.getElementById('resposta1').innerHTML = "Hello " + response.name + "!";
 						});
 				} , 350);
-		}
-
-		function getId() {
-			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-				document.getElementById('resposta').innerHTML = "Your Id is " + response.id ;
-			});
 		}
 
 		function getPic() {
 			setTimeout(
 				function () {
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-				document.getElementById('resposta').innerHTML = "<img src='" + response.picture.data.url + "'>";
+				document.getElementById('resposta2').innerHTML = "<img src='" + response.picture.data.url + "'>";
 			});
 			} , 350);
+		}
+
+		function getId() {
+			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+				document.getElementById('resposta').innerHTML = "Your Id is " + response.id ;
+			});
 		}

@@ -226,7 +226,7 @@ div #status{
   display: none;
 }
 
-.IMGsrcFB{
+img.IMGsrcFB{
   float: left;
-  border-radius: 25px;
+  border-radius: 50%;
 }
