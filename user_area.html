@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="js/fbSDK.js"></script>
     <title>User's Area</title>
 
     <link rel="stylesheet" href="css/normalize.css">
@@ -22,6 +23,10 @@
 
     <script src='js/jquery-3.1.1.min.js'></script>
     <script src="js/index.js"></script>
-    <script src="js/fbSDK.js"></script>
+    <script type="text/javascript">
+                FB.api('/me', {fields: 'last_name'}, function(response) {
+          console.log(response);
+        });
+    </script>
   </body>
 </html>
