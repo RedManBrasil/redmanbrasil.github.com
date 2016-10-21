@@ -1,4 +1,5 @@
 		// initialize and setup facebook js sdk
+		window.onload = function(){
 		window.fbAsyncInit = function() {
 		    FB.init({
 		      appId      : '1866035216951680',
@@ -26,6 +27,7 @@
 		    js.src = "https://connect.facebook.net/en_US/sdk.js";
 		    fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
+	}
 		
 		// login with facebook with extra permissions
 		function login() {
