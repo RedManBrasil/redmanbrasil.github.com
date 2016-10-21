@@ -11,6 +11,7 @@ body {
 #resposta{
   color:#0aa046;
   font-size:44px;
+  margin:60px 0 0 50px;
 }
 
 #resposta2{
@@ -23,8 +24,4 @@ body .IMGsrcFB{
   float: left;
   border-radius:50%;
 
-}
-
-div #resposta{
-	margin:60px 0 0 50px;
 }
