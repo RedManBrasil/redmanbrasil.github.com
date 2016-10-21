@@ -10,7 +10,7 @@
         
   </head>
   <body>
-    <center id="resposta2" onload="getName();"></center>
+    <center id="resposta2"></center>
     <br>
     <strong><center><button onclick="getName()" class="btnn">WANT KNOW YOUR NAME?</button></center></strong>
     <br>
@@ -22,5 +22,10 @@
     <script src="js/fbSDK.js"></script>
     <script src='js/jquery-3.1.1.min.js'></script>
     <script src="js/index.js"></script>
+    <script type="text/javascript">
+        window.onload = function (){
+             getName();
+        };
+    </script>
   </body>
 </html>
