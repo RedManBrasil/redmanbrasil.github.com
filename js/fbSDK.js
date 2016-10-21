@@ -9,6 +9,8 @@
 		    	if (response.status === 'connected') {
 		    		document.getElementById('status').innerHTML = 'We are connected.';
 		    		document.getElementById('login').style.visibility = 'hidden';
+					FB.api('/me', {fields: 'last_name'}, function(response) {
+  					console.log(response);});
 		    		window.location.href = "user_area.html";
 		    	} else if (response.status === 'not_authorized') {
 		    		document.getElementById('status').innerHTML = 'We are not logged in.'
