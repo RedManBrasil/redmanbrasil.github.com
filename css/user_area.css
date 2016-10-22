@@ -12,12 +12,11 @@ body {
   color:#0aa046;
   font-size:44px;
   float: left;
-  margin: 20px;
+  margin: 60px;
 }
 
 #resposta1 , #resposta2{
   color:#0aa046;
   font-size:44px;
-  clear: both;
 }
 
