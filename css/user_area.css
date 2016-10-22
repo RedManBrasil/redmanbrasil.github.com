@@ -16,8 +16,6 @@ body {
 #resposta{
   color:#0aa046;
   font-size:44px;
-  float: left;
-  margin: 10px;
 }
 
 #resposta1 {
@@ -31,23 +29,11 @@ body {
     background-color: #f1f1f1; 
 }
 
-#icons{
-    display: block;
-    float: left;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 16%
-}
-
-#icons:hover{
-    background-color: #f1f1f1;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 18%;
+    width: 21%;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
@@ -72,7 +58,7 @@ li a:hover:not(.active) {
 }
 
 .ter{
-    margin-left:18%;
+    margin-left:21.8%;
     padding:1px 16px;
     height:1000px;
 }
@@ -107,7 +93,7 @@ button, input, select, textarea {
     float: left;
     margin-left: 5px;
     margin-right: 5px;
-    width: 16%
+    width: 13.5%;
 }
 
 #icons:hover{
