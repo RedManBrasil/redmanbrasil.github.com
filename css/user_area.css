@@ -11,10 +11,12 @@ body {
 #resposta{
   color:#0aa046;
   font-size:44px;
+  float: left;
 }
 
 #resposta1 , #resposta2{
   color:#0aa046;
   font-size:44px;
+  clear: both;
 }
 
