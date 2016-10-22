@@ -1,0 +1,24 @@
+@font-face {
+        font-family: 'Titillium Web';
+        src: url(fonts/TitilliumWeb-Regular.ttf);
+}
+
+body {
+  background: #dde9e2;
+  font-family: 'Titillium Web';
+}
+
+#resposta{
+  color:#0aa046;
+  font-size:44px;
+  margin:40px 50px 50px 350px;
+  float: right;
+}
+
+#resposta2{
+  color:#0aa046;
+  font-size:44px;
+  margin:40px 50px 50px 90px;
+  float: left;
+}
+
