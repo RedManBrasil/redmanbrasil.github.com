@@ -112,7 +112,6 @@ button, input, select, textarea {
 select.LeagueList{
     border: 1px solid #111;
     background: transparent;
-    width: 150px;
     padding: 5px;
     font-size: 16px;
     border: 1px solid #ccc;
