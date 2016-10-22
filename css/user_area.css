@@ -3,12 +3,14 @@
         src: url(fonts/TitilliumWeb-Regular.ttf);
 }
 
+html, body {
+    font-family: Verdana,sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
 body {
-  background: #dde9e2;
-  font-family: 'Titillium Web';
-  font-size: 15px;
-  line-height: 1.5;
-  margin: 0;
+    margin: 0;
 }
 
 #resposta{
