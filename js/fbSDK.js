@@ -77,3 +77,4 @@
 						document.getElementById('resposta2').innerHTML = "Welcome " + response.name + ".";
 						});
 				} , 350);
+  		}
