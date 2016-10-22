@@ -11,9 +11,11 @@ html, body {
 
 body {
     margin: 0;
+    color:#0aa046;
 }
 
 #resposta {
+  
   color:#0aa046;
   font-size:44px;
   margin:10px 0 0 0;
@@ -27,7 +29,7 @@ body {
 
 #resposta2 {
 	color:#0aa046;
-	font-size:70px;
+	font-size:60px;
 	text-transform: uppercase;
 }
 
@@ -105,4 +107,17 @@ button, input, select, textarea {
 
 #icons:hover{
     background-color: #f1f1f1;
+}
+
+select .LeagueList{
+    border: 1px solid #111;
+    background: transparent;
+    width: 150px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    height: 34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
