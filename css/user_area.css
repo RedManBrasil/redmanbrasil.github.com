@@ -120,7 +120,3 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
     -moz-appearance: none;
     appearance: none;
 }
-
-#escudoTime{
-    width: 5%;
-}
