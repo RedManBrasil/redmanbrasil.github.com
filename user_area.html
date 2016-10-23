@@ -31,10 +31,12 @@
   <p>Chose your favorite Team and National Team.</p>
   <p>League:</p>
     <select id="LeagueList">
-          <option value="BrLeague">Brazilian League</option>
+        <option disabled selected value>Choose Your League</option>
+        <option value="BrLeague">Brazilian League</option>
     </select>
   <p>Your Favorite Team:</p>
     <select id="TeamBRList" onchange="check()">
+            <option disabled selected value>Choose Your Team</option>
             <option value="Fla">Flamengo</option>
             <option value="Bot">Botafogo</option>
             <option value="Vas">Vasco</option>
@@ -59,12 +61,13 @@
             <option value="Sta">Santa Cruz</option>
             <option value="Goi">Goiás</option>
     </select>
-    <div id="escudoTime" style="float: center;"></div>
+    <div id="escudoTime"></div>
   <p>Your Favorite National Team:</p>
     <select id="NtlTeams">
+            <option disabled selected value>Choose Your National Team</option>
             <option value="Arge">Argentina</option>
             <option value="Belg">Belgium</option>
-            <option value="Braz" selected>Brazil</option>
+            <option value="Braz">Brazil</option>
             <option value="Chil">Chile</option>
             <option value="Colo">Colombia</option>
             <option value="Ecua">Ecuador</option>
