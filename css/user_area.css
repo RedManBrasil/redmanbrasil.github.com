@@ -109,7 +109,7 @@ button, input, select, textarea {
     background-color: #f1f1f1;
 }
 
-select.LeagueList, select.TeamBRList, select.NtlTeams{
+select#LeagueList, select#TeamBRList, select#NtlTeams{
     border: 1px solid #111;
     background: transparent;
     padding: 5px;
