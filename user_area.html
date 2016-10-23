@@ -30,11 +30,12 @@
   <p>We will teach you the basics of this game.</p>
   <p>Chose your favorite Team and National Team.</p>
   <p>League:</p>
-    <select id="LeagueList">
+    <select id="LeagueList" onchange="check1()">
         <option disabled selected value>Choose Your League</option>
         <option value="BrLeague">Brazilian League</option>
     </select>
-  <p>Your Favorite Team:</p>
+    <div id='FavBRTeam'>
+    <p>Your Favorite Team:</p>
     <select id="TeamBRList" onchange="check()">
             <option disabled selected value>Choose Your Team</option>
             <option value="Fla">Flamengo</option>
@@ -61,6 +62,7 @@
             <option value="Sta">Santa Cruz</option>
             <option value="Goi">Goiás</option>
     </select>
+    </div>
     <div id="escudoTime" style="margin-top:10px;"></div>
   <p>Your Favorite National Team:</p>
     <select id="NtlTeams">

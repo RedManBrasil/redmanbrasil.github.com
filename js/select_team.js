@@ -1,3 +1,13 @@
+function check1(){
+	var val = document.getElementById('LeagueList').value;
+	if(val=="BrLeague"){
+		$('#FavBRTeam').show();
+	
+	}
+}
+
+
+
 function check(){
 	var val = document.getElementById('TeamBRList').value;
 	if(val=='Fla'){
