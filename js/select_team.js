@@ -83,5 +83,71 @@ function check(){
 	else{
 		document.getElementById('escudoTime').innerHTML = "";
 	}
+}
 
+function check2(){
+	var val = document.getElementById('NtlTeams').value;
+	if(val=='Arge'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/argentina.png' height=120>";
+	}
+	else if(val=='Belg'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/belgium.png' height=120>";
+	}
+	else if(val=='Braz'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Brasil.png' height=120>";
+	}
+	else if(val=='Chil'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/chile.png' height=120>";
+	}
+	else if(val=='Chin'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/China.png' height=120>";
+	}
+	else if(val=='Colo'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Colombia.png' height=120>";
+	}
+	else if(val=='Ecua'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/ecuador.png' height=120>";
+	}
+	else if(val=='Engl'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/england.png' height=120>";
+	}
+	else if(val=='Fran'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/France.png' height=120>";
+	}
+	else if(val=='Germ'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Germany.png' height=120>";
+	}
+	else if(val=='Gree'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/greece.png' height=120>";
+	}
+	else if(val=='Ital'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/italy.png' height=120>";
+	}
+	else if(val=='Mexi'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/mexico.png' height=120>";
+	}
+	else if(val=='Neth'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Netherlands.png' height=120>";
+	}
+	else if(val=='Para'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/paraguay.png' height=120>";
+	}
+	else if(val=='Port'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/portugal.png' height=120>";
+	}
+	else if(val=='Spai'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/spain.png' height=120>";
+	}
+	else if(val=='Swed'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Sweden.png' height=120>";
+	}
+	else if(val=='Swit'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Switzerland.png' height=120>";
+	}
+	else if(val=='USA'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Uruguay.png' height=120>";
+	}
+	else if(val=='Swed'){
+		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/USA.png' height=120>";
+	}
 }
