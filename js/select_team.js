@@ -144,10 +144,10 @@ function check2(){
 	else if(val=='Swit'){
 		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Switzerland.png' height=120>";
 	}
-	else if(val=='USA'){
+	else if(val=='Urua'){
 		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/Uruguay.png' height=120>";
 	}
-	else if(val=='Swed'){
+	else if(val=='USA'){
 		document.getElementById('escudoSelecao').innerHTML = "<img src='Flags/USA.png' height=120>";
 	}
 }
