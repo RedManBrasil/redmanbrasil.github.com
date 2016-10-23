@@ -27,6 +27,48 @@ function check(){
 	else if(val=='AtlMG'){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Atletico Mineiro.png' style='float:center;''>";
 	}
+	else if(val=='Cru'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Cruzeiro.png' style='float:center;''>";
+	}
+	else if(val=='AltPR'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Atletico Paranaense.png' style='float:center;''>";
+	}
+	else if(val=='Gre'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Gremio.png' style='float:center;''>";
+	}
+	else if(val=='Int'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Internacional.png' style='float:center;''>";
+	}
+	else if(val=='Spo'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Sport.png' style='float:center;''>";
+	}
+	else if(val=='Cha'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Chapecoense.png' style='float:center;''>";
+	}
+	else if(val=='Bah'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Bahia.png' style='float:center;''>";
+	}
+	else if(val=='Vit'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Vitoria.png' style='float:center;''>";
+	}
+	else if(val=='AmeMG'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/america mg.png' style='float:center;''>";
+	}
+	else if(val=='Coritiba'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Coritiba.png' style='float:center;''>";
+	}
+	else if(val=='Fig'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/figueirense.png' style='float:center;''>";
+	}
+	else if(val=='Pon'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Ponte Preta.png' style='float:center;''>";
+	}
+	else if(val=='Sta'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Santa Cruz.png' style='float:center;''>";
+	}
+	else if(val=='Goi'){
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Goias.png' style='float:center;''>";
+	}
 	else{
 		document.getElementById('escudoTime').innerHTML = "";
 	}
