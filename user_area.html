@@ -34,7 +34,7 @@
           <option value="BrLeague">Brazilian League</option>
     </select>
   <p>Your Favorite Team:</p>
-    <select id="TeamBRList">
+    <select id="TeamBRList" onchange="check()">
             <option value="Fla">Flamengo</option>
             <option value="Bot">Botafogo</option>
             <option value="Vas">Vasco</option>
@@ -59,6 +59,7 @@
             <option value="Sta">Santa Cruz</option>
             <option value="Goi">Goiás</option>
     </select>
+    <div id="escudoTime" style="float: center;"></div>
   <p>Your Favorite National Team:</p>
     <select id="NtlTeams">
             <option value="Arge">Argentina</option>
@@ -84,7 +85,8 @@
 </div>
 
 </body>
-<script src="js/fbSDK.js"></script>
+    <script src="js/fbSDK.js"></script>
+    <script src="js/select_team.js"></script>
     <script src='js/jquery-3.1.1.min.js'></script>
     <script src="js/index.js"></script>
     <script type="text/javascript">
