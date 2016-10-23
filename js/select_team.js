@@ -28,7 +28,7 @@ function check(){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Atletico Mineiro.png' style='float:center;''>";
 	}
 	else if(val=='Cru'){
-		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Cruzeiro.png' style='float:center;''>";
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/cruzeiro.png' style='float:center;''>";
 	}
 	else if(val=='AltPR'){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Atletico Paranaense.png' style='float:center;''>";
