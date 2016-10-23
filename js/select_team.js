@@ -2,7 +2,9 @@ function check1(){
 	var val = document.getElementById('LeagueList').value;
 	if(val=="BrLeague"){
 		$('#FavBRTeam').show();
-	
+	}
+	else{
+		$('#FavBRTeam').hide();
 	}
 }
 
