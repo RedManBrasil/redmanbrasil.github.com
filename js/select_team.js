@@ -55,7 +55,7 @@ function check(){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/america mg.png' style='float:center;''>";
 	}
 	else if(val=='Coritiba'){
-		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Coritiba.png' style='float:center;''>";
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/coritiba.png' style='float:center;''>";
 	}
 	else if(val=='Fig'){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/figueirense.png' style='float:center;''>";
