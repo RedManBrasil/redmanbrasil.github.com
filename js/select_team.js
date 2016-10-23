@@ -10,7 +10,7 @@ function check(){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/vasco.png' style='float:center;''>";
 	}
 	else if(val=='Flu'){
-		document.getElementById('escudoTime').innerHTML = "<img src='escudos/fluminense1.png' style='float:right;''>";
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/fluminense.png' style='float:center;''>";
 	}
 	else if(val=='Sp'){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Sao Paulo.png' style='float:center;''>";
