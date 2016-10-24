@@ -63,7 +63,7 @@ function check(){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/Vitoria.png' height=120>";
 	}
 	else if(val=='AmeMG'){
-		document.getElementById('escudoTime').innerHTML = "<img src='escudos/america mg1.png' height=120>";
+		document.getElementById('escudoTime').innerHTML = "<img src='escudos/america mg.png' height=120>";
 	}
 	else if(val=='Coritiba'){
 		document.getElementById('escudoTime').innerHTML = "<img src='escudos/coritiba.png' height=120>";
