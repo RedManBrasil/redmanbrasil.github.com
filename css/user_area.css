@@ -124,3 +124,8 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
 .hidden {
     display: none; 
 }
+
+#element_01 {
+    background: url(path/Flags) no-repeat;
+    display: none;
+    }
