@@ -7,6 +7,9 @@ html, body {
     font-family: Verdana,sans-serif;
     font-size: 15px;
     line-height: 1.5;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 }
 
 body {
