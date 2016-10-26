@@ -213,7 +213,7 @@ div #status{
   display: none;
 }
 
-#MonthBirthDay, #DayBirthDay, #YearBirthDay{
+#MonthBirthDate, #DayBirthDate, #YearBirthDate{
   color: #0aa046;
   font-size: 22px;
 }
