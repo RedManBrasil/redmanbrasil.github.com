@@ -136,6 +136,8 @@ textarea {
 .field-wrap {
   position: relative;
   margin-bottom: 40px;
+  color: #0aa046;
+  font-size: 22px;
 }
 
 .top-row:after {
@@ -209,4 +211,9 @@ div #status{
 
 #status{
   display: none;
+}
+
+#MonthBirthDay, #DayBirthDay, #YearBirthDay{
+  color: #0aa046;
+  font-size: 22px;
 }
