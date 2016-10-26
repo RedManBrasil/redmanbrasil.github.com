@@ -7,8 +7,6 @@ html, body {
     font-family: Verdana,sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 body {
@@ -124,17 +122,14 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
 }
 
 .hidden {
-    display: none; 
+    display: none;
+    background: url(imgs/sun-eclipseGreen.png) no-repeat -9999px -9999px; 
 }
 
-#testss {
-    background: url(imgs/settingsGreen.png) no-repeat -9999px -9999px; 
-}
-
-#testss1 {
+.pre_load2{
     background: url(imgs/suitcaseGreen.png) no-repeat -9999px -9999px; 
 }
 
-#testss2 {
-    background: url(imgs/sun-eclipseGreen.png) no-repeat -9999px -9999px; 
+.pre_load3{
+    background: url(imgs/settingsGreen.png) no-repeat -9999px -9999px; 
 }

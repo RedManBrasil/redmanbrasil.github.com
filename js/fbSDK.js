@@ -46,7 +46,7 @@
 					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 						document.getElementById('resposta1').innerHTML = response.name;
 						});
-				} , 550);
+				} , 350);
 		}
 
 		function getPic() {
@@ -55,7 +55,7 @@
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 				document.getElementById('resposta').innerHTML = "<img src='" + response.picture.data.url + "' style='border-radius:50%;border:6px solid #0aa046;width:60%;'>";
 			});
-			} , 550);
+			} , 350);
 		}
 
 		function getId() {
@@ -64,7 +64,7 @@
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 				document.getElementById('resposta2').innerHTML = "Your Id is : " + response.id ;
 			});
-			} , 550);
+			} , 350);
 		}
 
 		function getName2() {
@@ -73,5 +73,5 @@
 					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 						document.getElementById('resposta2').innerHTML = "Welcome " + response.name;
 						});
-				} , 550);
+				} , 350);
   		}
