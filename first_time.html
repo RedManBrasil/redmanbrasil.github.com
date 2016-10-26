@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/first_time.css">
+  <script src="js/fbSDK.js"></script>
+  <script src="js/select_team.js"></script>
+  <script src='js/jquery-3.1.1.min.js'></script>
+  <script src="js/index.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FUT MARKET</title>
+</head>
+<body>
+
+<ul>
+  <li><input id="myInp" type="text" name="search" placeholder="Search.."></li>
+  <li><center id="resposta"></center></li>
+  <li><h3><center><a href="#" id="resposta1"></a></center></h3></li>
+  <li><a class="active" href="#">Home</a></li>
+  <li><a href="#">Teams</a></li>
+  <li><a href="#">Portfolio</a></li>
+  <li><a href="#">Your Firm</a></li>
+  <li><a href="#">Next Games</a></li>
+  <li><a href="#">Rankings</a></li>
+ <li><a href="#" id="icons" class="icons"><img src="css/imgs/settings.png" onmouseover="this.src='css/imgs/settingsGreen.png'" onmouseout="this.src='css/imgs/settings.png'"></a></li>
+  <li><a href="#" id="icons" class="icons"><img src="css/imgs/suitcase.png" onmouseover="this.src='css/imgs/suitcaseGreen.png'" onmouseout="this.src='css/imgs/suitcase.png'"></a></li>
+  <li><a href="#" id="icons" class="icons"><img src="css/imgs/sun-eclipse.png" onmouseover="this.src='css/imgs/sun-eclipseGreen.png'" onmouseout="this.src='css/imgs/sun-eclipse.png'"></a></li>
+</ul>
+
+<div class="ter">
+  <center><h2 id="resposta2"></h2></center>
+  <center><h3>Congratulations, now you are part of FUTMARKET, make yourself comfortable.</h3></center>
+  <p>We will teach you the basics of this game.</p>
+  <p>FUTMARKET is a fantasy market game based on soccer. It work the same way as a normal stock market, but instead of buying real company's stocks, you are going to buy some soccer team stocks. Create your own portfolio, buying and selling stocks of a National Team or some real soccer team. Join up with friends, creating firms, where you can manage hedge funds, putting together money from all of you. Start now!</p>
+  <p>Chose your favorite Team and National Team.</p>
+  <p>League:</p>
+    <select id="LeagueList" onchange="check1()">
+        <option disabled selected value>Choose Your League</option>
+        <option value="BrLeague">Brazilian League</option>
+    </select>
+    <div id='FavBRTeam' class='hidden'>
+    <p>Your Favorite Team:</p>
+    <select id="TeamBRList" onchange="check()">
+            <option disabled selected value>Choose Your Team</option>
+            <option value="AmeMG">América-MG</option>
+            <option value="AltPR">Atlético-PR</option>
+            <option value="AtlMG">Atlético-MG</option>
+            <option value="Bah">Bahia</option>
+            <option value="Bot">Botafogo</option>
+            <option value="Cha">Chapecoense</option>
+            <option value="Cor">Corinthias</option>
+            <option value="Coritiba">Coritiba</option>
+            <option value="Cru">Cruzeiro</option>
+            <option value="Fig">Figueirense</option>
+            <option value="Fla">Flamengo</option>
+            <option value="Flu">Fluminense</option>
+            <option value="Goi">Goiás</option>
+            <option value="Gre">Grêmio</option>
+            <option value="Int">Internacional</option>
+            <option value="Pal">Palmeiras</option>
+            <option value="Pon">Ponte Preta</option>
+            <option value="Sta">Santa Cruz</option>
+            <option value="San">Santos</option>
+            <option value="Sp">São Paulo</option>
+            <option value="Spo">Sport</option>
+            <option value="Vas">Vasco</option>
+            <option value="Vit">Vitória</option>
+    </select>
+    </div>
+    <div id="escudoTime" style="margin-top:10px;"></div>
+  <p class="pre_load2">Your Favorite National Team:</p>
+    <select id="NtlTeams" onchange="check2()">
+            <option disabled selected value>Choose Your National Team</option>
+            <option value="Arge">Argentina</option>
+            <option value="Belg">Belgium</option>
+            <option value="Braz">Brazil</option>
+            <option value="Chil">Chile</option>
+            <option value="Chin">China</option>
+            <option value="Colo">Colombia</option>
+            <option value="Ecua">Ecuador</option>
+            <option value="Engl">England</option>
+            <option value="Fran">France</option>
+            <option value="Germ">Germany</option>
+            <option value="Gree">Greece</option>
+            <option value="Ital">Italy</option>
+            <option value="Mexi">Mexico</option>
+            <option value="Neth">Netherlands</option>
+            <option value="Para">Paraguay</option>
+            <option value="Port">Portugal</option>
+            <option value="Spai">Spain</option>
+            <option value="Swed">Sweden</option>
+            <option value="Swit">Switzerland</option>
+            <option value="USA">United States</option>
+            <option value="Urua">Uruguay</option>
+    </select>
+    <div id="escudoSelecao" style="margin-top:20px;"></div>
+
+</div>
+
+</body>
+    <script type="text/javascript" class="pre_load3">
+        window.onload = function (){
+            getPic();
+            getName();
+            getName2();
+            check1();
+        };
+    </script>
+</html>
