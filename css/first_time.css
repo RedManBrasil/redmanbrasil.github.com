@@ -7,7 +7,7 @@ html, body {
     font-family: Verdana,sans-serif;
     font-size: 15px;
     line-height: 1.5;
-    background-color: #d8e4dc;
+    background-color: #dfe3e0;
 }
 
 body {
@@ -111,12 +111,13 @@ button, input, select, textarea {
 }
 
 select#LeagueList, select#TeamBRList, select#NtlTeams{
-    border: 1px solid #111;
     background: transparent;
     padding: 5px;
+    border-radius: 8px;
     font-size: 16px;
     border: 1px solid #ccc;
     height: 34px;
+    color: black;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -133,4 +134,15 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
 
 .pre_load3{
     background: url(imgs/settingsGreen.png) no-repeat -9999px -9999px; 
+}
+
+#next, #previous{
+    background-color: #0aa046;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }

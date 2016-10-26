@@ -7,8 +7,6 @@ function check1(){
 	}
 }
 
-
-
 function check(){
 	var val = document.getElementById('TeamBRList').value;
 	if(val=='Fla'){
