@@ -29,7 +29,6 @@
 			FB.login(function(response) {
 				if (response.status === 'connected') {
 		    		document.getElementById('status').innerHTML = 'We are connected.';
-		    		document.getElementById('login').style.visibility = 'hidden';
 		    		window.location.href = "first_time.html";
 					}
 		        else if (response.status === 'not_authorized') {
