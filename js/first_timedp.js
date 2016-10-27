@@ -24,6 +24,7 @@ $(document).ready(function(){
         if ($("#third_page:visible").length){
              $("#first_page").hide(500);
              $("#third_page").hide(500);
+             $("#start").hide(500); 
              $("#second_page").show(500);}
     });
 });
