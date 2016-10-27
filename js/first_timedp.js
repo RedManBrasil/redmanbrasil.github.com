@@ -19,12 +19,13 @@ $(document).ready(function(){
         if ($("#second_page:visible").length){
              $("#third_page").hide(500);
              $("#second_page").hide(500);
+             $("#start").hide(500);
              $("#first_page").show(500);
         	 $("#previous").hide(500); }
         if ($("#third_page:visible").length){
              $("#first_page").hide(500);
              $("#third_page").hide(500);
-             $("#start").hide(500); 
+             $("#start").hide(500);
              $("#second_page").show(500);}
     });
 });
