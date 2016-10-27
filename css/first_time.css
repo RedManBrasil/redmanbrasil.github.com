@@ -164,7 +164,7 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
     display: none;
 }
 
-#start{
+button#start{
     background-color: #0aa046;
     font-size: 22px;
     line-height: 1.5;
