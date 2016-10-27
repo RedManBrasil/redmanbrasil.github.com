@@ -1,8 +1,13 @@
 $(document).ready(function(){
     $("#next").click(function(){
         $("#first_page").hide(500);
+        $('html,body').scrollTop(0);
+        $("#next").hide(500);
+        $("#previous").show(500);
     });
     $("#previous").click(function(){
         $("#first_page").show(500);
+        $("#next").show(500);
+        $("#previous").hide(500);
     });
 });
