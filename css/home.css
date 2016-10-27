@@ -1,7 +1,3 @@
-@font-face {
-        font-family: 'Titillium Web';
-        src: url(fonts/TitilliumWeb-Regular.ttf);
-}
 
 html, body {
     font-family: Verdana,sans-serif;
@@ -73,6 +69,21 @@ li a:hover:not(.active) {
     height:1000px;
 }
 
+.hidden {
+    display: none;
+}
+
+.pre_load1{
+    background: url(imgs/sun-eclipseGreen.png) no-repeat -9999px -9999px; 
+}
+
+.pre_load2{
+    background: url(imgs/suitcaseGreen.png) no-repeat -9999px -9999px; 
+}
+
+.pre_load3{
+    background: url(imgs/settingsGreen.png) no-repeat -9999px -9999px; 
+}
 
 input[type=text]#myInp {
     width: 130px;
@@ -108,76 +119,4 @@ button, input, select, textarea {
 
 #icons:hover{
     background-color: #f1f1f1;
-}
-
-select#LeagueList, select#TeamBRList, select#NtlTeams{
-    background: transparent;
-    padding: 5px;
-    border-radius: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    height: 34px;
-    color: black;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
-
-.hidden {
-    display: none;
-    background: url(imgs/sun-eclipseGreen.png) no-repeat -9999px -9999px; 
-}
-
-.pre_load2{
-    background: url(imgs/suitcaseGreen.png) no-repeat -9999px -9999px; 
-}
-
-.pre_load3{
-    background: url(imgs/settingsGreen.png) no-repeat -9999px -9999px; 
-}
-
-#next, #previous{
-    background-color: #0aa046;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 30px;
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
-
-#previous.hidden{
-    display: none;
-}
-
-#second_page.hidden{
-    display: none;
-    color:#0aa046;
-    margin:10px 0 0 0;
-}
-
-#start.hidden{
-    display: none;
-}
-
-#start{
-    background-color: #0aa046;
-    font-size: 22px;
-    line-height: 1.5;
-    border-radius: 500px;
-    padding: 7px 35px;
-    outline: none;
-    border-width: 0;
-    letter-spacing: 8px;
-    min-width: 130px;
-    white-space: normal;
-}
-
-#start:hover{
-    transition: .25s;
-    background: #2cc45a;
 }
