@@ -28,7 +28,7 @@
 			FB.login(function(response) {
 				if (response.status === 'connected') {
 		    		document.getElementById('status').innerHTML = 'We are connected.';
-		    		window.location.href = "first_time.html";
+		    		window.location.href = "first_time/";
 					}
 		        else if (response.status === 'not_authorized') {
 		    		document.getElementById('status').innerHTML = 'We are not logged in.'
