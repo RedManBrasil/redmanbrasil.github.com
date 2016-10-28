@@ -151,7 +151,7 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
 
 #second_page.hidden{
     display: none;
-    color:#0aa046;
+    color:black;
     margin:10px 0 0 0;
     margin-right: 360px;
     margin-left: 360px;
@@ -160,6 +160,7 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
 #third_page{
     margin-right: 360px;
     margin-left: 360px;
+    color: black;
 }
 
 #start.hidden{
