@@ -45,6 +45,8 @@ body {
 div#WelText{
     margin-right: 360px;
     margin-left: 360px;
+    color: black;
+    font-size: 18px;
 }
 
 .ter{
