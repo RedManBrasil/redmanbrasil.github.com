@@ -140,3 +140,9 @@ ul li .icons:hover{
       width: 10px;
       height: 10px;
     }
+
+canvas#canvas{
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }

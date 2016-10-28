@@ -33,8 +33,6 @@
       <center><div id="canvas-holder" style="width: 300px;">
         <canvas id="chart-area2" width="300" height="300" />
     </div><center>
-
-    <div id="chartjs-tooltip"></div>
 </div>
 
 <div style="background-color:#b7c3ba; width:50%; height:50%; float:right">
@@ -44,6 +42,9 @@
 
 <div style="background-color:#b7c3ba; width:50%; height:50%; float:left">
 <center><h1>Net Worth</h1></center>
+  <div style="width:90%;">
+        <canvas id="canvas"></canvas>
+    </div>
 </div>
 
 <div style="background-color:#dfe3e0; width:50%; height:50%; float:right">
@@ -134,11 +135,11 @@
                 ],
             }],
             labels: [
-                "Red",
-                "Green",
-                "Yellow",
-                "Grey",
-                "Dark Grey"
+                "Flamengo",
+                "Palmeiras",
+                "Santos",
+                "China",
+                "Chapecoense"
             ]
         },
         options: {
@@ -147,19 +148,87 @@
                 display: false
             },
             tooltips: {
-                enabled: false,
+                enabled: true,
             }
         }
     };
 
-    window.onload = function() {
+//SEPARATION CHART 1 to CHART 2
 
+        var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        
+        var randomScalingFactor = function() {
+            return Math.round(Math.random() * 100);
+            //return 0;
+        };
+        var randomColorFactor = function() {
+            return Math.round(Math.random() * 255);
+        };
+        var randomColor = function(opacity) {
+            return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+        };
+
+        var config1 = {
+            type: 'line',
+            data: {
+                xLabels: ["January", "February", "March", "April", "May", "June", "July"],
+                yLabels: ['1200$', '1000$', '800$', '600$', '400$', '200$', '0$'],
+                datasets: [{
+                    label: "Net Worth",
+                    data: ['800$', '1000$', '800$', '600$', '400$', '200$', '600$'],
+                    fill: false,
+                   
+                }]
+            },
+            options: {
+                responsive: true,
+                title:{
+                    display:false,
+                  
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        type: 'category',
+                        position: 'left',
+                        display: true,
+                        scaleLabel: {
+                            display: false,
+                            labelString: 'Value(Dollars)'
+                        },
+                        ticks: {
+                            reverse: false
+                        }
+                    }]
+                }
+            }
+        };
+
+        $.each(config.data.datasets, function(i, dataset) {
+            dataset.borderColor = randomColor(0.4);
+            dataset.backgroundColor = randomColor(0.5);
+            dataset.pointBorderColor = randomColor(0.7);
+            dataset.pointBackgroundColor = randomColor(0.5);
+            dataset.pointBorderWidth = 1;
+        });
+
+
+    window.onload = function() {
         var ctx2 = document.getElementById("chart-area2").getContext("2d");
         window.myPie = new Chart(ctx2, config);
+        var ctx = document.getElementById("canvas").getContext("2d");
+        window.myLine = new Chart(ctx, config1);
         getPic2();
         getName();
         getName2();
         check1();
     };
     </script>
+
 </html>
