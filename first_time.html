@@ -14,28 +14,20 @@
 </head>
 <body>
 
-<ul>
-  <li><input id="myInp" type="text" name="search" placeholder="Search.."></li>
-  <li><center id="resposta"></center></li>
-  <li><h3><center><a href="#" id="resposta1"></a></center></h3></li>
-  <li><a href="home">Home</a></li>
-  <li><a href="#">Teams</a></li>
-  <li><a href="#">Portfolio</a></li>
-  <li><a href="#">Your Firm</a></li>
-  <li><a href="#">Next Games</a></li>
-  <li><a href="#">Rankings</a></li>
- <li><a href="#" id="icons" class="icons"><img src="css/imgs/settings.png" onmouseover="this.src='css/imgs/settingsGreen.png'" onmouseout="this.src='css/imgs/settings.png'"></a></li>
-  <li><a href="#" id="icons" class="icons"><img src="css/imgs/suitcase.png" onmouseover="this.src='css/imgs/suitcaseGreen.png'" onmouseout="this.src='css/imgs/suitcase.png'"></a></li>
-  <li><a href="#" id="icons" class="icons"><img src="css/imgs/sun-eclipse.png" onmouseover="this.src='css/imgs/sun-eclipseGreen.png'" onmouseout="this.src='css/imgs/sun-eclipse.png'"></a></li>
-</ul>
-
 <div class="ter">
 <div id="first_page">
-  <center><h2 id="resposta2"></h2></center>
-  <center><h3>Congratulations, now you are part of FUTMARKET, make yourself comfortable.</h3></center>
-  <p>We will teach you the basics of this game.</p>
-  <p>FUTMARKET is a fantasy market game based on soccer. It work the same way as a normal stock market, but instead of buying real company's stocks, you are going to buy some soccer team stocks. Create your own portfolio, buying and selling stocks of a National Team or some real soccer team. Join up with friends, creating firms, where you can manage hedge funds, putting together money from all of you. Start now!</p>
-  <p>Chose your favorite Team and National Team.</p>
+  <span id="resposta"  class="pre_load2" style="vertical-align: middle; margin-top: 20px; margin-left: 360px;"></span>
+   <span id="resposta2"></span>
+   <div id="WelText">
+    <center><h3>Congratulations, now you are part of FUTMARKET, make yourself comfortable.</h3></center>
+    <p>We will teach you the basics of this game.</p>
+    <p>FUTMARKET is a fantasy market game based on soccer. It work the same way as a normal stock market, but instead of buying real company's stocks, you are going to buy some soccer team stocks. Create your own portfolio, buying and selling stocks of a National Team or some real soccer team. Join up with friends, creating firms, where you can manage hedge funds, putting together money from all of you. Start now!</p></div>
+    <br><br>
+    </div>
+    <div id="second_page" class="hidden">
+      <h1><center>We want to know a little bit more about you</center></h1>
+      <br><br>
+      <p>Chose your favorite Team and National Team.</p>
   <p>League:</p>
     <select id="LeagueList" onchange="check1()">
         <option disabled selected value>Choose Your League</option>
@@ -97,11 +89,6 @@
             <option value="Urua">Uruguay</option>
     </select>
     <div id="escudoSelecao" style="margin-top:20px;"></div>
-    <br><br>
-    </div>
-    <div id="second_page" class="hidden">
-      <h1><center>We want to know a little bit more about you</center></h1>
-      <br>
         <h3>If you had a firm how should you call it?</h3>
         <input type="text" name="firmName">
     </div>
