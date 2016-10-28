@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <script src="js/fbSDK.js"></script>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/home.css">
+  <script src="js/fbSDK.js"></script>
   <script src="Chart.js-2.3.0/dist/Chart.bundle.js"></script>
-  <script src="js/select_team.js"></script>
   <script src='js/jquery-3.1.1.min.js'></script>
-  <script src="js/index.js"></script>
-  <script src="js/first_timedp.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,14 +53,6 @@
     </div>
 
 </body>
-    <script type="text/javascript" class="pre_load3">
-        window.onload = function (){
-            getPic2();
-            getName();
-            getName2();
-            check1();
-        };
-        </script>
 <script>
       Chart.defaults.global.tooltips.custom = function(tooltip) {
 
@@ -167,6 +156,10 @@
 
         var ctx2 = document.getElementById("chart-area2").getContext("2d");
         window.myPie = new Chart(ctx2, config);
+        getPic2();
+        getName();
+        getName2();
+        check1();
     };
     </script>
 </html>
