@@ -1,73 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-  <script src="js/fbSDK.js"></script>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/home.css">
-  <script src="Chart.js-2.3.0/dist/Chart.bundle.js"></script>
-  <script src="js/select_team.js"></script>
-  <script src='js/jquery-3.1.1.min.js'></script>
-  <script src="js/index.js"></script>
-  <script src="js/first_timedp.js"></script>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>FUT MARKET</title>
+    <title>Pie Chart with Custom Tooltips</title>
+    <script src="../dist/Chart.bundle.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <style>
+    #canvas-holder {
+        width: 100%;
+        margin-top: 50px;
+        text-align: center;
+    }
+    #chartjs-tooltip {
+      opacity: 1;
+      position: absolute;
+      background: rgba(0, 0, 0, .7);
+      color: white;
+      border-radius: 3px;
+      -webkit-transition: all .1s ease;
+      transition: all .1s ease;
+      pointer-events: none;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .chartjs-tooltip-key {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
+    </style>
 </head>
-<body class="pre_load1">
 
-    <ul>
-      <li><input id="myInp" type="text" name="search" placeholder="Search.."></li>
-      <li><center id="resposta"  class="pre_load2"></center></li>
-      <li><h3><center><a href="#" id="resposta1"></a></center></h3></li>
-      <li><a class="active" href="home.html">Home</a></li>
-      <li><a href="#">Teams</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Your Firm</a></li>
-      <li><a href="#">Next Games</a></li>
-      <li><a href="#">Rankings</a></li>
-      <li><a href="#" class="icons" class="icons"><img src="css/imgs/settings.png" onmouseover="this.src='css/imgs/settingsGreen.png'" onmouseout="this.src='css/imgs/settings.png'"></a></li>
-      <li><a href="#" class="icons" class="icons"><img src="css/imgs/suitcase.png" onmouseover="this.src='css/imgs/suitcaseGreen.png'" onmouseout="this.src='css/imgs/suitcase.png'"></a></li>
-      <li><a href="#" class="icons" class="icons"><img src="css/imgs/sun-eclipse.png" onmouseover="this.src='css/imgs/sun-eclipseGreen.png'" onmouseout="this.src='css/imgs/sun-eclipse.png'"></a></li>
-    </ul>
-
-    <div class="ter">
-      <div style="background-color:#dfe3e0; width:50%; height:50%; float:left">
-      <center><h1>Your Portfolio</h1></center>
-      <center><div id="canvas-holder" style="width: 300px;">
+<body>
+    
+    <div id="canvas-holder" style="width: 300px;">
         <canvas id="chart-area2" width="300" height="300" />
-    </div><center>
-
-    <div id="chartjs-tooltip"></div>
-</div>
-
-<div style="background-color:#b7c3ba; width:50%; height:50%; float:right">
- <center><h1>Last Games</h1></center>
-
-</div>
-
-<div style="background-color:#b7c3ba; width:50%; height:50%; float:left">
-<center><h1>Net Worth</h1></center>
-</div>
-
-<div style="background-color:#dfe3e0; width:50%; height:50%; float:right">
-<center><h1>Ranking</h1></center>
-</div>
-      
     </div>
 
-</body>
-    <script type="text/javascript" class="pre_load3">
-        window.onload = function (){
-            getPic2();
-            getName();
-            getName2();
-            check1();
-        };
-        </script>
-<script>
-      Chart.defaults.global.tooltips.custom = function(tooltip) {
+    <div id="chartjs-tooltip"></div>
 
-      // Tooltip Element
+
+    <script>
+    Chart.defaults.global.tooltips.custom = function(tooltip) {
+
+    	// Tooltip Element
       var tooltipEl = $('#chartjs-tooltip');
 
       if (!tooltipEl[0]) {
@@ -169,4 +147,6 @@
         window.myPie = new Chart(ctx2, config);
     };
     </script>
+</body>
+
 </html>

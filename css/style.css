@@ -3,6 +3,11 @@
         src: url(fonts/TitilliumWeb-Regular.ttf);
 }
 
+@font-face {
+        font-family: 'FontAwesome';
+        src: url(fonts/fontawesome-webfont.ttf);
+}
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
