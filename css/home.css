@@ -36,7 +36,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 15%;
+    width: 16%;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
@@ -106,14 +106,13 @@ button, input, select, textarea {
     margin: 0;
 }
 
-#icons{
+ul li .icons{
     display: block;
     float: left;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 13.5%;
-}
+    position: relative;
+    left: 8%;
+   }
 
-#icons:hover{
+ul li .icons:hover{
     background-color: #f1f1f1;
 }
