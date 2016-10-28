@@ -33,6 +33,8 @@ body {
 	font-size:60px;
 	text-transform: uppercase;
     font-weight: bold;
+    margin-right: 360px;
+    margin-left: 360px;
 }
 
 #resposta1:hover {
