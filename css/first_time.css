@@ -53,6 +53,9 @@ div#WelText{
 .ter{
     padding:1px 16px;
     height:1000px;
+    margin-left:auto;
+    margin-right:auto;
+    width:1380px;
 }
 
 
@@ -167,8 +170,6 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
 
 #start.hidden{
     display: none;
-    position: fixed;
-    left: 600px;
 }
 
 button#start{
