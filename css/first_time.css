@@ -34,6 +34,8 @@ body {
     font-weight: bold;
     margin-right: 360px;
     margin-left: 360px;
+    width:590px;
+    max-width:590px;
 }
 
 #resposta1:hover {
@@ -165,6 +167,8 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
 
 #start.hidden{
     display: none;
+    position: fixed;
+    left: 600px;
 }
 
 button#start{
