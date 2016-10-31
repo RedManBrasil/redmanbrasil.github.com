@@ -60,7 +60,7 @@ li a.active:not(#changeslist) {
     color: white;
 }
 
-li a:hover:not(.active):not(#changeslist) {
+li a:hover:not(.active, #changeslist) {
     background-color: #555;
     color: white;
 }
