@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+  <script src='js/jquery-3.1.1.min.js'></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/fbSDK.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FUT MARKET</title>
+</head>
+<body class="pre_load1">
+
+    <ul>
+      <li><input id="myInp" type="text" name="search" placeholder="Search.."></li>
+      <li><center id="resposta"  class="pre_load2"></center></li>
+      <li><h3><center><a href="#" id="resposta1"></a></center></h3></li>
+      <li><a class="active" href="home.html">Home</a></li>
+      <li><a href="#">Teams</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Your Firm</a></li>
+      <li><a href="#">Next Games</a></li>
+      <li><a href="#">Rankings</a></li>
+      <li><a href="#" class="icons" class="icons"><img src="css/imgs/settings.png" onmouseover="this.src='css/imgs/settingsGreen.png'" onmouseout="this.src='css/imgs/settings.png'"></a></li>
+      <li><a href="#" class="icons" class="icons"><img src="css/imgs/suitcase.png" onmouseover="this.src='css/imgs/suitcaseGreen.png'" onmouseout="this.src='css/imgs/suitcase.png'"></a></li>
+      <li><a href="#" class="icons" class="icons"><img src="css/imgs/sun-eclipse.png" onmouseover="this.src='css/imgs/sun-eclipseGreen.png'" onmouseout="this.src='css/imgs/sun-eclipse.png'"></a></li>
+    </ul>
+
+    <div class="ter">
+      <div style="background-color:#dfe3e0; width:50%; height:50%; float:left">
+      <center><h1>Your Portfolio</h1></center>
+      <center><div id="canvas-holder" style="width: 300px;">
+        <canvas id="chart-area2" width="300" height="300" />
+    </div><center>
+</div>
+
+<div style="background-color:#b7c3ba; width:50%; height:50%; float:right">
+ <center><h1>Last Games</h1></center>
+ <br>
+ <center><h3 style="color: black;">Flamengo 2 x 2 Corinthias</h3></center>
+ <center><h3 style="color: black;">China 1 x 3 Japan</h3></center>
+ <center><h3 style="color: black;">Palmeiras 1 x 0 Santa Cruz</h3></center>
+ <center><h3 style="color: black;">Flamengo 5 x 4 Santos</h3></center>
+
+</div>
+
+<div style="background-color:#b7c3ba; width:50%; height:50%; float:left">
+<center><h1>Net Worth</h1></center>
+  <div style="width:100%;">
+        <canvas id="canvasNetWorth"></canvas>
+    </div>
+</div>
+
+<div style="background-color:#dfe3e0; width:50%; height:50%;float:right;overflow:hidden;overflow-y:scroll;">
+<center><h1>Today's Top Stock Variations</h1></center>
+<ul id="changeslist">
+<li class="changeslist"><div id="changediv0"></div></li>
+<li class="changeslist"><div id="changediv1"></div></li>
+<li class="changeslist"><div id="changediv2"></div></li>
+<li class="changeslist"><div id="changediv3"></div></li>
+<li class="changeslist"><div id="changediv4"></div></li>
+<li class="changeslist"><div id="changediv5"></div></li>
+<li class="changeslist"><div id="changediv6"></div></li>
+<li class="changeslist"><div id="changediv7"></div></li>
+<li class="changeslist"><div id="changediv8"></div></li>
+<li class="changeslist"><div id="changediv9"></div></li>
+<li class="changeslist"><div id="changediv10"></div></li>
+<li class="changeslist"><div id="changediv11"></div></li>
+<li class="changeslist"><div id="changediv12"></div></li>
+<li class="changeslist"><div id="changediv13"></div></li>
+<li class="changeslist"><div id="changediv14"></div></li>
+<li class="changeslist"><div id="changediv15"></div></li>
+<li class="changeslist"><div id="changediv16"></div></li>
+<li class="changeslist"><div id="changediv17"></div></li>
+<li class="changeslist"><div id="changediv18"></div></li>
+<li class="changeslist"><div id="changediv19"></div></li>
+<li class="changeslist"><div id="changediv20"></div></li>
+<li class="changeslist"><div id="changediv21"></div></li>
+<li class="changeslist"><div id="changediv22"></div></li>
+<li class="changeslist"><div id="changediv23"></div></li>
+<li class="changeslist"><div id="changediv24"></div></li>
+<li class="changeslist"><div id="changediv25"></div></li>
+<li class="changeslist"><div id="changediv26"></div></li>
+<li class="changeslist"><div id="changediv27"></div></li>
+<li class="changeslist"><div id="changediv28"></div></li>
+<li class="changeslist"><div id="changediv29"></div></li>
+<li class="changeslist"><div id="changediv30"></div></li>
+<li class="changeslist"><div id="changediv31"></div></li>
+<li class="changeslist"><div id="changediv32"></div></li>
+<li class="changeslist"><div id="changediv33"></div></li>
+<li class="changeslist"><div id="changediv34"></div></li>
+<li class="changeslist"><div id="changediv35"></div></li>
+<li class="changeslist"><div id="changediv36"></div></li>
+<li class="changeslist"><div id="changediv37"></div></li>
+<li class="changeslist"><div id="changediv38"></div></li>
+<li class="changeslist"><div id="changediv39"></div></li>
+<li class="changeslist"><div id="changediv40"></div></li>
+<li class="changeslist"><div id="changediv41"></div></li>
+<li class="changeslist"><div id="changediv42"></div></li>
+<li class="changeslist"><div id="changediv43"></div></li>
+</ul>
+    </div>
+
+</body>
+<script src="js/home.js"></script>
+<script src="Chart.js-2.3.0/dist/Chart.bundle.js"></script>
+<script>
+      Chart.defaults.global.tooltips.custom = function(tooltip) {
+
+      // Tooltip Element
+      var tooltipEl = $('#chartjs-tooltip');
+
+      // Hide if no tooltip
+      if (!tooltip.opacity) {
+        tooltipEl.css({
+          opacity: 0
+        });
+        $('.chartjs-wrap canvas')
+          .each(function(index, el) {
+            $(el).css('cursor', 'default');
+          });
+        return;
+      }
+
+      $(this._chart.canvas).css('cursor', 'pointer');
+
+      // Set caret Position
+      tooltipEl.removeClass('above below no-transform');
+      if (tooltip.yAlign) {
+        tooltipEl.addClass(tooltip.yAlign);
+      } else {
+        tooltipEl.addClass('no-transform');
+      }
+
+      // Set Text
+      if (tooltip.body) {
+        var innerHtml = [
+          (tooltip.beforeTitle || []).join('\n'), (tooltip.title || []).join('\n'), (tooltip.afterTitle || []).join('\n'), (tooltip.beforeBody || []).join('\n'), (tooltip.body || []).join('\n'), (tooltip.afterBody || []).join('\n'), (tooltip.beforeFooter || [])
+          .join('\n'), (tooltip.footer || []).join('\n'), (tooltip.afterFooter || []).join('\n')
+        ];
+        tooltipEl.html(innerHtml.join('\n'));
+      }
+
+      // Find Y Location on page
+      var top = 0;
+      if (tooltip.yAlign) {
+        if (tooltip.yAlign == 'above') {
+          top = tooltip.y - tooltip.caretHeight - tooltip.caretPadding;
+        } else {
+          top = tooltip.y + tooltip.caretHeight + tooltip.caretPadding;
+        }
+      }
+
+      var position = $(this._chart.canvas)[0].getBoundingClientRect();
+
+      // Display, position, and set styles for font
+      tooltipEl.css({
+        opacity: 1,
+        width: tooltip.width ? (tooltip.width + 'px') : 'auto',
+        left: position.left + tooltip.x + 'px',
+        top: position.top + top + 'px',
+        fontFamily: tooltip._fontFamily,
+        fontSize: tooltip.fontSize,
+        fontStyle: tooltip._fontStyle,
+        padding: tooltip.yPadding + 'px ' + tooltip.xPadding + 'px',
+      });
+    };
+
+    var config = {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [300, 50, 100, 40, 10],
+                backgroundColor: [
+                    "#F7464A",
+                    "#46BFBD",
+                    "#FDB45C",
+                    "#949FB1",
+                    "#4D5360",
+                ],
+            }],
+            labels: [
+                "Flamengo",
+                "Palmeiras",
+                "Santos",
+                "China",
+                "Chapecoense"
+            ]
+        },
+        options: {
+            responsive: true,
+            legend: {
+                display: false
+            },
+            tooltips: {
+                enabled: true,
+            }
+        }
+    };
+
+//SEPARATION CHART 1 to CHART 2
+
+        var datapointsNetWorth = [100, 95, 82, 121, 180, 115];
+    var configNetWorth = {
+            type: 'line',
+            data: {
+                labels: ["January", "February", "March", "April", "May", "June"],
+                datasets: [{
+                    label: "Net Worth",
+                    data: datapointsNetWorth,
+                    borderColor: 'rgba(255, 0, 0, 0.7)',
+          backgroundColor: 'rgba(0, 0, 0, 0)',
+                    fill: false,
+          cubicInterpolationMode: 'monotone'
+                },  ]
+            },
+            options: {
+                responsive: true,
+                title:{
+                    display:false,
+                    text:'Chart.js Line Chart - Cubic interpolation mode'
+                },
+                tooltips: {
+                    mode: 'label'
+                },
+                hover: {
+                    mode: 'dataset'
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value(Dollars)'
+                        },
+                        ticks: {
+                            suggestedMin: 0,
+                            suggestedMax: 200,
+                        }
+                    }]
+                }
+            }
+        };
+
+
+    window.onload = function() {
+        var ctx2 = document.getElementById("chart-area2").getContext("2d");
+        window.myPie = new Chart(ctx2, config);
+        var ctxNetWorth = document.getElementById("canvasNetWorth").getContext("2d");
+            window.myLine = new Chart(ctxNetWorth, configNetWorth);
+        getPic2();
+        getName();
+        getName2();
+    };
+    </script>
+
+</html>
