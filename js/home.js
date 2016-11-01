@@ -4,12 +4,12 @@ $(function (){
     var nameChangessList=new Array();   //array com o nome de cada time, associado a uma Change
     var ChangessList=new Array();       //array com a ordem da maior change diaria para a menor
 
-    for (var n = 0; n != 30; ++n){ //o numero apos o != representa o numero de diferentes divs
+    for (var n = 0; n != 44; ++n){ //o numero apos o != representa o numero de diferentes divs
      ChangeDivArray[n] = $('#changediv'+n);} //onde puxa a id de cada <div> que sera modificado
 
     $.ajax({
         type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/?limit=30",
+        url: "https://api.coinmarketcap.com/v1/ticker/?limit=45",
         success: function(response) {
             $.each(response, function(i, change) {
 
@@ -42,13 +42,28 @@ $(function (){
                 else if(i==26){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
                 else if(i==27){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
                 else if(i==28){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
-                else if(i==29){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])
+                else if(i==29){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==30){} //a 30ª moeda é o Theter
+                else if(i==31){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==32){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==33){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==34){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==35){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==36){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==37){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==38){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==39){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==40){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==41){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==42){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==43){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
+                else if(i==44){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])
 
                     function sortNumber(a,b) {
                     return b - a;
                             }
                     ChangessList.sort(sortNumber); // coloca os valores na ordem crescente/decrescente chamando a funcao SortNumber
-                    for (var n = 0; n != 30; ++n) { //o numero apos o != representa o numero de diferentes times
+                    for (var n = 0; n != 45; ++n) { //o numero apos o != representa o numero de diferentes times
                                 if (ChangessList[n] == ChangeCoinArray[0]){nameChangessList[n] = "   Flamengo"}
                                 if (ChangessList[n] == ChangeCoinArray[1]){nameChangessList[n] = "   Santos"}
                                 if (ChangessList[n] == ChangeCoinArray[2]){nameChangessList[n] = "   Internacional"}
@@ -79,9 +94,24 @@ $(function (){
                                 if (ChangessList[n] == ChangeCoinArray[27]){nameChangessList[n] = "   Argentina"}
                                 if (ChangessList[n] == ChangeCoinArray[28]){nameChangessList[n] = "   France"}
                                 if (ChangessList[n] == ChangeCoinArray[29]){nameChangessList[n] = "   England"}
+                              //if (ChangessList[n] == ChangeCoinArray[30]){nameChangessList[n] = "   Sweden"}
+                                if (ChangessList[n] == ChangeCoinArray[31]){nameChangessList[n] = "   Portugal"}
+                                if (ChangessList[n] == ChangeCoinArray[32]){nameChangessList[n] = "   Greece"}
+                                if (ChangessList[n] == ChangeCoinArray[33]){nameChangessList[n] = "   Switzerland"}
+                                if (ChangessList[n] == ChangeCoinArray[34]){nameChangessList[n] = "   Uruguay"}
+                                if (ChangessList[n] == ChangeCoinArray[35]){nameChangessList[n] = "   Germany"}
+                                if (ChangessList[n] == ChangeCoinArray[36]){nameChangessList[n] = "   Belgium"}
+                                if (ChangessList[n] == ChangeCoinArray[37]){nameChangessList[n] = "   Ecuador"}
+                                if (ChangessList[n] == ChangeCoinArray[38]){nameChangessList[n] = "   Colombia"}
+                                if (ChangessList[n] == ChangeCoinArray[39]){nameChangessList[n] = "   Netherlands"}
+                                if (ChangessList[n] == ChangeCoinArray[40]){nameChangessList[n] = "   Paraguay"}
+                                if (ChangessList[n] == ChangeCoinArray[41]){nameChangessList[n] = "   Mexico"}
+                                if (ChangessList[n] == ChangeCoinArray[42]){nameChangessList[n] = "   Chile"}
+                                if (ChangessList[n] == ChangeCoinArray[43]){nameChangessList[n] = "   Italy"}
+                                if (ChangessList[n] == ChangeCoinArray[44]){nameChangessList[n] = "   Sweden"}
                             }
 
-                  for (var n = 0; n != 30; ++n) { //o numero apos o != representa o numero de diferentes times
+                  for (var n = 0; n != 45; ++n) { //o numero apos o != representa o numero de diferentes times
                 if(ChangessList[n] > 0){ //maior que zero é verde
                     ChangeDivArray[n].append('&nbsp;&nbsp;&nbsp;&nbsp;<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width: 6%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#0aa046;">( '+ ChangessList[n] +'%)'+ nameChangessList[n] + '</h2><br>');}
                 else if (ChangessList[n] < 0){ //menor que zero é vermelho
