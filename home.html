@@ -4,6 +4,8 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/home.css">
   <script src="js/fbSDK.js"></script>
+  <script src="js/home.js"></script>
+  <script src="Chart.js-2.3.0/dist/Chart.bundle.js"></script>
   <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 <head>
     <meta charset="UTF-8">
@@ -53,8 +55,8 @@
 </div>
 
 <div style="background-color:#dfe3e0; width:50%; height:50%;float:right;overflow:hidden;overflow-y:scroll;">
-<center><h1>Today's Top Stock Variations</h1></center>
-<button id="SortssButton" onclick="Sortsssf();">&nbsp;Sort&nbsp;</button>
+<center><h1>Today's Top 20 Stock Changes</h1></center>
+<button id="SortssButton">&nbsp;Sort&nbsp;</button>
 <ul id="changeslist">
 <li class="changeslist"><div id="changediv0"></div></li>
 <li class="changeslist"><div id="changediv1"></div></li>
@@ -76,36 +78,10 @@
 <li class="changeslist"><div id="changediv17"></div></li>
 <li class="changeslist"><div id="changediv18"></div></li>
 <li class="changeslist"><div id="changediv19"></div></li>
-<li class="changeslist"><div id="changediv20"></div></li>
-<li class="changeslist"><div id="changediv21"></div></li>
-<li class="changeslist"><div id="changediv22"></div></li>
-<li class="changeslist"><div id="changediv23"></div></li>
-<li class="changeslist"><div id="changediv24"></div></li>
-<li class="changeslist"><div id="changediv25"></div></li>
-<li class="changeslist"><div id="changediv26"></div></li>
-<li class="changeslist"><div id="changediv27"></div></li>
-<li class="changeslist"><div id="changediv28"></div></li>
-<li class="changeslist"><div id="changediv29"></div></li>
-<li class="changeslist"><div id="changediv30"></div></li>
-<li class="changeslist"><div id="changediv31"></div></li>
-<li class="changeslist"><div id="changediv32"></div></li>
-<li class="changeslist"><div id="changediv33"></div></li>
-<li class="changeslist"><div id="changediv34"></div></li>
-<li class="changeslist"><div id="changediv35"></div></li>
-<li class="changeslist"><div id="changediv36"></div></li>
-<li class="changeslist"><div id="changediv37"></div></li>
-<li class="changeslist"><div id="changediv38"></div></li>
-<li class="changeslist"><div id="changediv39"></div></li>
-<li class="changeslist"><div id="changediv40"></div></li>
-<li class="changeslist"><div id="changediv41"></div></li>
-<li class="changeslist"><div id="changediv42"></div></li>
-<li class="changeslist"><div id="changediv43"></div></li>
 </ul>
     </div>
 
 </body>
-<script src="js/home.js"></script>
-<script src="Chart.js-2.3.0/dist/Chart.bundle.js"></script>
 <script>
       Chart.defaults.global.tooltips.custom = function(tooltip) {
 
