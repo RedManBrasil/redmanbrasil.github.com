@@ -35,10 +35,8 @@ body {
 #resposta2 {
 	color:#3dd379;
 	font-size:60px;
-    margin-right: 360px;
-    margin-left: 360px;
-    width:590px;
-    max-width:590px;
+    width:800px;
+    max-width:800px;
 }
 
 #resposta1:hover {
