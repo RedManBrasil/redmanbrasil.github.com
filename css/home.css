@@ -1,10 +1,15 @@
+@font-face {
+        font-family: 'Helvetica';
+        src: url(fonts/HelveticaLTStd-Roman.otf);
+}
+
 * { 
   margin:0; 
   padding:0; 
 }
 
 html, body {
-    font-family: Verdana,sans-serif;
+    font-family: 'Helvetica';
     font-size: 15px;
     line-height: 1.5;
     background-color: #dfe3e0;

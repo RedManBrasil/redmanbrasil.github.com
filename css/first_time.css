@@ -3,11 +3,16 @@
         src: url(fonts/TitilliumWeb-Regular.ttf);
 }
 
+@font-face {
+        font-family: 'Helvetica';
+        src: url(fonts/HelveticaLTStd-Roman.otf);
+}
+
 html, body {
-    font-family: Verdana,sans-serif;
+    font-family: 'Helvetica';
     font-size: 15px;
     line-height: 1.5;
-    background-color: #dfe3e0;
+    background-color: #271222;
 }
 
 body {
@@ -28,10 +33,8 @@ body {
 }
 
 #resposta2 {
-	color:#0aa046;
+	color:#3dd379;
 	font-size:60px;
-	text-transform: uppercase;
-    font-weight: bold;
     margin-right: 360px;
     margin-left: 360px;
     width:590px;

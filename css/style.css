@@ -1,4 +1,9 @@
 @font-face {
+        font-family: 'Helvetica';
+        src: url(fonts/HelveticaLTStd-Roman.otf);
+}
+
+@font-face {
         font-family: 'Titillium Web';
         src: url(fonts/TitilliumWeb-Regular.ttf);
 }
@@ -18,7 +23,7 @@ html {
 
 body {
   background: #dceae0;
-  font-family: 'Titillium Web';
+  font-family: 'Helvetica';
 }
 
 a {
