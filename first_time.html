@@ -8,7 +8,6 @@
   <script src="js/index.js"></script>
   <script src="js/first_timedp.js"></script>
 <head>
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FUT MARKET</title>
@@ -112,9 +111,11 @@
             getPic();
             getName();
             getName2();
-            check1();
-            check23();
             $(document).scrollTop( $("#start").offset().top );  
+            $("#resposta2").css({"position":"relative","opacity": 0, "left":"+=100"});
+            $("#resposta2").animate({left:0, opacity:1},3500);
+            $("#resposta").css({"position":"relative","opacity": 0, "bottom":"+=100"});
+            $("#resposta").animate({bottom:0, opacity:1},3500);
         };
     </script>
 </html>
