@@ -43,7 +43,7 @@ $(function (){
                 else if(i==27){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
                 else if(i==28){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
                 else if(i==29){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
-                else if(i==30){} //a 30ª moeda é o Theter
+                else if(i==30){}     //a 30ª moeda é o Theter que não tem variação
                 else if(i==31){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
                 else if(i==32){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
                 else if(i==33){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
@@ -59,10 +59,11 @@ $(function (){
                 else if(i==43){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])}
                 else if(i==44){ChangeCoinArray[i] = change.percent_change_24h;ChangessList.push(ChangeCoinArray[i])
 
-                    function sortNumber(a,b) {
-                    return b - a;
-                            }
-                    ChangessList.sort(sortNumber); // coloca os valores na ordem crescente/decrescente chamando a funcao SortNumber
+                    function sortNumberCresc(a,b) { // coloca os valores na ordem crescente
+                    return a - b;}
+                    function sortNumberDecres(a,b) { // coloca os valores na ordem decrescente
+                    return b - a;}
+                    ChangessList.sort(sortNumberDecres); 
                     for (var n = 0; n != 45; ++n) { //o numero apos o != representa o numero de diferentes times
                                 if (ChangessList[n] == ChangeCoinArray[0]){nameChangessList[n] = "   Flamengo"}
                                 if (ChangessList[n] == ChangeCoinArray[1]){nameChangessList[n] = "   Santos"}
@@ -118,7 +119,7 @@ $(function (){
                     ChangeDivArray[n].append('&nbsp;&nbsp;&nbsp;&nbsp;<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width: 6%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#dd5056;">( '+ ChangessList[n] +'%)'+ nameChangessList[n] + '</h2><br>');}
                 else{ //igual a zero é cinza
                     ChangeDivArray[n].append('&nbsp;&nbsp;&nbsp;&nbsp;<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width: 6%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#9a9090;">( '+ ChangessList[n] +'%)'+ nameChangessList[n] + '</h2><br>');}
-                }    
+                }   
          }
             });
             }
