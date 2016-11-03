@@ -84,18 +84,6 @@ button, input, select, textarea {
     margin: 0;
 }
 
-#icons{
-    display: block;
-    float: left;
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 13.5%;
-}
-
-#icons:hover{
-    background-color: #f1f1f1;
-}
-
 select#LeagueList, select#TeamBRList, select#NtlTeams{
     background-color: #262d27;
     padding: 5px;
@@ -111,15 +99,6 @@ select#LeagueList, select#TeamBRList, select#NtlTeams{
 
 .hidden {
     display: none;
-    background: url(imgs/sun-eclipseGreen.png) no-repeat -9999px -9999px; 
-}
-
-.pre_load2{
-    background: url(imgs/suitcaseGreen.png) no-repeat -9999px -9999px; 
-}
-
-.pre_load3{
-    background: url(imgs/settingsGreen.png) no-repeat -9999px -9999px; 
 }
 
 #next{

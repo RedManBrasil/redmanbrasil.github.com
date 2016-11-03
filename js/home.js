@@ -4,7 +4,7 @@ $(function (){
     var nameChangessList=new Array();   //array com o nome de cada time, associado a uma Change
     var ChangessList=new Array();       //array com a ordem da maior change diaria para a menor
 
-    for (var n = 0; n != 19; ++n){ //o numero apos o != representa o numero de diferentes divs
+    for (var n = 0; n != 20; ++n){ //o numero apos o != representa o numero de diferentes divs
      ChangeDivArray[n] = $('#changediv'+n);} //onde puxa a id de cada <div> que sera modificado
 
     $.ajax({
@@ -112,13 +112,13 @@ $(function (){
                                 if (ChangessList[n] == ChangeCoinArray[44]){nameChangessList[n] = "   Sweden"}
                             }
 
-                  for (var n = 0; n != 19; ++n) { //o numero apos o != representa o numero de diferentes times
+                  for (var n = 0; n != 20; ++n) { //o numero apos o != representa o numero de diferentes times
                 if(ChangessList[n] > 0){ //maior que zero é verde
                     ChangeDivArray[n].append('&nbsp;&nbsp;&nbsp;&nbsp;<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width: 6%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#0aa046;">( '+ ChangessList[n] +'%)'+ nameChangessList[n] + '</h2><br>');}
                 else if (ChangessList[n] < 0){ //menor que zero é vermelho
                     ChangeDivArray[n].append('&nbsp;&nbsp;&nbsp;&nbsp;<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width: 6%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#dd5056;">( '+ ChangessList[n] +'%)'+ nameChangessList[n] + '</h2><br>');}
                 else{ //igual a zero é cinza
-                    ChangeDivArray[n].append('&nbsp;&nbsp;&nbsp;&nbsp;<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width: 6%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#9a9090;">( '+ ChangessList[n] +'%)'+ nameChangessList[n] + '</h2><br>');}
+                    ChangeDivArray[n].append('&nbsp;&nbsp;&nbsp;&nbsp;<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width: 6%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)'+ nameChangessList[n] + '</h2><br>');}
                 }   
          }
             });
