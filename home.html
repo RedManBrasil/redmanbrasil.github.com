@@ -127,6 +127,9 @@
 
 </body>
 <script>
+      function getRandomArbitrary(min, max) {
+            return Math.random() * (max - min) + min;
+        }
       Chart.defaults.global.tooltips.custom = function(tooltip) {
 
       // Tooltip Element
@@ -188,11 +191,14 @@
       });
     };
 
+    var ChartData=new Array();  
+    for (var n = 0; n != 6; ++n){ 
+   ChartData[n] = getRandomArbitrary(0, 100);}
     var config = {
         type: 'pie',
         data: {
             datasets: [{
-                data: [300, 50, 100, 40, 10],
+                data: [ChartData[0], ChartData[1], ChartData[2], ChartData[3], ChartData[4]],
                 backgroundColor: [
                     "#F7464A",
                     "#46BFBD",
@@ -222,7 +228,7 @@
 
 //SEPARATION CHART 1 to CHART 2
 
-        var datapointsNetWorth = [100, 95, 82, 121, 180, 115];
+        var datapointsNetWorth = [ChartData[0], ChartData[1], ChartData[2], ChartData[3], ChartData[4], ChartData[5]];
     var configNetWorth = {
             type: 'line',
             data: {
