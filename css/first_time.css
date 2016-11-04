@@ -84,7 +84,7 @@ button, input, select, textarea {
     margin: 0;
 }
 
-select#LeagueList, select#TeamBRList, select#NtlTeams{
+select#LeagueList, select#TeamBRList, select#NtlTeams,{
     background-color: #262d27;
     padding: 5px;
     border-radius: 8px;

@@ -80,7 +80,7 @@
   			setTimeout(
 				function () {
 					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-						document.getElementById('resposta2').innerHTML = "Hi " + response.first_name + ", your life as a <strong>stockbroker</strong> has just began.";
+						document.getElementById('resposta2').innerHTML = "Hi " + response.first_name + ", your life as a <strong>stockbroker</strong> has just begun.";
 						});
 				} , 600);
   		}
