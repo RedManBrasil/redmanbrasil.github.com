@@ -79,18 +79,6 @@ li a:hover:not(.active) {
     display: none;
 }
 
-.pre_load1{
-    background: url(imgs/sun-eclipseGreen.png) no-repeat -9999px -9999px; 
-}
-
-.pre_load2{
-    background: url(imgs/suitcaseGreen.png) no-repeat -9999px -9999px; 
-}
-
-.pre_load3{
-    background: url(imgs/settingsGreen.png) no-repeat -9999px -9999px; 
-}
-
 input[type=text]#myInp {
     width: 130px;
     box-sizing: border-box;
@@ -123,6 +111,7 @@ ul li .icons{
    }
 
 ul li .icons:hover{
+    color: #0aa046;
     background-color: #f1f1f1;
 }
 
