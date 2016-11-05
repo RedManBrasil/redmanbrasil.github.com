@@ -42,10 +42,10 @@
 <div style="background-color:#b7c3ba; width:50%; height:50%; float:right">
  <center><h1>Last Games</h1></center>
  <br>
- <center><h3 style="color: black;">Flamengo 2 x 2 Corinthias</h3></center>
- <center><h3 style="color: black;">China 1 x 3 Japan</h3></center>
- <center><h3 style="color: black;">Palmeiras 1 x 0 Santa Cruz</h3></center>
- <center><h3 style="color: black;">Flamengo 5 x 4 Santos</h3></center>
+ <center><h3 style="color: black;">Flamengo <span id="Resultss0"></span> x <span id="Resultss1"></span> Corinthias</h3></center>
+ <center><h3 style="color: black;">Cruzeiro <span id="Resultss2"></span> x <span id="Resultss3"></span> Atlético-MG</h3></center>
+ <center><h3 style="color: black;">Palmeiras <span id="Resultss4"></span> x <span id="Resultss5"></span> Santa Cruz</h3></center>
+ <center><h3 style="color: black;">Brazil <span id="Resultss6"></span> x <span id="Resultss7"></span> Germany</h3></center>
 
 </div>
 
@@ -151,6 +151,23 @@
 
 </body>
 <script>
+
+      function getRandomInt(min, max) { //gera numero inteiro aleatorio
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+          var GameResultss=new Array();  //array com resultados aleatorios
+          var GameResultsSpan=new Array();  //array com o <span> que exibirão os resultados aleatorios
+            for (var n = 0; n != 8; ++n){ 
+           GameResultss[n] = getRandomInt(0, 3); //range dos numeros inteiros aleatorios
+          console.log(GameResultss[n]);}
+
+      $(function (){
+        for (var n = 0; n != 8; ++n){
+              GameResultsSpan[n] = $('#Resultss'+n);
+              GameResultsSpan[n].append(GameResultss[n]);} 
+      });
+
     window.onload = function() {
         var ctx2 = document.getElementById("chart-area2").getContext("2d");
         window.myPie = new Chart(ctx2, config);
