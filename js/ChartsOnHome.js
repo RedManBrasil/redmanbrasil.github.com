@@ -1,4 +1,8 @@
-      function getRandomArbitrary(min, max) {
+      function getRandomInt(min, max) { //gera numero inteiro aleatorio
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function getRandomArbitrary(min, max) { //gera numero aleatorio
             return Math.random() * (max - min) + min;
         }
       Chart.defaults.global.tooltips.custom = function(tooltip) {
@@ -64,7 +68,7 @@
 
     var ChartData=new Array();  
     for (var n = 0; n != 6; ++n){ 
-   ChartData[n] = getRandomArbitrary(0, 100);}
+   ChartData[n] = getRandomInt(0, 300);}
     var config = {
         type: 'pie',
         data: {
