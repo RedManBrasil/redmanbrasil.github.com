@@ -8,7 +8,8 @@
   <script src="js/fbSDK.js"></script>
   <script src="js/home.js"></script>
   <script src="Chart.js-2.3.0/dist/Chart.bundle.js"></script>
-  <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+  <script src="js/ChartsOnHome.js"></script>
+  <script src="js/KryogenixSorttable.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -56,226 +57,100 @@
 </div>
 
 <div style="background-color:#dfe3e0; width:50%; height:50%;float:right;overflow:hidden;overflow-y:scroll;">
-<center><h1>Today's Top 20 Stock Changes</h1></center>
+<center style="background:#1b1e24;padding:10px;color:#C1C3D1;"><h1>Today's Top 20 Stock Changes</h1></center>
 <table>
+<thead>
+  <tr style="font-size:28px;">
+    <th>CHANGE</th> 
+  </tr>
+</thead>
+<tbody>
   <tr>
-    <th style="font-size: 28px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#%&nbsp;&nbsp;CHANGE</th>
+    <td id="changediv0">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv0"></div></td>
+    <td id="changediv1">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv1"></div></td>
+    <td id="changediv2">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv2"></div></td>
+    <td id="changediv3">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv3"></div></td>
+   <td id="changediv4">
+   </td>
   </tr>
   <tr>
-    <td><div id="changediv4"></div></td>
+    <td id="changediv5">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv5"></div></td>
+    <td id="changediv6">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv6"></div></td>
+    <td id="changediv7">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv7"></div></td>
+    <td id="changediv8">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv8"></div></td>
+    <td id="changediv9">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv9"></div></td>
+    <td id="changediv10">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv10"></div></td>
+    <td id="changediv11">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv11"></div></td>
+    <td id="changediv12">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv12"></div></td>
+    <td id="changediv13">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv13"></div></td>
+    <td id="changediv14">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv14"></div></td>
+    <td id="changediv15">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv15"></div></td>
+    <td id="changediv16">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv16"></div></td>
+    <td id="changediv17">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv17"></div></td>
+    <td id="changediv18">
+    </td>
   </tr>
   <tr>
-    <td><div id="changediv18"></div></td>
+    <td id="changediv19">
+    </td>
   </tr>
-  <tr>
-    <td><div id="changediv19"></div></td>
-  </tr>
+</tbody>
 </table>
     </div>
 
 </body>
 <script>
-      function getRandomArbitrary(min, max) {
-            return Math.random() * (max - min) + min;
-        }
-      Chart.defaults.global.tooltips.custom = function(tooltip) {
-
-      // Tooltip Element
-      var tooltipEl = $('#chartjs-tooltip');
-
-      // Hide if no tooltip
-      if (!tooltip.opacity) {
-        tooltipEl.css({
-          opacity: 0
-        });
-        $('.chartjs-wrap canvas')
-          .each(function(index, el) {
-            $(el).css('cursor', 'default');
-          });
-        return;
-      }
-
-      $(this._chart.canvas).css('cursor', 'pointer');
-
-      // Set caret Position
-      tooltipEl.removeClass('above below no-transform');
-      if (tooltip.yAlign) {
-        tooltipEl.addClass(tooltip.yAlign);
-      } else {
-        tooltipEl.addClass('no-transform');
-      }
-
-      // Set Text
-      if (tooltip.body) {
-        var innerHtml = [
-          (tooltip.beforeTitle || []).join('\n'), (tooltip.title || []).join('\n'), (tooltip.afterTitle || []).join('\n'), (tooltip.beforeBody || []).join('\n'), (tooltip.body || []).join('\n'), (tooltip.afterBody || []).join('\n'), (tooltip.beforeFooter || [])
-          .join('\n'), (tooltip.footer || []).join('\n'), (tooltip.afterFooter || []).join('\n')
-        ];
-        tooltipEl.html(innerHtml.join('\n'));
-      }
-
-      // Find Y Location on page
-      var top = 0;
-      if (tooltip.yAlign) {
-        if (tooltip.yAlign == 'above') {
-          top = tooltip.y - tooltip.caretHeight - tooltip.caretPadding;
-        } else {
-          top = tooltip.y + tooltip.caretHeight + tooltip.caretPadding;
-        }
-      }
-
-      var position = $(this._chart.canvas)[0].getBoundingClientRect();
-
-      // Display, position, and set styles for font
-      tooltipEl.css({
-        opacity: 1,
-        width: tooltip.width ? (tooltip.width + 'px') : 'auto',
-        left: position.left + tooltip.x + 'px',
-        top: position.top + top + 'px',
-        fontFamily: tooltip._fontFamily,
-        fontSize: tooltip.fontSize,
-        fontStyle: tooltip._fontStyle,
-        padding: tooltip.yPadding + 'px ' + tooltip.xPadding + 'px',
-      });
-    };
-
-    var ChartData=new Array();  
-    for (var n = 0; n != 6; ++n){ 
-   ChartData[n] = getRandomArbitrary(0, 100);}
-    var config = {
-        type: 'pie',
-        data: {
-            datasets: [{
-                data: [ChartData[0], ChartData[1], ChartData[2], ChartData[3], ChartData[4]],
-                backgroundColor: [
-                    "#F7464A",
-                    "#9DEDAB",
-                    "#355DDE",
-                    "#F2E63A",
-                    "#855555",
-                ],
-            }],
-            labels: [
-                "Flamengo",
-                "Palmeiras",
-                "Cruzeiro",
-                "Brazil",
-                "Vitória"
-            ]
-        },
-        options: {
-            responsive: true,
-            legend: {
-                display: false
-            },
-            tooltips: {
-                enabled: true,
-            }
-        }
-    };
-
-//SEPARATION CHART 1 to CHART 2
-
-        var datapointsNetWorth = [ChartData[0], ChartData[1], ChartData[2], ChartData[3], ChartData[4], ChartData[5]];
-    var configNetWorth = {
-            type: 'line',
-            data: {
-                labels: ["January", "February", "March", "April", "May", "June"],
-                datasets: [{
-                    label: "Net Worth",
-                    data: datapointsNetWorth,
-                    borderColor: 'rgba(255, 0, 0, 0.7)',
-          backgroundColor: 'rgba(0, 0, 0, 0)',
-                    fill: false,
-          cubicInterpolationMode: 'monotone'
-                },  ]
-            },
-            options: {
-                responsive: true,
-                title:{
-                    display:false,
-                    text:'Chart.js Line Chart - Cubic interpolation mode'
-                },
-                tooltips: {
-                    mode: 'label'
-                },
-                hover: {
-                    mode: 'dataset'
-                },
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Value(Dollars)'
-                        },
-                        ticks: {
-                            suggestedMin: 0,
-                            suggestedMax: 100,
-                        }
-                    }]
-                }
-            }
-        };
-
-
     window.onload = function() {
         var ctx2 = document.getElementById("chart-area2").getContext("2d");
         window.myPie = new Chart(ctx2, config);

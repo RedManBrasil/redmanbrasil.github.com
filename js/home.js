@@ -64,7 +64,7 @@ $(function (){
                     return a - b;}
                     function sortNumberDecres(a,b) { // coloca os valores na ordem decrescente
                     return b - a;}
-                    ChangessList.sort(sortNumberDecres); 
+                    ChangessList.sort(sortNumberCresc); 
                     for (var n = 0; n != 45; ++n) { //o numero apos o != representa o numero de diferentes times
                                 if (ChangessList[n] == ChangeCoinArray[0]){nameChangessList[n] = "   Flamengo"}
                                 if (ChangessList[n] == ChangeCoinArray[1]){nameChangessList[n] = "   Santos"}
