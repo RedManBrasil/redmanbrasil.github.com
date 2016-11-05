@@ -1,8 +1,9 @@
-$(function (){
     var ChangeDivArray=new Array();     //array com as <div> onde irao conter as changes
     var ChangeCoinArray=new Array();    //array com o valor de change das criptomoedas puxadas pelo API
     var nameChangessList=new Array();   //array com o nome de cada time, associado a uma Change
     var ChangessList=new Array();       //array com a ordem da maior change diaria para a menor
+
+$(function (){
 
     for (var n = 0; n != 20; ++n){ //o numero apos o != representa o numero de diferentes divs
      ChangeDivArray[n] = $('#changediv'+n);} //onde puxa a id de cada <div> que sera modificado
@@ -111,7 +112,6 @@ $(function (){
                                 if (ChangessList[n] == ChangeCoinArray[43]){nameChangessList[n] = "   Italy"}
                                 if (ChangessList[n] == ChangeCoinArray[44]){nameChangessList[n] = "   Sweden"}
                             }
-
                   for (var n = 0; n != 20; ++n) { //o numero apos o != representa o numero de diferentes times
                 if(ChangessList[n] > 0){ //maior que zero é verde
                     ChangeDivArray[n].append('&nbsp;&nbsp;&nbsp;&nbsp;<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width: 6%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#0aa046;">( '+ ChangessList[n] +'%)'+ nameChangessList[n] + '</h2><br>');}
@@ -125,3 +125,4 @@ $(function (){
             }
         });
 });
+
