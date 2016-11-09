@@ -112,7 +112,7 @@ ul li .icons{
 
 ul li .icons:hover{
     color: #0aa046;
-    background-color: #f1f1f1;
+    background-color: #f2f5f3;
 }
 
 #canvas-holder {
@@ -161,7 +161,9 @@ th, td {
     border-bottom: 1px solid #ddd;
 }
 
-td:hover{background-color:#f5f5f5}
+td:hover{
+  background-color:white;
+}
 
 span.XXxX{
   font-weight:normal;
