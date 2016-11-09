@@ -144,7 +144,7 @@
                         },
                         ticks: {
                             suggestedMin: 0,
-                            suggestedMax: 100,
+                            suggestedMax: 300,
                         }
                     }]
                 }
