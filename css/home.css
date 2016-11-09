@@ -170,3 +170,14 @@ span.XXxX{
   color: #333;
   font-size:12px;
 }
+
+span.ResultsNumber{
+  border:1px solid #7d8aa0;
+  padding:2px;
+  color: gray;
+}
+
+td center h2:not(.ResultsNumber){
+  color: black;
+  font-weight: normal;
+}
