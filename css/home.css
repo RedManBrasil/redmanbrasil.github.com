@@ -162,3 +162,9 @@ th, td {
 }
 
 td:hover{background-color:#f5f5f5}
+
+span.XXxX{
+  font-weight:normal;
+  color: #333;
+  font-size:12px;
+}
