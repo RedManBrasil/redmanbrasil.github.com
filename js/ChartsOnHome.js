@@ -76,9 +76,9 @@
                 data: [ChartData[0], ChartData[1], ChartData[2], ChartData[3], ChartData[4]],
                 backgroundColor: [
                     "#F7464A",
-                    "#9DEDAB",
+                    "#62bb46",
                     "#355DDE",
-                    "#F2E63A",
+                    "#ffd400",
                     "#855555",
                 ],
             }],
