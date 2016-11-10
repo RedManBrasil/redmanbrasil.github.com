@@ -44,13 +44,6 @@ body {
     background-color: #f1f1f1; 
 }
 
-div#WelText{
-    margin-right: 360px;
-    margin-left: 360px;
-    color: black;
-    font-size: 18px;
-}
-
 .ter{
     padding:1px 16px;
     height:1000px;
@@ -58,7 +51,6 @@ div#WelText{
     margin-right:auto;
     width:1380px;
 }
-
 
 input[type=text]#myInp {
     width: 130px;
@@ -84,7 +76,7 @@ button, input, select, textarea {
     margin: 0;
 }
 
-select#LeagueList, select#TeamBRList, select#NtlTeams,{
+select#LeagueList, select#TeamBRList, select#NtlTeams{
     background-color: #262d27;
     padding: 5px;
     border-radius: 8px;
