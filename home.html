@@ -38,21 +38,42 @@
     </div><center>
 </div>
 
-<div style="background-color:#f2f5f3; width:50%; height:50%; float:right">
+<div style="background-color:#f2f5f3; width:50%; height:50%; float:right;overflow:hidden;overflow-y:scroll;">
 <center style="background:#1b1e24;padding:10px;color:#C1C3D1;"><h1>Last Games</h1></center>
 <table>
 <tbody> 
 <tr>
- <td><center><h2>Flamengo <span id="Resultss0" class="ResultsNumber"></span> <span class="XXxX">X</span> <span id="Resultss1" class="ResultsNumber"></span> Corinthias</h2></center></td>
+ <td><center><h2>Flamengo <span id="Resultss0" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss1" class="ResultsNumber"></span> Corinthias</h2></center></td>
  </tr>
  <tr>
- <td><center><h2>Cruzeiro <span id="Resultss2" class="ResultsNumber"></span> <span class="XXxX">X</span> <span id="Resultss3" class="ResultsNumber"></span> Atlético-MG</h2></center></td>
+ <td><center><h2>Cruzeiro <span id="Resultss2" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss3" class="ResultsNumber"></span> Atlético-MG</h2></center></td>
   </tr>
  <tr>
- <td><center><h2>Palmeiras <span id="Resultss4" class="ResultsNumber"></span> <span class="XXxX">X</span> <span id="Resultss5" class="ResultsNumber"></span> Santa Cruz</h2></center></td>
+ <td><center><h2>Palmeiras <span id="Resultss4" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss5" class="ResultsNumber"></span> Santa Cruz</h2></center></td>
   </tr>
  <tr>
- <td><center><h2>Brazil <span id="Resultss6" class="ResultsNumber"></span> <span class="XXxX">X</span> <span id="Resultss7" class="ResultsNumber"></span> Germany</h2></center></td>
+ <td><center><h2>Brazil <span id="Resultss6" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss7" class="ResultsNumber"></span> Germany</h2></center></td>
+  </tr>
+  <tr>
+ <td><center><h2>Vitoria <span id="Resultss8" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss9" class="ResultsNumber"></span> Bahia</h2></center></td>
+  </tr>
+  <tr>
+ <td><center><h2>Chile <span id="Resultss10" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss11" class="ResultsNumber"></span> Brazil</h2></center></td>
+  </tr>
+  <tr>
+ <td><center><h2>Palmeiras <span id="Resultss12" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss13" class="ResultsNumber"></span> Vasco</h2></center></td>
+  </tr>
+  <tr>
+ <td><center><h2>Flamengo <span id="Resultss14" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss15" class="ResultsNumber"></span> Fluminense</h2></center></td>
+  </tr>
+    <tr>
+ <td><center><h2>Cruzeiro <span id="Resultss16" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss17" class="ResultsNumber"></span> São Paulo</h2></center></td>
+  </tr>
+    <tr>
+ <td><center><h2>Santos <span id="Resultss18" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss19" class="ResultsNumber"></span> Vitória</h2></center></td>
+  </tr>
+    <tr>
+ <td><center><h2>Brazil <span id="Resultss20" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss21" class="ResultsNumber"></span> Argentina</h2></center></td>
   </tr>
  </tbody>
  </table>
@@ -209,12 +230,12 @@
 
           var GameResultss=new Array();  //array com resultados aleatorios
           var GameResultsSpan=new Array();  //array com o <span> que exibirão os resultados aleatorios
-            for (var n = 0; n != 8; ++n){ 
+            for (var n = 0; n != 22; ++n){ 
            GameResultss[n] = getRandomInt(0, 3); //range dos numeros inteiros aleatorios
          }
 
-      $(function (){
-        for (var n = 0; n != 8; ++n){
+      $(function (){    //funcao que coloca o GameResultss no lugar certo
+        for (var n = 0; n != 22; ++n){
               GameResultsSpan[n] = $('#Resultss'+n);
               GameResultsSpan[n].append(GameResultss[n]);} 
       });

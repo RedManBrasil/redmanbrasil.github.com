@@ -52,6 +52,10 @@ ul:not(#changeslist){
     overflow: auto;
 }
 
+li a:link {
+    color:black;
+}
+
 li a:visited{
     color:black;
 }
@@ -169,7 +173,7 @@ td:hover{
 }
 
 span.XXxX{
-  font-weight:normal;
+  font-weight: bolder;
   color: #333;
   font-size:12px;
 }
