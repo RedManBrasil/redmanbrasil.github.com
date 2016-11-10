@@ -52,9 +52,12 @@ ul:not(#changeslist){
     overflow: auto;
 }
 
+li a:visited{
+    color:black;
+}
+
 li a:not(#changeslist) {
     display: block;
-    color: #000;
     padding: 8px 16px;
     text-decoration: none;
 }
@@ -112,7 +115,7 @@ ul li .icons{
 
 ul li .icons:hover{
     color: #0aa046;
-    background-color: #f2f5f3;
+    background-color: #f1f1f1;
 }
 
 #canvas-holder {
