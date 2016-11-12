@@ -114,13 +114,13 @@ $(function (){
                             }
                   for (var n = 0; n != 20; ++n) { //o numero apos o != representa o numero de diferentes times
                 if(ChangessList[n] > 0){ //maior que zero é verde
-                    ChangeDivArray[n].append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width: 10%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#0aa046;">( '+ ChangessList[n] +'%)</h2>');
+                    ChangeDivArray[n].append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#0aa046;">( '+ ChangessList[n] +'%)</h2>');
                      $('#namediv'+n).append('<h2 style="display:inline-block;color:#0aa046;">' + nameChangessList[n]);}
                 else if (ChangessList[n] < 0){ //menor que zero é vermelho
-                    ChangeDivArray[n].append('<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width: 10%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#dd5056;">( '+ ChangessList[n] +'%)</h2>');
+                    ChangeDivArray[n].append('<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#dd5056;">( '+ ChangessList[n] +'%)</h2>');
                     $('#namediv'+n).append('<h2 style="display:inline-block;color:#dd5056;">' + nameChangessList[n]);}
                 else{ //igual a zero é cinza
-                    ChangeDivArray[n].append('<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width: 10%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)</h2>');
+                    ChangeDivArray[n].append('<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)</h2>');
                     $('#namediv'+n).append('<h2 style="display:inline-block;color:#9a9090;">' + nameChangessList[n]);}
                 }   
          }
