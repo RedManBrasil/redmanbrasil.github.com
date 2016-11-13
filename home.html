@@ -35,18 +35,26 @@
 
 <div style="margin:1%;height:40%;width:63.85%;background-color:#f2f5f3;float:left;">
 <center><h1>Net Worth</h1></center>
-<button id="WeekChart">Week</button>
+<button id="WeekChart" class="ChartBtnActivated">Week</button>
 <button id="SemesterChart">Semester</button>
+<button id="TodayChart">Today</button>
+<button id="YearChart">Year</button>
   <div id="SemesterChartGraph" style="margin:20px;">
         <canvas id="canvasNetWorthSemester" height="320%"></canvas>
     </div>
   <div id="WeekChartGraph" style="margin:20px;">
         <canvas id="canvasNetWorthWeek" height="320%"></canvas>
     </div>
+  <div id="TodayChartGraph" style="margin:20px;">
+        <canvas id="canvasNetWorthToday" height="320%"></canvas>
+    </div>
+  <div id="YearChartGraph" style="margin:20px;">
+        <canvas id="canvasNetWorthYear" height="320%"></canvas>
+    </div>
 </div>
 
 <script type="text/javascript">
-$("#SemesterChart").hide();
+
 </script>
 
 
@@ -257,20 +265,54 @@ $("#SemesterChart").hide();
 <script>
 
       $(document).ready(function(){
-        $("#WeekChart").click(function () {
-          $('#SemesterChartGraph').hide();
-            $("#WeekChart").hide();
-            $("#SemesterChart").show();
-            $("#WeekChartGraph").show();
+        $("#WeekChart").click(function () { //Mostra o grafico da Week
+        $("#WeekChart").addClass("ChartBtnActivated")
+        $("#TodayChart").removeClass("ChartBtnActivated")
+        $("#YearChart").removeClass("ChartBtnActivated")
+        $("#SemesterChart").removeClass("ChartBtnActivated")
+          $("#WeekChartGraph").show();
+            $('#SemesterChartGraph').hide();
+            $('#TodayChartGraph').hide();
+            $("#YearChartGraph").hide();
         });
     });
 
       $(document).ready(function(){
-        $("#SemesterChart").click(function () {
+        $("#SemesterChart").click(function () { //Mostra o grafico do Semester
+        $("#SemesterChart").addClass("ChartBtnActivated")
+        $("#TodayChart").removeClass("ChartBtnActivated")
+        $("#YearChart").removeClass("ChartBtnActivated")
+        $("#WeekChart").removeClass("ChartBtnActivated")
           $('#SemesterChartGraph').show();
-            $("#WeekChart").show();
-            $("#SemesterChart").hide();
             $("#WeekChartGraph").hide();
+            $('#TodayChartGraph').hide();
+            $("#YearChartGraph").hide();
+        });
+    });
+
+     $(document).ready(function(){
+        $("#TodayChart").click(function () { //Mostra o grafico do Today
+        $("#TodayChart").addClass("ChartBtnActivated")
+        $("#YearChart").removeClass("ChartBtnActivated")
+        $("#WeekChart").removeClass("ChartBtnActivated")
+        $("#SemesterChart").removeClass("ChartBtnActivated")
+          $("#TodayChartGraph").show();
+            $('#SemesterChartGraph').hide();
+            $('#WeekChartGraph').hide();
+            $("#YearChartGraph").hide();
+        });
+    });
+
+     $(document).ready(function(){
+        $("#YearChart").click(function () { //Mostra o grafico do Year
+        $("#YearChart").addClass("ChartBtnActivated")
+        $("#TodayChart").removeClass("ChartBtnActivated")
+        $("#WeekChart").removeClass("ChartBtnActivated")
+        $("#SemesterChart").removeClass("ChartBtnActivated")
+          $("#YearChartGraph").show();
+            $('#SemesterChartGraph').hide();
+            $('#WeekChartGraph').hide();
+            $('#TodayChartGraph').hide();
         });
     });
 
@@ -298,6 +340,12 @@ $("#SemesterChart").hide();
         var ctxNetWorthWeek = document.getElementById("canvasNetWorthWeek").getContext("2d");
             window.myLine = new Chart(ctxNetWorthWeek, configNetWorthWeek);
             $("#WeekChartGraph").hide();
+        var ctxNetWorthToday = document.getElementById("canvasNetWorthToday").getContext("2d");
+            window.myLine = new Chart(ctxNetWorthToday, configNetWorthToday);
+            $("#TodayChartGraph").hide();
+        var ctxNetWorthYear = document.getElementById("canvasNetWorthYear").getContext("2d");
+            window.myLine = new Chart(ctxNetWorthYear, configNetWorthYear);
+            $("#YearChartGraph").hide();
         getPic2();
         getName();
         getName2();
