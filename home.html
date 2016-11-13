@@ -36,7 +36,7 @@
 <div style="margin:1%;height:40%;width:63.85%;background-color:#f2f5f3;float:left;">
 <center><h1>Net Worth</h1></center>
 <button id="WeekChart">Week</button>
-<button id="MonthChart">Month</button>
+<button id="SemesterChart">Semester</button>
   <div id="SemesterChartGraph" style="margin:20px;">
         <canvas id="canvasNetWorthSemester" height="320%"></canvas>
     </div>
@@ -46,7 +46,7 @@
 </div>
 
 <script type="text/javascript">
-$("#MonthChart").hide();
+$("#SemesterChart").hide();
 </script>
 
 
@@ -260,16 +260,16 @@ $("#MonthChart").hide();
         $("#WeekChart").click(function () {
           $('#SemesterChartGraph').hide();
             $("#WeekChart").hide();
-            $("#MonthChart").show();
+            $("#SemesterChart").show();
             $("#WeekChartGraph").show();
         });
     });
 
       $(document).ready(function(){
-        $("#MonthChart").click(function () {
+        $("#SemesterChart").click(function () {
           $('#SemesterChartGraph').show();
             $("#WeekChart").show();
-            $("#MonthChart").hide();
+            $("#SemesterChart").hide();
             $("#WeekChartGraph").hide();
         });
     });
