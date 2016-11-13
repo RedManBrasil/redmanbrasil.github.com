@@ -32,12 +32,24 @@
 
     <div class="ter">
 
+
 <div style="margin:1%;height:40%;width:63.85%;background-color:#f2f5f3;float:left;">
 <center><h1>Net Worth</h1></center>
-  <div style="margin:20px;">
+<button id="WeekChart">Week</button>
+<button id="MonthChart">Month</button>
+  <div id="SemesterChartGraph" style="margin:20px;">
         <canvas id="canvasNetWorth" height="320%"></canvas>
     </div>
+  <div id="WeekChartGraph" style="margin:20px;">
+        <canvas id="canvasNetWorth2" height="320%"></canvas>
+    </div>
 </div>
+
+<script type="text/javascript">
+$("#MonthChart").hide();
+</script>
+
+
 
 <div style="background-color:#f2f5f3; width:31%; height:40%;overflow:hidden;overflow-y:scroll;margin:1%;float:left;">
 <center style="background:#1b1e24;padding:10px;color:#C1C3D1;"><h1>NEWS</h1></center>
@@ -51,6 +63,9 @@
 </div>
 
 <br>
+
+
+
 
 <div style="clear:left;background-color:#f2f5f3; width:31%; height:30%;float:left;margin:1%;overflow:hidden;">
       <center><h1>Your Portfolio</h1></center>
@@ -99,6 +114,8 @@
  </tbody>
  </table>
 </div>
+
+
 
 
 <div style="background-color:#f2f5f3; width:31%; float:left; height:30%; overflow:hidden;overflow-y:scroll;overflow-x:auto;margin: 1%;">
@@ -236,7 +253,26 @@
     </div>
 
 </body>
+
 <script>
+
+      $(document).ready(function(){
+        $("#WeekChart").click(function () {
+          $('#SemesterChartGraph').hide();
+            $("#WeekChart").hide();
+            $("#MonthChart").show();
+            $("#WeekChartGraph").show();
+        });
+    });
+
+      $(document).ready(function(){
+        $("#MonthChart").click(function () {
+          $('#SemesterChartGraph').show();
+            $("#WeekChart").show();
+            $("#MonthChart").hide();
+            $("#WeekChartGraph").hide();
+        });
+    });
 
       function getRandomInt(min, max) { //gera numero inteiro aleatorio
           return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -259,6 +295,9 @@
         window.myPie = new Chart(ctx2, config);
         var ctxNetWorth = document.getElementById("canvasNetWorth").getContext("2d");
             window.myLine = new Chart(ctxNetWorth, configNetWorth);
+        var ctxNetWorth2 = document.getElementById("canvasNetWorth2").getContext("2d");
+            window.myLine = new Chart(ctxNetWorth2, configNetWorth2);
+            $("div#WeekChartGraph").hide();
         getPic2();
         getName();
         getName2();
