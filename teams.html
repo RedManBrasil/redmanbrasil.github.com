@@ -50,8 +50,9 @@
       $('#map1').vectorMap({
         map: 'world_mill_en',
         panOnDrag: true,
-        onRegionClick: function (click, BR) {
-             window.location.href = "home"
+        onRegionClick: function (click, code) {
+          if ( code == 'BR'){
+             window.location.href = "home"}
         },
         focusOn: {
           x: 0.5,
@@ -99,7 +100,7 @@
     <title>FUT MARKET</title>
 </head>
 <body>
-    <ul style="overflow:hidden;">
+    <ul>
       <li><input id="myInp" type="text" name="search" placeholder="Search.."></li>
       <li><center id="resposta"></center></li>
       <li><h3><center><a href="#" id="resposta1"></a></center></h3></li>
