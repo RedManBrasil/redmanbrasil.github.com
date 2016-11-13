@@ -6,20 +6,20 @@
             return Math.random() * (max - min) + min;
         }
 
-    var datapointsNetWorth = [getRandomInt(0, 300),
-                              getRandomInt(0, 300),
-                              getRandomInt(0, 300),
-                              getRandomInt(0, 300),
-                              getRandomInt(0, 300),
-                              getRandomInt(0, 300),
-                              getRandomInt(0, 300)];
-    var configNetWorth = {
+    var datapointsNetWorthSemester = [getRandomInt(0, 300),
+                                      getRandomInt(0, 300),
+                                      getRandomInt(0, 300),
+                                      getRandomInt(0, 300),
+                                      getRandomInt(0, 300),
+                                      getRandomInt(0, 300),
+                                      getRandomInt(0, 300)];
+    var configNetWorthSemester = {
             type: 'line',
             data: {
                 labels: ["January", "February", "March", "April", "May", "June", "July"],
                 datasets: [{
-                    label: "Net Worth",
-                    data: datapointsNetWorth,
+                    label: "Net Worth Semester",
+                    data: datapointsNetWorthSemester,
                     borderColor: 'rgba(255, 0, 0, 0.7)',
           backgroundColor: 'rgba(0, 0, 0, 0)',
                     fill: false,
@@ -63,22 +63,22 @@
             }
         };
 
-        //SEPARATION CHART 1(NetWorth) to CHART 2(NetWorth2)
+        //SEPARATION CHART 1(NetWorthSemester) to CHART 2(NetWorthWeek)
 
-            var datapointsNetWorth2 = [getRandomInt(0, 300),
+            var datapointsNetWorthWeek = [getRandomInt(0, 300),
                                        getRandomInt(0, 300),
                                        getRandomInt(0, 300),
                                        getRandomInt(0, 300),
                                        getRandomInt(0, 300),
                                        getRandomInt(0, 300),
                                        getRandomInt(0, 300)];
-            var configNetWorth2 = {
+            var configNetWorthWeek = {
             type: 'line',
             data: {
                 labels: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
                 datasets: [{
                     label: "Net Worth",
-                    data: datapointsNetWorth2,
+                    data: datapointsNetWorthWeek,
                     borderColor: 'rgba(255, 0, 0, 0.7)',
           backgroundColor: 'rgba(0, 0, 0, 0)',
                     fill: false,
@@ -123,7 +123,7 @@
         };
 
 
-       //SEPARATION CHART 2(NetWorth2) to CHART 3(Donut)
+       //SEPARATION CHART 2(NetWorthWeek) to CHART 3(Donut)
 
     var config = {
         type: 'doughnut',

@@ -38,10 +38,10 @@
 <button id="WeekChart">Week</button>
 <button id="MonthChart">Month</button>
   <div id="SemesterChartGraph" style="margin:20px;">
-        <canvas id="canvasNetWorth" height="320%"></canvas>
+        <canvas id="canvasNetWorthSemester" height="320%"></canvas>
     </div>
   <div id="WeekChartGraph" style="margin:20px;">
-        <canvas id="canvasNetWorth2" height="320%"></canvas>
+        <canvas id="canvasNetWorthWeek" height="320%"></canvas>
     </div>
 </div>
 
@@ -293,11 +293,11 @@ $("#MonthChart").hide();
     window.onload = function() {
         var ctx2 = document.getElementById("chart-area2").getContext("2d");
         window.myPie = new Chart(ctx2, config);
-        var ctxNetWorth = document.getElementById("canvasNetWorth").getContext("2d");
-            window.myLine = new Chart(ctxNetWorth, configNetWorth);
-        var ctxNetWorth2 = document.getElementById("canvasNetWorth2").getContext("2d");
-            window.myLine = new Chart(ctxNetWorth2, configNetWorth2);
-            $("div#WeekChartGraph").hide();
+        var ctxNetWorthSemester = document.getElementById("canvasNetWorthSemester").getContext("2d");
+            window.myLine = new Chart(ctxNetWorthSemester, configNetWorthSemester);
+        var ctxNetWorthWeek = document.getElementById("canvasNetWorthWeek").getContext("2d");
+            window.myLine = new Chart(ctxNetWorthWeek, configNetWorthWeek);
+            $("#WeekChartGraph").hide();
         getPic2();
         getName();
         getName2();
