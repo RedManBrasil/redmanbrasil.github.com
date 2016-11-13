@@ -50,6 +50,9 @@
       $('#map1').vectorMap({
         map: 'world_mill_en',
         panOnDrag: true,
+        onRegionClick: function (click, BR) {
+             window.location.href = "home"
+        },
         focusOn: {
           x: 0.5,
           y: 0.5,
@@ -86,20 +89,6 @@
           }]
         }
       });
-       var mapObj = $('#vmap').data('mapObject');
-
-            $('#countries').on('mouseover mouseout', 'a:first-child', function (event) {
-                // event.preventDefault();
-                var elem = event.target,
-                    evtype = event.type;
-
-
-                if (evtype === 'mouseover') {
-                    mapObj.select($(elem).attr('id'));
-                } else {
-                    mapObj.deselect($(elem).attr('id'));
-                };
-            });
     })
   </script>
 
