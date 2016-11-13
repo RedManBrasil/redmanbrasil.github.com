@@ -333,6 +333,9 @@
       });
 
     window.onload = function() {
+      getPic2();
+      getName();
+      getName2();
         var ctx2 = document.getElementById("chart-area2").getContext("2d");
         window.myPie = new Chart(ctx2, config);
         var ctxNetWorthSemester = document.getElementById("canvasNetWorthSemester").getContext("2d");
@@ -346,9 +349,6 @@
         var ctxNetWorthYear = document.getElementById("canvasNetWorthYear").getContext("2d");
             window.myLine = new Chart(ctxNetWorthYear, configNetWorthYear);
             $("#YearChartGraph").hide();
-        getPic2();
-        getName();
-        getName2();
     };
     </script>
 

@@ -46,7 +46,7 @@
 					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 						document.getElementById('resposta1').innerHTML = response.name;
 						});
-				} , 1000);
+				} , 600);
 		}
 
 		function getPic() {
@@ -55,7 +55,7 @@
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 				document.getElementById('resposta').innerHTML = "<img src='" + response.picture.data.url + "' style='border-radius:50%;border:6px solid #3dd379;width:10%; margin-top: 20px;'>";
 			});
-			} , 1000);
+			} , 600);
 		}
 
 		function getPic2() {
@@ -64,7 +64,7 @@
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 				document.getElementById('resposta').innerHTML = "<img src='" + response.picture.data.url + "' style='border-radius:50%;border:6px solid #0aa046;width:60%;'>";
 			});
-			} , 1000);
+			} , 600);
 		}
 
 		function getId() {
@@ -73,7 +73,7 @@
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 				document.getElementById('resposta2').innerHTML = "Your Id is : " + response.id ;
 			});
-			} , 1000);
+			} , 600);
 		}
 
 		function getName2() {
@@ -82,5 +82,5 @@
 					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 						document.getElementById('resposta2').innerHTML = "Hi " + response.first_name + ", your life as a <strong>stockbroker</strong> has just begun.";
 						});
-				} , 1000);
+				} , 600);
   		}
