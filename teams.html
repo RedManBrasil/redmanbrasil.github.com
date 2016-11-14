@@ -57,7 +57,8 @@
           if ( code == 'DE'){ //se o user clicar na alemanha...
             $("#ShowCountryTeamsDiv").html("<img src='Flags/Germany.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>German Teams: 1</h2>");
           }
-             $("html, body").scrollTop($('#ShowCountryTeamsDiv').offset().top);//scrol ate as info
+              $('html,body').animate({scrollTop: 485}, 2000); //maneira alternatica de scroll sem o div
+             //$("html, body").scrollTop($('#ShowCountryTeamsDiv').offset().top);  //scrol ate as info
         },
         focusOn: {
           x: 0.5,
