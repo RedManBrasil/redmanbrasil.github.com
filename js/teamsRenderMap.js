@@ -9,28 +9,28 @@ jQuery.noConflict();
             $("#ShowCountryTeamsDiv").html("<img src='Flags/Brasil.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>Brazilian Teams: 24</h2>");
           }
           else if ( code == 'DE'){ //se o user clicar na alemanha...
-            $("#ShowCountryTeamsDiv").html("<img src='Flags/Germany.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>German Teams: 1</h2>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/german_mini.png'></td><td>German's National Team</td><td>10.2Bi</td><td>$29.34</td><td>2%</td></tr></table>");
           }
           else if ( code == 'AR'){
-            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='flags_mini/argentina_mini.png'></td><td>Argentina National Team</td><td>4.3Bi</td><td>$17.43</td><td>-5%</td></tr></table>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/argentina_mini.png'></td><td>Argentina's National Team</td><td>4.3Bi</td><td>$17.43</td><td>-5%</td></tr></table>");
           }
           else if ( code == 'BE'){
-            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='flags_mini/belgium_mini.png'></td><td>Belgium National Team</td><td>6.9 Bi</td><td>$24.42</td><td>3%</td></tr></table>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/belgium_mini.png'></td><td>Belgium's National Team</td><td>6.9 Bi</td><td>$24.42</td><td>3%</td></tr></table>");
           }
           else if ( code == 'CL'){
-            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='flags_mini/chile_mini.png'></td><td>Chile National Team</td><td>5.5 Bi</td><td>$20.40</td><td>12%</td></tr></table>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/chile_mini.png'></td><td>Chile's National Team</td><td>5.5 Bi</td><td>$20.40</td><td>12%</td></tr></table>");
           }
           else if ( code == 'CN'){
-            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='flags_mini/china_mini.png'></td><td>China National Team</td><td>6.2Bi</td><td>$21.93</td><td>33%</td></tr></table>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/china_mini.png'></td><td>China's National Team</td><td>6.2Bi</td><td>$21.93</td><td>33%</td></tr></table>");
           }
           else if ( code == 'CO'){
-            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='flags_mini/colombia_mini.png'></td><td>Colombia National Team</td><td>3.9 Bi</td><td>$16.59</td><td>-1%</td></tr></table>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/colombia_mini.png'></td><td>Colombia's National Team</td><td>3.9 Bi</td><td>$16.59</td><td>-1%</td></tr></table>");
           }
           else if ( code == 'EC'){
-            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='flags_mini/ecuador_mini.png'></td><td>Ecuador National Team</td><td>2.1 Bi</td><td>$14.75</td><td>10%</td></tr></table>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/ecuador_mini.png'></td><td>Ecuador's National Team</td><td>2.1 Bi</td><td>$14.75</td><td>10%</td></tr></table>");
           }
           else if ( code == 'FR'){
-            $("#ShowCountryTeamsDiv").html("<img src='Flags/France.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>French Teams: 1</h2>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/france_mini.png'></td><td>France's National Team</td><td>6.9</td><td>$23.45</td><td>-9%</td></tr></table>");
           }
           else if ( code == 'GB'){
             $("#ShowCountryTeamsDiv").html("<img src='Flags/UK.png' style='margin:25px;float:left;width:28%;'> <h2 style='color:black;float:left;margin:25px;'>British Teams: 1</h2>");
