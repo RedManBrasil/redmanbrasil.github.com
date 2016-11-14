@@ -85,7 +85,7 @@ var teamsBRDivContent =
 					"<td><img src='escudos/brazilian_league/escudos_mini/gremio_mini.png'></td>" +
 					"<td>Grêmio</td>"+
 					"<td>3.9Bi</td>" +
-					"<td>$16.87</td>" +
+					"<td>$16.70</td>" +
 					"<td>3%</td>" +
 				"</tr>" +
 				"<tr>" +
