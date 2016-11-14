@@ -42,4 +42,5 @@ var teamsBRDivContent =
 					"<td>$15.93</td>" +
 					"<td>-1%</td>" +
 				"</tr>" +
+				
 			"</table>";
