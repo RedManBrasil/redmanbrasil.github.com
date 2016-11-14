@@ -6,7 +6,7 @@ jQuery.noConflict();
         panOnDrag: true,
         onRegionClick: function (click, code) { //seleciona um pais e faz algo com isso
           if ( code == 'BR'){ //se o user clicar no brasil...
-            $("#ShowCountryTeamsDiv").html("<img src='Flags/Brasil.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>Brazilian Teams: 24</h2>");
+            $("#ShowCountryTeamsDiv").html(teamsBRDivContent);
           }
           else if ( code == 'DE'){ //se o user clicar na alemanha...
             $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/germany_mini.png'></td><td>Germany's National Team</td><td>10.2Bi</td><td>$29.34</td><td>2%</td></tr></table>");
