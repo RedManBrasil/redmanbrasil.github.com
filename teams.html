@@ -43,16 +43,21 @@
 
   <script src="VectorMap/assets/jquery-jvectormap-world-mill-en.js"></script>
 
-        <script>
+        <script> //funcao que renderiza o mapa
     jQuery.noConflict();
     jQuery(function(){
       var $ = jQuery;
       $('#map1').vectorMap({
         map: 'world_mill_en',
         panOnDrag: true,
-        onRegionClick: function (click, code) {
-          if ( code == 'BR'){
-             window.location.href = "home"}
+        onRegionClick: function (click, code) { //seleciona um pais e faz algo com isso
+          if ( code == 'BR'){ //se o user clicar no brasil...
+            $("#ShowCountryTeamsDiv").html("<img src='Flags/Brasil.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>Brazilian Teams: 24</h2>");
+          }
+          if ( code == 'DE'){ //se o user clicar na alemanha...
+            $("#ShowCountryTeamsDiv").html("<img src='Flags/Germany.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>German Teams: 1</h2>");
+          }
+             $("html, body").scrollTop($('#ShowCountryTeamsDiv').offset().top);//scrol ate as info
         },
         focusOn: {
           x: 0.5,
@@ -62,9 +67,10 @@
         },
         series: {
           regions: [{
-            scale: ['#b3ffaa', '#005421'],
+            scale: ['#b3ffaa', '#005421'], //a cor mais clara e a mais escura possivel
             normalizeFunction: 'polynomial',
-            values: {
+            values: { //numero de times por país, contando com a seleção
+              //todos os codigos dos paises http://jvectormap.com/maps/world/world/
               "AR": 1,
               "BE": 1,
               "BR": 24,
@@ -114,12 +120,13 @@
       <li><a href="#" class="icons"><i class="fa fa-suitcase fa-2x icons" aria-hidden="true"></i></a></li>
       <li><a href="#" class="icons"><i class="fa fa-moon-o fa-2x icons" aria-hidden="true"></i></a></li>
     </ul>
-    <div class="ter" style="overflow-x:scroll;">
+<div class="ter">
     <h1 style="color: black;margin:25px;">Select a Country to see the stocks available from that region</h1>
     <h4 style="color: black;margin:-20px 0 0 25px;">The darker the country, more teams it has</h4>
 
-  <div id="map1" style="width: 1080px; height: 720px; margin: 25px;"></div>
-    </div>
+  <div id="map1" style="width: 90%; height: 60%; margin: 25px;"></div>
+    <div id="ShowCountryTeamsDiv"></div>
+</div>
 
 </body>
 <script type="text/javascript">
