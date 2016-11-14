@@ -6,7 +6,9 @@ jQuery.noConflict();
         panOnDrag: true,
         onRegionClick: function (click, code) { //seleciona um pais e faz algo com isso
           if ( code == 'BR'){ //se o user clicar no brasil...
-            $("#ShowCountryTeamsDiv").html(teamsBRDivContent); //conteudo na ../team.js
+            $("#ShowCountryTeamsDiv").html(teamsBRDivContent); //seu conteudo esta na ../team.js
+            var newTableObject = document.getElementById('teamsBRTableContent'); 
+            sorttable.makeSortable(newTableObject); //faz a tabela ser sortable(junto com a linha de cima)
           }
           else if ( code == 'DE'){ //se o user clicar na alemanha...
             $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='Flags/flags_mini/germany_mini.png'></td><td>Germany's National Team</td><td>10.2Bi</td><td>$29.34</td><td>2%</td></tr></table>");
