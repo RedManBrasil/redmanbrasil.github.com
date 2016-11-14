@@ -21,7 +21,7 @@ jQuery.noConflict();
             $("#ShowCountryTeamsDiv").html("<img src='Flags/chile.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>Chilean Teams: 1</h2>");
           }
           else if ( code == 'CN'){
-            $("#ShowCountryTeamsDiv").html("<img src='Flags/China.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>Chinese Teams: 1</h2>");
+            $("#ShowCountryTeamsDiv").html("<table><tr><th>/</th><th>Name</th><th>Team Value</th><th>Stock Value</th><th>Last 5 Games Change</th></tr><tr><td><img src='flags_mini/china_mini.png'></td><td>China National Team</td><td>6.2 Bi</td><td>$21.93</td><td>33%</td></tr></table>");
           }
           else if ( code == 'CO'){
             $("#ShowCountryTeamsDiv").html("<img src='Flags/Colombia.png' style='margin:25px;float:left;width:25%;'> <h2 style='color:black;float:left;margin:25px;'>Colombian Teams: 1</h2>");
