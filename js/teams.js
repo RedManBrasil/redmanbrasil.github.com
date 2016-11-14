@@ -70,23 +70,23 @@ var teamsBRDivContent =
 				"<tr>" +
 					"<td><img src='escudos/brazilian_league/escudos_mini/atletico_paranaense_mini.png'></td>" +
 					"<td>Atlético Paranaense</td>"+
-					"<td>3.6Bi</td>" +
-					"<td>$15.93</td>" +
-					"<td>-1%</td>" +
+					"<td>4.0Bi</td>" +
+					"<td>$16.77</td>" +
+					"<td>4%</td>" +
 				"</tr>" +
 				"<tr>" +
 					"<td><img src='escudos/brazilian_league/escudos_mini/chapecoense_mini.png'></td>" +
 					"<td>Chapecoense</td>"+
-					"<td>3.6Bi</td>" +
-					"<td>$15.93</td>" +
-					"<td>-1%</td>" +
+					"<td>2.8Bi</td>" +
+					"<td>$13.28</td>" +
+					"<td>0%</td>" +
 				"</tr>" +
 				"<tr>" +
 					"<td><img src='escudos/brazilian_league/escudos_mini/gremio_mini.png'></td>" +
 					"<td>Grêmio</td>"+
-					"<td>3.6Bi</td>" +
-					"<td>$15.93</td>" +
-					"<td>-1%</td>" +
+					"<td>3.9Bi</td>" +
+					"<td>$16.87</td>" +
+					"<td>3%</td>" +
 				"</tr>" +
 				"<tr>" +
 					"<td><img src='escudos/brazilian_league/escudos_mini/internacional_mini.png'></td>" +
