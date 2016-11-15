@@ -11,7 +11,7 @@ var teamsBRDivContent =
 			  "</thead>" +
 			  "<tbody>" +
 				"<tr id='BrazilTableTD'>" +
-					"<td><img src='Flags/flags_mini/brasil_mini.png'></td>" +
+					"<td><img src='Flags/flags_mini/BR_mini.png'></td>" +
 					"<td>Brazil's National Team</td>"+
 					"<td>9.8Bi</td>" +
 					"<td>$28.14</td>" +
