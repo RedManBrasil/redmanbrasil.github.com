@@ -72,7 +72,7 @@ jQuery.noConflict();
           }
           else {
             return;}
-              $('html,body').animate({scrollTop: 240}, 500); //maneira alternatica de scroll sem o div
+              $('html,body').animate({scrollTop: 300}, 500); //maneira alternatica de scroll sem o div
              //$("html, body").scrollTop($('#ShowCountryTeamsDiv').offset().top);  //scrol ate as info
         },
         focusOn: {
