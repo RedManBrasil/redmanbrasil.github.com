@@ -9,6 +9,7 @@ jQuery.noConflict();
             $("#ShowCountryTeamsDiv").html(teamsBRDivContent); //seu conteudo esta na ../team.js
             var newTableObject = document.getElementById('teamsBRTableContent'); 
             sorttable.makeSortable(newTableObject); //faz a tabela ser sortable(junto com a linha de cima)
+          $('html,body').animate({scrollTop: 300}, 500);
           }
           else if ( code !== 1){ //cria a tabela segundo o pais que o user clica
             $("#ShowCountryTeamsDiv").html(
