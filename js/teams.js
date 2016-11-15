@@ -1,6 +1,12 @@
 $(document).ready(function(){
+    $("#BackBtn").click(function(){
+        $("#BackBtn").hide(0);
+        $("#StockInfoDisplay").hide(0);
+        $("#ShowCountryTeamsDiv").show(0);
+        });
     $(document).on('click', '#BrazilTableTD', function(){
-    //Your code
-    alert("Actual Price: $28.14"); 
+    $("#BackBtn").show(0);
+    $("#StockInfoDisplay").show(0);
+    $("#ShowCountryTeamsDiv").hide(0);
 });
 });
