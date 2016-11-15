@@ -134,6 +134,10 @@ tr:nth-child(even){
     background-color: #f2f2f2
 }
 
+table tbody tr:hover{
+    background-color: white;
+}
+
 ::-webkit-scrollbar{width:9px;height:9px;}
 ::-webkit-scrollbar-button:start:decrement,
 ::-webkit-scrollbar-button:end:increment{display:block;height:0;background-color:transparent;}
