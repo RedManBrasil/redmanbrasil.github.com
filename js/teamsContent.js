@@ -11,39 +11,39 @@ var teamsBRDivContent =
 			  "</thead>" +
 			  "<tbody>" +
 				"<tr id='BrazilTableTD'>" +
-					"<td><img src='Flags/flags_mini/" + CountryArrayAPI['BR']['code'] + "_mini.png'></td>" +
-					"<td>" + CountryArrayAPI['BR']['name'] + "'s National Team</td>"+
-					"<td>" + CountryArrayAPI['BR']['value'] + "Bi</td>" +
-					"<td>$" + CountryArrayAPI['BR']['stock'] + "</td>" +
-					"<td>" + CountryArrayAPI['BR']['last_5_games_change'] + "%</td>" +
+					"<td><img src='Flags/flags_mini/" + BRLeagueAPI['BR'][0]['code'] + "_mini.png'></td>" +
+					"<td>" + BRLeagueAPI['BR'][0]['name'] + "'s National Team</td>"+
+					"<td>" + BRLeagueAPI['BR'][0]['value'] + "Bi</td>" +
+					"<td>$" + BRLeagueAPI['BR'][0]['stock'] + "</td>" +
+					"<td>" + BRLeagueAPI['BR'][0]['last_5_games_change'] + "%</td>" +
 				"</tr>" +
 				"<tr>" +
-					"<td><img src='escudos/brazilian_league/escudos_mini/" + BRLeagueAPI['BR']['FLA']['code'] + "_mini.png'></td>" +
-					"<td>" + BRLeagueAPI['BR']['FLA']['name'] + "</td>"+
-					"<td>" + BRLeagueAPI['BR']['FLA']['value'] + "Bi</td>" +
-					"<td>$" + BRLeagueAPI['BR']['FLA']['stock'] + "</td>" +
-					"<td>" + BRLeagueAPI['BR']['FLA']['last_5_games_change'] + "%</td>" +
+					"<td><img src='escudos/brazilian_league/escudos_mini/" + BRLeagueAPI['BR'][1]['code'] + "_mini.png'></td>" +
+					"<td>" + BRLeagueAPI['BR'][1]['name'] + "</td>"+
+					"<td>" + BRLeagueAPI['BR'][1]['value'] + "Bi</td>" +
+					"<td>$" + BRLeagueAPI['BR'][1]['stock'] + "</td>" +
+					"<td>" + BRLeagueAPI['BR'][1]['last_5_games_change'] + "%</td>" +
 				"</tr>" +
 				"<tr>" +
-					"<td><img src='escudos/brazilian_league/escudos_mini/" + BRLeagueAPI['BR']['BOT']['code'] + "_mini.png'></td>" +
-					"<td>" + BRLeagueAPI['BR']['BOT']['name'] + "</td>"+
-					"<td>" + BRLeagueAPI['BR']['BOT']['value'] + "Bi</td>" +
-					"<td>$" + BRLeagueAPI['BR']['BOT']['stock'] + "</td>" +
-					"<td>" + BRLeagueAPI['BR']['BOT']['last_5_games_change'] + "%</td>" +
+					"<td><img src='escudos/brazilian_league/escudos_mini/" + BRLeagueAPI['BR'][2]['code'] + "_mini.png'></td>" +
+					"<td>" + BRLeagueAPI['BR'][2]['name'] + "</td>"+
+					"<td>" + BRLeagueAPI['BR'][2]['value'] + "Bi</td>" +
+					"<td>$" + BRLeagueAPI['BR'][2]['stock'] + "</td>" +
+					"<td>" + BRLeagueAPI['BR'][2]['last_5_games_change'] + "%</td>" +
 				"</tr>" +
 				"<tr>" +
-					"<td><img src='escudos/brazilian_league/escudos_mini/" + BRLeagueAPI['BR']['VAS']['code'] + "_mini.png'></td>" +
-					"<td>" + BRLeagueAPI['BR']['VAS']['name'] + "</td>"+
-					"<td>" + BRLeagueAPI['BR']['VAS']['value'] + "Bi</td>" +
-					"<td>$" + BRLeagueAPI['BR']['VAS']['stock'] + "</td>" +
-					"<td>" + BRLeagueAPI['BR']['VAS']['last_5_games_change'] + "%</td>" +
+					"<td><img src='escudos/brazilian_league/escudos_mini/" + BRLeagueAPI['BR'][3]['code'] + "_mini.png'></td>" +
+					"<td>" + BRLeagueAPI['BR'][3]['name'] + "</td>"+
+					"<td>" + BRLeagueAPI['BR'][3]['value'] + "Bi</td>" +
+					"<td>$" + BRLeagueAPI['BR'][3]['stock'] + "</td>" +
+					"<td>" + BRLeagueAPI['BR'][3]['last_5_games_change'] + "%</td>" +
 				"</tr>" +
 				"<tr>" +
-					"<td><img src='escudos/brazilian_league/escudos_mini/" + BRLeagueAPI['BR']['FLU']['code'] + "_mini.png'></td>" +
-					"<td>" + BRLeagueAPI['BR']['FLU']['name'] + "</td>"+
-					"<td>" + BRLeagueAPI['BR']['FLU']['value'] + "Bi</td>" +
-					"<td>$" + BRLeagueAPI['BR']['FLU']['stock'] + "</td>" +
-					"<td>" + BRLeagueAPI['BR']['FLU']['last_5_games_change'] + "%</td>" +
+					"<td><img src='escudos/brazilian_league/escudos_mini/" + BRLeagueAPI['BR'][4]['code'] + "_mini.png'></td>" +
+					"<td>" + BRLeagueAPI['BR'][4]['name'] + "</td>"+
+					"<td>" + BRLeagueAPI['BR'][4]['value'] + "Bi</td>" +
+					"<td>$" + BRLeagueAPI['BR'][4]['stock'] + "</td>" +
+					"<td>" + BRLeagueAPI['BR'][4]['last_5_games_change'] + "%</td>" +
 				"</tr>" +
 				"<tr>" +
 					"<td><img src='escudos/brazilian_league/escudos_mini/america_mineiro_mini.png'></td>" +

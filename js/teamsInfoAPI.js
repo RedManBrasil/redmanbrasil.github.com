@@ -149,34 +149,41 @@ var CountryArrayAPI = {
 };
 
 var BRLeagueAPI = {
-  "BR": {
-    "FLA": {
+  "BR": [ 
+  {
+            "name": "Brazil",
+            "code": "BR",
+            "value": 9.8,
+            "stock": 28.14,
+            "last_5_games_change": 22
+         },
+ {
             "name": "Flamengo",
             "code": "flamengo",
             "value": 4.9,
             "stock": 19.84,
             "last_5_games_change": -3
          },
-  "BOT": {
+  {
             "name": "Botafogo",
             "code": "botafogo",
             "value": 4.2,
             "stock": 17.93,
             "last_5_games_change": 8
          },
-  "VAS": {
+  {
             "name": "Vasco",
             "code": "vasco",
             "value": 2.9,
             "stock": 12.45,
             "last_5_games_change": -16
          },
-  "FLU": {
+  {
             "name": "Fluminense",
             "code": "fluminense",
             "value": 3.6,
             "stock": 15.93,
             "last_5_games_change": -2
          }
-      }
+        ]
   };
