@@ -8,10 +8,10 @@ jQuery.noConflict();
           if ( code == 'BR'){ //se o user clicar no brasil...
             $("#ShowCountryTeamsDiv").html(teamsBRDivContent); //seu conteudo esta na ../team.js
             var newTableObject = document.getElementById('teamsBRTableContent'); 
-            sorttable.makeSortable(newTableObject); //faz a tabela ser sortable(junto com a linha de cima)
+            sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
           $('html,body').animate({scrollTop: 300}, 500);
           }
-          else if ( code !== 1){ //cria a tabela segundo o pais que o user clica
+          else if ( code !== 1){ //cria a tabela segundo o país que o user clica
             $("#ShowCountryTeamsDiv").html(
                               "<table>" +
                                 "<thead>" +
@@ -26,10 +26,10 @@ jQuery.noConflict();
                                 "<tbody>" +
                                     "<tr>" +
                                        "<td><img src='Flags/flags_mini/"+ code +"_mini.png'></td>" +
-                                       "<td>"+ countryArrayAPI[code]['name'] + "'s National Team</td>" +
-                                       "<td>" + countryArrayAPI[code]['value'] + "Bi" +"</td>" + 
-                                       "<td>$" + countryArrayAPI[code]['stock'] + "</td>" +
-                                       "<td>" + countryArrayAPI[code]['last_5_games_change'] + "%</td>" +
+                                       "<td>"+ CountryArrayAPI[code]['name'] + "'s National Team</td>" +
+                                       "<td>" + CountryArrayAPI[code]['value'] + "Bi" +"</td>" + 
+                                       "<td>$" + CountryArrayAPI[code]['stock'] + "</td>" +
+                                       "<td>" + CountryArrayAPI[code]['last_5_games_change'] + "%</td>" +
                                     "</tr>" +
                                 "</tbody>" +
                                "</table>"
