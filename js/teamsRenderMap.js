@@ -29,7 +29,7 @@ jQuery.noConflict();
                                        "<td>"+ countryArrayAPI[code]['name'] + "'s National Team</td>" +
                                        "<td>" + countryArrayAPI[code]['value'] + "Bi" +"</td>" + 
                                        "<td>$" + countryArrayAPI[code]['stock'] + "</td>" +
-                                       "<td>" + countryArrayAPI[code]['lat_5_games_change'] + "%</td>" +
+                                       "<td>" + countryArrayAPI[code]['last_5_games_change'] + "%</td>" +
                                     "</tr>" +
                                 "</tbody>" +
                                "</table>"
