@@ -6,9 +6,8 @@ jQuery.noConflict();
         panOnDrag: true,
         onRegionClick: function (event, code) { //seleciona um pais e faz algo com isso
           if ( code == 'BR'){ //se o user clicar no brasil...
-            $("#ShowCountryTeamsDiv").html(teamsBRDivContent); //seu conteudo esta na ../team.js
-            var newTableObject = document.getElementById('teamsBRTableContent'); 
-            sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
+            $("#ShowCountryTeamsDiv").html(headerDivContent + bodyDivContent); //seu conteudo esta na ../team.js
+            //faz a tabela ser sorttable(junto com a linha de cima)
           $('html,body').animate({scrollTop: 300}, 500);
           }
           else if ( code !== 1){ //cria a tabela segundo o país que o user clica
@@ -26,7 +25,7 @@ jQuery.noConflict();
                                 "<tbody>" +
                                     "<tr>" +
                                        "<td><img src='Flags/flags_mini/"+ code +"_mini.png'></td>" +
-                                       "<td>"+ CountryArrayAPI[code]['name'] + "'s National Team</td>" +
+                                       "<td>"+ CountryArrayAPI[code]['name'] + "</td>" +
                                        "<td>" + CountryArrayAPI[code]['value'] + "Bi" +"</td>" + 
                                        "<td>$" + CountryArrayAPI[code]['stock'] + "</td>" +
                                        "<td>" + CountryArrayAPI[code]['last_5_games_change'] + "%</td>" +
