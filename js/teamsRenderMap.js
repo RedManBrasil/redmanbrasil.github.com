@@ -5,40 +5,11 @@ jQuery.noConflict();
         map: 'world_mill_en',
         panOnDrag: true,
         onRegionClick: function (event, code) { //seleciona um pais e faz algo com isso
-          if ( code == 'BR'){ //se o user clicar no brasil...
-            $("#ShowCountryTeamsDiv").html(headerDivContent + bodyDivContent); //seu conteudo esta na ../team.js
-            var newTableObject = document.getElementById('teamsBRTableContent'); 
- -            sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
-          $('html,body').animate({scrollTop: 300}, 500);
-          }
-          else if ( code !== 1){ //cria a tabela segundo o país que o user clica
-            $("#ShowCountryTeamsDiv").html(
-                              "<table>" +
-                                "<thead>" +
-                                    "<tr>" +
-                                       "<th>/</th>"+
-                                       "<th>Name</th>" + 
-                                       "<th>Team Value</th>" +
-                                       "<th>Stock Value</th>" + 
-                                       "<th>Last 5 Games Change</th>" +
-                                    "</tr>" +
-                                "</thead>" +
-                                "<tbody>" +
-                                    "<tr>" +
-                                       "<td><img src='escudos/escudos_mini/"+ code +"_mini.png'></td>" +
-                                       "<td>"+ CountryArrayAPI[code]['name'] + "</td>" +
-                                       "<td>" + CountryArrayAPI[code]['value'] + "Bi" +"</td>" + 
-                                       "<td>$" + CountryArrayAPI[code]['stock'] + "</td>" +
-                                       "<td>" + CountryArrayAPI[code]['last_5_games_change'] + "%</td>" +
-                                    "</tr>" +
-                                "</tbody>" +
-                               "</table>"
-            );
-             $('html,body').animate({scrollTop: 300}, 500); //maneira alternatica de scroll sem o div
+            $("#ShowCountryTeamsDiv").html(CreateTableTeamAPI(code)); //cria a tabela e coloca na div destacada pela id (o conteudo da funcao CreateTableTeamAPI esta em ../js/teamsContent.js)
+            var newTableObject = document.getElementById('teams' + code +'TableContent'); 
+            sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
+             $('html,body').animate({scrollTop: 300}, 500); //maneira alternativa de scroll sem o div
              //$("html, body").scrollTop($('#ShowCountryTeamsDiv').offset().top);  //scrol ate as info
-          }
-          else {
-            return;}
         },
         focusOn: {
           x: 0.5,
