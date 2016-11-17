@@ -39,6 +39,7 @@ return fullDivContent;
 $("#BackBtn").click(function(){
                   $("#BackBtn").hide(0);
                   $("#StockInfoDisplay").hide(0);
+                  $("#MapaSpan").show(0);  
                   $("#ShowCountryTeamsDiv").show(0);
                   });
 
@@ -48,7 +49,9 @@ function TurnBtnForInfoAvaible(code){
               $(document).on('click', '#' + TeamsAPI[code][i]['name'] + 'TableTD', function(){
               $("#BackBtn").show(0);
               $("#StockInfoDisplay").show(0);
-              $("#ShowCountryTeamsDiv").hide(0);     
+              $("#MapaSpan").hide(0);  
+              $("#ShowCountryTeamsDiv").hide(0);  
+              $('html,body').scrollTop(0);   
 		});
     }
 }
