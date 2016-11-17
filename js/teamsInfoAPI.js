@@ -1,4 +1,24 @@
 var TeamsAPI = {
+    "AR": [
+  {
+            "name": "Argentina",      //nome do pais/time
+            "code": "AR",             // codigo usado para puxar o escudo
+            "country": true,
+            "value": '4.3',             // valor do time em biilhões de dólares( Team Value )
+            "stock": '17.43',           // valor da ação em dólares
+            "last_5_games_change": -5 //diferenca percentual do peco da acao nos ultimos 5 jogos da equipe
+           }
+        ],
+  "BE": [
+  {
+            "name": "Belgium",
+            "code": "BE",
+            "country": true,
+            "value": '7.0',    //tem que ser em string pq o JSON retira o final .0 quando passado para o site
+            "stock": '24.42',  //saber mais em http://stackoverflow.com/questions/5520399/how-to-prevent-removing-decimal-point-when-parsing-json
+            "last_5_games_change": 3
+           }
+        ],
   "BR": [ 
   {
             "name": "Brazil",
@@ -184,26 +204,6 @@ var TeamsAPI = {
             "stock": '10.57',
             "last_5_games_change": -4
          }
-        ],
-  "AR": [
-  {
-            "name": "Argentina",      //nome do pais/time
-            "code": "AR",             // codigo usado para puxar o escudo
-            "country": true,
-            "value": '4.3',             // valor do time em biilhões de dólares( Team Value )
-            "stock": '17.43',           // valor da ação em dólares
-            "last_5_games_change": -5 //diferenca percentual do peco da acao nos ultimos 5 jogos da equipe
-           }
-        ],
-  "BE": [
-  {
-            "name": "Belgium",
-            "code": "BE",
-            "country": true,
-            "value": '7.0',    //tem que ser em string pq o JSON retira o final .0 quando passado para o site
-            "stock": '24.42',  //saber mais em http://stackoverflow.com/questions/5520399/how-to-prevent-removing-decimal-point-when-parsing-json
-            "last_5_games_change": 3
-           }
         ],
   "CL": [
   {

@@ -14,10 +14,14 @@ var headerDivContent = //header para conter o inicio da tabela que só aparece u
 var bodiesDivContent = "";//necessario para nao aparecer undefined com o i=0, pois a variavel ainda estara vazia
 
 	for(var i = 0; (TeamsAPI[code].length) > i; i++){ //for que vai criando a tabela para cada time da array
+			if(TeamsAPI[code][i]['country'] == true)
+				{var name = TeamsAPI[code][i]['name'] + "'s National Team";}
+			else   //esse if/else complementa o nome quando o time é seleção
+				{var name = TeamsAPI[code][i]['name'];}
 	bodiesDivContent = bodiesDivContent + //o conteudo da array TeamAPI esta em .../js/teamsInfoAPI.js
 				"<tr id='" + TeamsAPI[code][i]['name'] + "TableTD'>" +
 					"<td><img src='escudos/escudos_mini/" + TeamsAPI[code][i]['code'] + "_mini.png'></td>" +
-					"<td>" + TeamsAPI[code][i]['name'] + "</td>"+
+					"<td>" + name + "</td>"+
 					"<td>" + TeamsAPI[code][i]['value'] + "Bi</td>" +
 					"<td>$" + TeamsAPI[code][i]['stock'] + "</td>" +
 					"<td>" + TeamsAPI[code][i]['last_5_games_change'] + "%</td>" +
@@ -26,7 +30,7 @@ var bodiesDivContent = "";//necessario para nao aparecer undefined com o i=0, po
 var fullDivContent = headerDivContent +
 			"<tbody>" +
  				 bodiesDivContent +
-				"</table>" +
+				"</tbody>" +
 			"</table>";
 
 return fullDivContent;
