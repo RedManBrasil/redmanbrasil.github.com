@@ -35,3 +35,20 @@ var fullDivContent = headerDivContent +
 
 return fullDivContent;
 }
+
+$("#BackBtn").click(function(){
+                  $("#BackBtn").hide(0);
+                  $("#StockInfoDisplay").hide(0);
+                  $("#ShowCountryTeamsDiv").show(0);
+                  });
+
+function TurnBtnForInfoAvaible(code){
+	var length = (TeamsAPI[code].length)
+				for(var i = 0; length > i; i++){
+              $(document).on('click', '#' + TeamsAPI[code][i]['name'] + 'TableTD', function(){
+              $("#BackBtn").show(0);
+              $("#StockInfoDisplay").show(0);
+              $("#ShowCountryTeamsDiv").hide(0);     
+		});
+    }
+}

@@ -10,6 +10,7 @@ jQuery.noConflict();
             sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
              $('html,body').animate({scrollTop: 300}, 500); //maneira alternativa de scroll sem o div
              //$("html, body").scrollTop($('#ShowCountryTeamsDiv').offset().top);  //scrol ate as info
+             TurnBtnForInfoAvaible(code); //funcao que permite clicar ema linha das tabelas e aparecer mais info sobre aquela acao // função TurnBtnForInfoAvaible() em teamsContent.js
         },
         focusOn: {
           x: 0.5,
