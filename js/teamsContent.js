@@ -1,5 +1,5 @@
 function CreateTableTeamAPI(code){
-var headerDivContent = //header para conter o inicio da tabela que só aparece uma vez, por isso nao entra no for
+var headerDivContent = //header para conter o início da tabela que só aparece uma vez, por isso não entra no for
 			 "<table id='teams" + TeamsAPI[code][0]['code'] + "TableContent'>" +
 			  "<thead>" +
 				"<tr>" +
@@ -35,6 +35,7 @@ var fullDivContent = headerDivContent +
 
 return fullDivContent;
 }
+
 $(document).ready(function(){
 $("#BackBtn").click(function(){
                   $("#BackBtn").hide(0);
@@ -45,20 +46,17 @@ $("#BackBtn").click(function(){
 
 
 function TurnBtnForInfoAvaible(code){
+	var n = 0;
 	var length = (TeamsAPI[code].length)
 				for(var i = 0; length > i; i++){
               $(document).on('click', '#' + TeamsAPI[code][i]['code'] + 'TableTD', function(){
               $("#BackBtn").show(0);
               $("#StockInfoDisplay").show(0);
               $("#ShowCountryTeamsDiv").hide(0);  
-              var idTR = $(this).closest('tr').attr('id'); //da a id do time clicado
+			  var idTR = $(this).closest('tr').attr('id'); //da a id do <tr> do time clicado
               var partidTR = idTR.replace('TableTD','');  //da o nome do time clicado
-   			  var idTB = $(this).closest('table').attr('id'); //da o nome da tabela que o time esta
-   			  var partidTB = idTB.replace('teams','');  //da o code do país do time
-			  partidTB = partidTB.replace('TableContent','');  //como tem que tirar o inicio e o final necessita de duas partes
-			  partidTR = partidTR.toLowerCase(); //passa para letra minúscula
 			  $("#StockInfoDisplay").html(
-			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;'>"
+			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;float:left;'>"
 			  	);
 		});
     }

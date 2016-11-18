@@ -3,6 +3,7 @@ var TeamsAPI = {
   {
             "name": "Argentina",      //nome do pais/time
             "code": "AR",             // codigo usado para puxar o escudo
+            "id": 0,                  //codigo usado para saber qual o numero do time dentro da array do país
             "country": true,
             "value": '4.3',             // valor do time em biilhões de dólares( Team Value )
             "stock": '17.43',           // valor da ação em dólares
@@ -13,6 +14,7 @@ var TeamsAPI = {
   {
             "name": "Belgium",
             "code": "BE",
+            "id": 0,
             "country": true,
             "value": '7.0',    //tem que ser em string pq o JSON retira o final .0 quando passado para o site
             "stock": '24.42',  //saber mais em http://stackoverflow.com/questions/5520399/how-to-prevent-removing-decimal-point-when-parsing-json
@@ -22,6 +24,7 @@ var TeamsAPI = {
   "BR": [ 
   {
             "name": "Brazil",
+            "id": 0,
             "code": "BR",
             "country": true,
             "value": '9.8',
@@ -30,6 +33,7 @@ var TeamsAPI = {
          },
  {
             "name": "Flamengo",
+            "id": 1,
             "code": "flamengo",
             "country": false,
             "value": '4.9',
@@ -38,6 +42,7 @@ var TeamsAPI = {
          },
   {
             "name": "Botafogo",
+            "id": 2,
             "code": "botafogo",
             "country": false,
             "value": '4.2',
@@ -46,6 +51,7 @@ var TeamsAPI = {
          },
   {
             "name": "Vasco",
+            "id": 3,
             "code": "vasco",
             "country": false,
             "value": '2.9',
@@ -54,6 +60,7 @@ var TeamsAPI = {
          },
   {
             "name": "Fluminense",
+            "id": 4,
             "code": "fluminense",
             "country": false,
             "value": '3.6',
@@ -62,6 +69,7 @@ var TeamsAPI = {
          },
   {
             "name": "América Mineiro",
+            "id": 5,
             "code": "america_mineiro",
             "country": false,
             "value": '0.8',
@@ -70,6 +78,7 @@ var TeamsAPI = {
          },
  {
             "name": "Atlético Mineiro",
+            "id": 6,
             "code": "atletico_mineiro",
             "country": false,
             "value": '5.1',
@@ -78,6 +87,7 @@ var TeamsAPI = {
          },
   {
             "name": "Cruzeiro",
+            "id": 7,
             "code": "cruzeiro",
             "country": false,
             "value": '3.6',
@@ -86,6 +96,7 @@ var TeamsAPI = {
          },
   {
             "name": "Atlético Paranaense",
+            "id": 8,
             "code": "atletico_paranaense",
             "country": false,
             "value": '4.0',
@@ -94,6 +105,7 @@ var TeamsAPI = {
          },
   {
             "name": "Chapecoense",
+            "id": 9,
             "code": "chapecoense",
             "country": false,
             "value": '2.8',
@@ -102,6 +114,7 @@ var TeamsAPI = {
          },
   {
             "name": "Grêmio",
+            "id": 10,
             "code": "gremio",
             "country": false,
             "value": '3.9',
@@ -110,6 +123,7 @@ var TeamsAPI = {
          },
  {
             "name": "Internacional",
+            "id": 11,
             "code": "internacional",
             "country": false,
             "value": '3.1',
@@ -118,6 +132,7 @@ var TeamsAPI = {
          },
   {
             "name": "Figueirense",
+            "id": 12,
             "code": "figueirense",
             "country": false,
             "value": '3.5',
@@ -126,6 +141,7 @@ var TeamsAPI = {
          },
   {
             "name": "Corinthias",
+            "id": 13,
             "code": "corinthias",
             "country": false,
             "value": '4.7',
@@ -134,6 +150,7 @@ var TeamsAPI = {
          },
   {
             "name": "Santos",
+            "id": 14,
             "code": "santos",
             "country": false,
             "value": '5.2',
@@ -142,6 +159,7 @@ var TeamsAPI = {
          },
   {
             "name": "Palmeiras",
+            "id": 15,
             "code": "palmeiras",
             "country": false,
             "value": '5.9',
@@ -150,6 +168,7 @@ var TeamsAPI = {
          },
   {
             "name": "Ponte Preta",
+            "id": 16,
             "code": "ponte_preta",
             "country": false,
             "value": '3.8',
@@ -158,6 +177,7 @@ var TeamsAPI = {
          },
   {
             "name": "São Paulo",
+            "id": 17,
             "code": "sao_paulo",
             "country": false,
             "value": '3.6',
@@ -166,6 +186,7 @@ var TeamsAPI = {
          },
   {
             "name": "Vitória",
+            "id": 18,
             "code": "vitoria",
             "country": false,
             "value": '1.8',
@@ -174,6 +195,7 @@ var TeamsAPI = {
          },
   {
             "name": "Sport",
+            "id": 19,
             "code": "sport",
             "country": false,
             "value": '2.0',
@@ -182,6 +204,7 @@ var TeamsAPI = {
          },
   {
             "name": "Santa Cruz",
+            "id": 20,
             "code": "santa_cruz",
             "country": false,
             "value": '2.0',
@@ -190,6 +213,7 @@ var TeamsAPI = {
          },
   {
             "name": "Bahia",
+            "id": 21,
             "code": "bahia",
             "country": false,
             "value": '1.9',
@@ -198,6 +222,7 @@ var TeamsAPI = {
          },
   {
             "name": "Goiás",
+            "id": 22,
             "code": "goias",
             "country": false,
             "value": '1.3',
@@ -208,6 +233,7 @@ var TeamsAPI = {
   "CL": [
   {
             "name": "Chile",
+            "id": 0,
             "code": "CL",
             "country": true,
             "value": '5.5',
@@ -218,6 +244,7 @@ var TeamsAPI = {
   "CN": [
   {
             "name": "China",
+            "id": 0,
             "code": "CN",
             "country": true,
             "value": '7.2',
@@ -228,6 +255,7 @@ var TeamsAPI = {
   "CO": [
   {
             "name": "Colombia",
+            "id": 0,
             "code": "CO",
             "country": true,
             "value": '3.9',
@@ -238,6 +266,7 @@ var TeamsAPI = {
   "EC": [
   {
             "name": "Ecuador",
+            "id": 0,
             "code": "EC",
             "country": true,
             "value": '2.1',
@@ -248,6 +277,7 @@ var TeamsAPI = {
   "GB": [
   {
             "name": "England", //como o mapa nao divide o reino unido, tem que deixar o país como inglaterra
+            "id": 0,
             "code": "GB",
             "country": true,
             "value": '5.9',
@@ -258,6 +288,7 @@ var TeamsAPI = {
   "FR": [
   {
             "name": "France",
+            "id": 0,
             "code": "FR",
             "country": true,
             "value": '6.9',
@@ -268,6 +299,7 @@ var TeamsAPI = {
   "DE": [
   {
             "name": "Germany",
+            "id": 0,
             "code": "DE",
             "country": true,
             "value": '10.2',
@@ -278,6 +310,7 @@ var TeamsAPI = {
   "GR": [
   {
             "name": "Greece",
+            "id": 0,
             "code": "GR",
             "country": true,
             "value": '3.8',
@@ -288,6 +321,7 @@ var TeamsAPI = {
   "IT": [
   {
             "name": "Italy",
+            "id": 0,
             "code": "IT",
             "country": true,
             "value": '6.1',
@@ -298,6 +332,7 @@ var TeamsAPI = {
   "MX": [
   {
             "name": "Mexico",
+            "id": 0,
             "code": "MX",
             "country": true,
             "value": '4.7',
@@ -308,6 +343,7 @@ var TeamsAPI = {
   "NL": [
   {
             "name": "Netherlands",
+            "id": 0,
             "code": "NL",
             "country": true,
             "value": '6.3',
@@ -318,6 +354,7 @@ var TeamsAPI = {
   "PY": [
   {
             "name": "Paraguay",
+            "id": 0,
             "code": "PY",
             "country": true,
             "value": '2.5',
@@ -328,6 +365,7 @@ var TeamsAPI = {
   "PT": [
   {
             "name": "Portugal",
+            "id": 0,
             "code": "PT",
             "country": true,
             "value": '7.1',
@@ -338,6 +376,7 @@ var TeamsAPI = {
   "ES": [
   {
             "name": "Spain",
+            "id": 0,
             "code": "ES",
             "country": true,
             "value": '6.2',
@@ -348,6 +387,7 @@ var TeamsAPI = {
   "SE": [ 
   {
             "name": "Sweden",
+            "id": 0,
             "code": "SE",
             "country": true,
             "value": '4.3',
@@ -358,6 +398,7 @@ var TeamsAPI = {
   "CH": [
   {
             "name": "Switzerland",
+            "id": 0,
             "code": "CH",
             "country": true,
             "value": '4.8',
@@ -368,6 +409,7 @@ var TeamsAPI = {
   "US": [
   {
             "name": "USA",
+            "id": 0,
             "code": "US",
             "country": true,
             "value": '5.4',
@@ -378,6 +420,7 @@ var TeamsAPI = {
   "UY": [
   {
             "name": "Uruguay",
+            "id": 0,
             "code": "UY",
             "country": true,
             "value": '5.9',

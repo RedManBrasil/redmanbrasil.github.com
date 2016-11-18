@@ -13,7 +13,7 @@ jQuery.noConflict();
              $("#BackBtn").hide(0); //essa call e mais as duas de baixo servem parap permitiqquer que vc saia do quadro das info detalhado apenas clicando em outro lugar no mapa mundi
              $("#StockInfoDisplay").hide(0);
              $("#ShowCountryTeamsDiv").show(0);
-             TurnBtnForInfoAvaible(code); //funcao que permite clicar ema linha das tabelas e aparecer mais info sobre aquela acao // função TurnBtnForInfoAvaible() em teamsContent.js
+             TurnBtnForInfoAvaible(code); //funcao que permite clicar nas linha das tabelas e aparecer mais info sobre aquela acao // função TurnBtnForInfoAvaible() em teamsContent.js
         },
         series: {
           regions: [{
