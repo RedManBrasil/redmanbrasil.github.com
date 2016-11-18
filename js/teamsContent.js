@@ -58,7 +58,7 @@ function TurnBtnForInfoAvaible(code){
 			  partidTB = partidTB.replace('TableContent','');  //como tem que tirar o inicio e o final necessita de duas partes
 			  partidTB = partidTB.toLowerCase(); //passa para letra minúscula
 			  $("#StockInfoDisplay").html(
-			  	"<img src='escudos/Brazil/flamengo.png' style='margin:25px;max-width:20%;max-height:20%;'>"
+			  	"<img src='escudos/Belgium/BE.png' style='margin:25px;max-width:20%;max-height:20%;'>"
 			  	);
 		});
     }
