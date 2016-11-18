@@ -56,9 +56,9 @@ function TurnBtnForInfoAvaible(code){
    			  var idTB = $(this).closest('table').attr('id'); //da o nome da tabela que o time esta
    			  var partidTB = idTB.replace('teams','');  //da o code do país do time
 			  partidTB = partidTB.replace('TableContent','');  //como tem que tirar o inicio e o final necessita de duas partes
-			  partidTB = partidTB.toLowerCase(); //passa para letra minúscula
+			  partidTR = partidTR.toLowerCase(); //passa para letra minúscula
 			  $("#StockInfoDisplay").html(
-			  	"<img src='escudos/Belgium/BE.png' style='margin:25px;max-width:20%;max-height:20%;'>"
+			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;'>"
 			  	);
 		});
     }
