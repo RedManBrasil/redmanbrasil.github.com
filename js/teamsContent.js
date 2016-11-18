@@ -19,7 +19,7 @@ var bodiesDivContent = "";//necessario para nao aparecer undefined com o i=0, po
 			else   //esse if/else complementa o nome quando o time é seleção
 				{var name = TeamsAPI[code][i]['name'];}
 	bodiesDivContent = bodiesDivContent + //o conteudo da array TeamAPI esta em .../js/teamsInfoAPI.js
-				"<tr id='" + TeamsAPI[code][i]['name'] + "TableTD'>" +
+				"<tr id='" + TeamsAPI[code][i]['code'] + "TableTD'>" +
 					"<td><img src='escudos/escudos_mini/" + TeamsAPI[code][i]['code'] + "_mini.png'></td>" +
 					"<td>" + name + "</td>"+
 					"<td>" + TeamsAPI[code][i]['value'] + "Bi</td>" +
@@ -35,23 +35,31 @@ var fullDivContent = headerDivContent +
 
 return fullDivContent;
 }
-
+$(document).ready(function(){
 $("#BackBtn").click(function(){
                   $("#BackBtn").hide(0);
-                  $("#StockInfoDisplay").hide(0);
-                  $("#MapaSpan").show(0);  
-                  $("#ShowCountryTeamsDiv").show(0);
+			      $("#StockInfoDisplay").hide(0);
+			      $("#ShowCountryTeamsDiv").show(0);
                   });
+ 			});
+
 
 function TurnBtnForInfoAvaible(code){
 	var length = (TeamsAPI[code].length)
 				for(var i = 0; length > i; i++){
-              $(document).on('click', '#' + TeamsAPI[code][i]['name'] + 'TableTD', function(){
+              $(document).on('click', '#' + TeamsAPI[code][i]['code'] + 'TableTD', function(){
               $("#BackBtn").show(0);
               $("#StockInfoDisplay").show(0);
-              $("#MapaSpan").hide(0);  
               $("#ShowCountryTeamsDiv").hide(0);  
-              $('html,body').scrollTop(0);   
+              var idTR = $(this).closest('tr').attr('id'); //da a id do time clicado
+              var partidTR = idTR.replace('TableTD','');  //da o nome do time clicado
+   			  var idTB = $(this).closest('table').attr('id'); //da o nome da tabela que o time esta
+   			  var partidTB = idTB.replace('teams','');  //da o code do país do time
+			  partidTB = partidTB.replace('TableContent','');  //como tem que tirar o inicio e o final necessita de duas partes
+			  partidTR = partidTR.toLowerCase(); //passa para letra minúscula
+			  $("#StockInfoDisplay").html(
+			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;'>"
+			  	);
 		});
     }
 }

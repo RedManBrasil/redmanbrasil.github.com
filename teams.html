@@ -7,9 +7,6 @@
   <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="css/teams.css">
   <link rel="stylesheet" media="all" href="VectorMap/jquery-jvectormap.css"/>
-  <script src="js/teamsInfoAPI.js"></script>
-  <script src="js/teamsContent.js"></script>
-  <script src="js/teams.js"></script>
 
   <script src="VectorMap/assets/jquery-1.8.2.js"></script>
   <script src="VectorMap/jquery-jvectormap.js"></script>
@@ -46,6 +43,9 @@
 
   <script src="VectorMap/assets/jquery-jvectormap-world-mill-en.js"></script>
   <script src="js/teamsRenderMap.js"></script>
+  <script src="js/teamsInfoAPI.js"></script>
+  <script src="js/teamsContent.js"></script>
+  <script src="js/teams.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -116,14 +116,15 @@
 
 <div class="ter">
     <span id="MapaSpan">
-    <h1 style="color: black;margin:25px;">Select a Country to see the stocks available from that region</h1>
-    <h4 style="color: black;margin:-20px 0 0 25px;">The darker the country, more teams it has</h4>
+    <h1 style="color:black;margin:25px;">Select a Country to see the stocks available from that region</h1>
+    <h4 style="color:black;margin:-20px 0 0 25px;">The darker the country, more teams it has</h4>
 
-  <div id="map1" style="width: 90%; height: 60%; margin: 25px;"></div>
+<div id="map1" style="width:90%;height:60%;margin:25px;"></div>
   </span>
   <button style="margin:25px;" id="BackBtn" class="hidden">Back</button>
     <div id="ShowCountryTeamsDiv"></div>
-    <div id="StockInfoDisplay" class="hidden"></div>
+    <div id="StockInfoDisplay" style="width:90%;height:720px;margin:25px;background-color:#f5f7e1;" class="hidden">
+    </div>
 </div>
 
 </body>
