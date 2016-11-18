@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+  <script src="js/fbSDK.js"></script>
+  <script src='js/jquery-3.1.1.min.js'></script>
+  <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="js/home.js"></script>
+  <script src="Chart.js-2.3.0/dist/Chart.bundle.js"></script>
+  <script src="js/ChartsOnHome.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FUT MARKET</title>
+</head>
+<body>
+    <ul>
+      <li><input id="myInp" type="text" name="search" placeholder="Search.."></li>
+      <li><center id="resposta"></center></li>
+      <li><h3><center><a href="#" id="resposta1"></a></center></h3></li>
+      <li><a class="active" href="home">Home</a></li>
+      <li><a href="teams">Teams</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Your Firm</a></li>
+      <li><a href="#">Next Games</a></li>
+      <li><a href="#">Rankings</a></li>
+      <li><a href="#" class="icons"><i class="fa fa-cogs fa-2x icons" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="icons"><i class="fa fa-suitcase fa-2x icons" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="icons"><i class="fa fa-moon-o fa-2x icons" aria-hidden="true"></i></a></li>
+    </ul>
+
+    <div class="ter">
+
+
+<div style="margin:1%;height:40%;width:63.85%;background-color:#f2f5f3;float:left;">
+<center><h1>Net Worth</h1></center>
+<button id="TodayChart">Today</button>
+<button id="WeekChart">Week</button>
+<button id="SemesterChart" class="ChartBtnActivated">Semester</button>
+<button id="YearChart">Year</button>
+  <div id="SemesterChartGraph" style="margin:20px;">
+        <canvas id="canvasNetWorthSemester" height="320%"></canvas>
+    </div>
+  <div id="WeekChartGraph" style="margin:20px;">
+        <canvas id="canvasNetWorthWeek" height="320%"></canvas>
+    </div>
+  <div id="TodayChartGraph" style="margin:20px;">
+        <canvas id="canvasNetWorthToday" height="320%"></canvas>
+    </div>
+  <div id="YearChartGraph" style="margin:20px;">
+        <canvas id="canvasNetWorthYear" height="320%"></canvas>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+</script>
+
+
+
+<div style="background-color:#f2f5f3; width:31%; height:40%;overflow:hidden;overflow-y:scroll;margin:1%;float:left;">
+<center style="background:#1b1e24;padding:10px;color:#C1C3D1;"><h1>NEWS</h1></center>
+<br>
+<div style="margin:12px;">
+<h3><strong style="color:black;">FUTMARKET Relase Date Set to 2017's Fall</strong></h3>
+<small style="color:#8e95a0;">According to FUTMARKET CEO, Pedro Andrade, the entire crew is working hard to deliver a playable version of the game as soon as possible.</small>
+<h3><strong style="color:black;">The Beta version is live!</strong></h3>
+<small style="color:#8e95a0;">First version of FUTMARKET is now live. For some reason you were specially picked for this test version, make your stay worth it.</small>
+</div>
+</div>
+
+<br>
+
+
+
+
+<div style="clear:left;background-color:#f2f5f3; width:31%; height:30%;float:left;margin:1%;overflow:hidden;">
+      <center><h1>Your Portfolio</h1></center>
+      <div id="canvas-holder">
+        <canvas id="chart-area2" style="width:400px;float:center;"></canvas>
+    </div>
+</div>
+
+<div style="background-color:#f2f5f3; width:31%; height:30%;float:left;overflow:hidden;overflow-y:scroll;margin:1%;">
+<center style="background:#1b1e24;padding:10px;color:#C1C3D1;"><h1>Last Games</h1></center>
+<table>
+<tbody> 
+<tr>
+ <td><center><h2>Flamengo <span id="Resultss0" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss1" class="ResultsNumber"></span> Corinthias</h2></center></td>
+ </tr>
+ <tr>
+ <td><center><h2>Cruzeiro <span id="Resultss2" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss3" class="ResultsNumber"></span> Atlético-MG</h2></center></td>
+  </tr>
+ <tr>
+ <td><center><h2>Palmeiras <span id="Resultss4" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss5" class="ResultsNumber"></span> Santa Cruz</h2></center></td>
+  </tr>
+ <tr>
+ <td><center><h2>Brazil <span id="Resultss6" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss7" class="ResultsNumber"></span> Germany</h2></center></td>
+  </tr>
+  <tr>
+ <td><center><h2>Vitoria <span id="Resultss8" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss9" class="ResultsNumber"></span> Bahia</h2></center></td>
+  </tr>
+  <tr>
+ <td><center><h2>Chile <span id="Resultss10" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss11" class="ResultsNumber"></span> Brazil</h2></center></td>
+  </tr>
+  <tr>
+ <td><center><h2>Palmeiras <span id="Resultss12" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss13" class="ResultsNumber"></span> Vasco</h2></center></td>
+  </tr>
+  <tr>
+ <td><center><h2>Flamengo <span id="Resultss14" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss15" class="ResultsNumber"></span> Fluminense</h2></center></td>
+  </tr>
+    <tr>
+ <td><center><h2>Cruzeiro <span id="Resultss16" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss17" class="ResultsNumber"></span> São Paulo</h2></center></td>
+  </tr>
+    <tr>
+ <td><center><h2>Santos <span id="Resultss18" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss19" class="ResultsNumber"></span> Vitória</h2></center></td>
+  </tr>
+    <tr>
+ <td><center><h2>Brazil <span id="Resultss20" class="ResultsNumber"></span> <span class="XXxX">x</span> <span id="Resultss21" class="ResultsNumber"></span> Argentina</h2></center></td>
+  </tr>
+ </tbody>
+ </table>
+</div>
+
+
+
+
+<div style="background-color:#f2f5f3; width:31%; float:left; height:30%; overflow:hidden;overflow-y:scroll;overflow-x:auto;margin: 1%;">
+<center style="background:#1b1e24;padding:10px;color:#C1C3D1;"><h1>Today's Top 20 Changes</h1></center>
+<table>
+<thead>
+  <tr style="font-size:28px;">
+    <th>CHANGE</th> 
+    <th>NAME</th> 
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td id="changediv0">
+    </td>
+    <td id="namediv0">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv1">
+    </td>
+    <td id="namediv1">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv2">
+    </td>
+    <td id="namediv2">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv3">
+    </td>
+    <td id="namediv3">
+    </td>
+  </tr>
+  <tr>
+   <td id="changediv4">
+   </td>
+   <td id="namediv4">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv5">
+    </td>
+    <td id="namediv5">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv6">
+    </td>
+    <td id="namediv6">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv7">
+    </td>
+    <td id="namediv7">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv8">
+    </td>
+    <td id="namediv8">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv9">
+    </td>
+    <td id="namediv9">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv10">
+    </td>
+    <td id="namediv10">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv11">
+    </td>
+    <td id="namediv11">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv12">
+    </td>
+    <td id="namediv12">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv13">
+    </td>
+    <td id="namediv13">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv14">
+    </td>
+    <td id="namediv14">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv15">
+    </td>
+    <td id="namediv15">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv16">
+    </td>
+    <td id="namediv16">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv17">
+    </td>
+    <td id="namediv17">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv18">
+    </td>
+    <td id="namediv18">
+    </td>
+  </tr>
+  <tr>
+    <td id="changediv19">
+    </td>
+    <td id="namediv19">
+    </td>
+  </tr>
+</tbody>
+</table>
+    </div>
+
+</body>
+
+<script>
+
+      $(document).ready(function(){
+        $("#WeekChart").click(function () { //Mostra o grafico da Week
+        $("#WeekChart").addClass("ChartBtnActivated")
+        $("#TodayChart").removeClass("ChartBtnActivated")
+        $("#YearChart").removeClass("ChartBtnActivated")
+        $("#SemesterChart").removeClass("ChartBtnActivated")
+          $("#WeekChartGraph").show();
+            $('#SemesterChartGraph').hide();
+            $('#TodayChartGraph').hide();
+            $("#YearChartGraph").hide();
+        });
+    });
+
+      $(document).ready(function(){
+        $("#SemesterChart").click(function () { //Mostra o grafico do Semester
+        $("#SemesterChart").addClass("ChartBtnActivated")
+        $("#TodayChart").removeClass("ChartBtnActivated")
+        $("#YearChart").removeClass("ChartBtnActivated")
+        $("#WeekChart").removeClass("ChartBtnActivated")
+          $('#SemesterChartGraph').show();
+            $("#WeekChartGraph").hide();
+            $('#TodayChartGraph').hide();
+            $("#YearChartGraph").hide();
+        });
+    });
+
+     $(document).ready(function(){
+        $("#TodayChart").click(function () { //Mostra o grafico do Today
+        $("#TodayChart").addClass("ChartBtnActivated")
+        $("#YearChart").removeClass("ChartBtnActivated")
+        $("#WeekChart").removeClass("ChartBtnActivated")
+        $("#SemesterChart").removeClass("ChartBtnActivated")
+          $("#TodayChartGraph").show();
+            $('#SemesterChartGraph').hide();
+            $('#WeekChartGraph').hide();
+            $("#YearChartGraph").hide();
+        });
+    });
+
+     $(document).ready(function(){
+        $("#YearChart").click(function () { //Mostra o grafico do Year
+        $("#YearChart").addClass("ChartBtnActivated")
+        $("#TodayChart").removeClass("ChartBtnActivated")
+        $("#WeekChart").removeClass("ChartBtnActivated")
+        $("#SemesterChart").removeClass("ChartBtnActivated")
+          $("#YearChartGraph").show();
+            $('#SemesterChartGraph').hide();
+            $('#WeekChartGraph').hide();
+            $('#TodayChartGraph').hide();
+        });
+    });
+
+      function getRandomInt(min, max) { //gera numero inteiro aleatorio
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+          var GameResultss=new Array();  //array com resultados aleatorios
+          var GameResultsSpan=new Array();  //array com o <span> que exibirão os resultados aleatorios
+            for (var n = 0; n != 22; ++n){ 
+           GameResultss[n] = getRandomInt(0, 3); //range dos numeros inteiros aleatorios
+         }
+
+      $(function (){    //funcao que coloca o GameResultss no lugar certo
+        for (var n = 0; n != 22; ++n){
+              GameResultsSpan[n] = $('#Resultss'+n);
+              GameResultsSpan[n].append(GameResultss[n]);} 
+      });
+
+    window.onload = function() {
+      getPic2();
+      getName();
+      getName2();
+        var ctx2 = document.getElementById("chart-area2").getContext("2d");
+        window.myPie = new Chart(ctx2, config);
+        var ctxNetWorthSemester = document.getElementById("canvasNetWorthSemester").getContext("2d");
+            window.myLine = new Chart(ctxNetWorthSemester, configNetWorthSemester);
+        var ctxNetWorthWeek = document.getElementById("canvasNetWorthWeek").getContext("2d");
+            window.myLine = new Chart(ctxNetWorthWeek, configNetWorthWeek);
+            $("#WeekChartGraph").hide();
+        var ctxNetWorthToday = document.getElementById("canvasNetWorthToday").getContext("2d");
+            window.myLine = new Chart(ctxNetWorthToday, configNetWorthToday);
+            $("#TodayChartGraph").hide();
+        var ctxNetWorthYear = document.getElementById("canvasNetWorthYear").getContext("2d");
+            window.myLine = new Chart(ctxNetWorthYear, configNetWorthYear);
+            $("#YearChartGraph").hide();
+    };
+    </script>
+
+</html>

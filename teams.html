@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <script src="js/fbSDK.js"></script>
+  <script src='js/jquery-3.1.1.min.js'></script>
+  <script src="js/KryogenixSorttable.js"></script>
+  <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/teams.css">
+  <link rel="stylesheet" media="all" href="VectorMap/jquery-jvectormap.css"/>
+
+  <script src="VectorMap/assets/jquery-1.8.2.js"></script>
+  <script src="VectorMap/jquery-jvectormap.js"></script>
+  <script src="VectorMap/jquery-mousewheel.js"></script>
+
+  <script src="VectorMap/jvectormap.js"></script>
+
+  <script src="VectorMap/abstract-element.js"></script>
+  <script src="VectorMap/abstract-canvas-element.js"></script>
+  <script src="VectorMap/abstract-shape-element.js"></script>
+
+  <script src="VectorMap/svg-element.js"></script>
+  <script src="VectorMap/svg-group-element.js"></script>
+  <script src="VectorMap/svg-canvas-element.js"></script>
+  <script src="VectorMap/svg-shape-element.js"></script>
+  <script src="VectorMap/svg-path-element.js"></script>
+  <script src="VectorMap/svg-circle-element.js"></script>
+  <script src="VectorMap/svg-image-element.js"></script>
+  <script src="VectorMap/svg-text-element.js"></script>
+
+  <script src="VectorMap/map-object.js"></script>
+  <script src="VectorMap/region.js"></script>
+  <script src="VectorMap/marker.js"></script>
+
+  <script src="VectorMap/vector-canvas.js"></script>
+  <script src="VectorMap/simple-scale.js"></script>
+  <script src="VectorMap/ordinal-scale.js"></script>
+  <script src="VectorMap/numeric-scale.js"></script>
+  <script src="VectorMap/color-scale.js"></script>
+  <script src="VectorMap/legend.js"></script>
+  <script src="VectorMap/data-series.js"></script>
+  <script src="VectorMap/proj.js"></script>
+  <script src="VectorMap/map.js"></script>
+
+  <script src="VectorMap/assets/jquery-jvectormap-world-mill-en.js"></script>
+  <script src="js/teamsRenderMap.js"></script>
+  <script src="js/teamsInfoAPI.js"></script>
+  <script src="js/teamsContent.js"></script>
+  <script src="js/teams.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FUT MARKET</title>
+</head>
+<body>
+    <ul>
+      <li><input id="myInp" type="text" name="search" placeholder="Search.."></li>
+      <li><center id="resposta"></center></li>
+      <li><h3><center><a href="#" id="resposta1"></a></center></h3></li>
+      <li><a href="home">Home</a></li>
+      <li><a class="active" href="teams">Teams</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Your Firm</a></li>
+      <li><a href="#">Next Games</a></li>
+      <li><a href="#">Rankings</a></li>
+      <li><a href="#" class="icons"><i class="fa fa-cogs fa-2x icons" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="icons"><i class="fa fa-suitcase fa-2x icons" aria-hidden="true"></i></a></li>
+      <li><a href="#" class="icons"><i class="fa fa-moon-o fa-2x icons" aria-hidden="true"></i></a></li>
+    </ul>
+    <div class="hidden">   <!--div para pre-load todas as mini_flag!-->
+      <img src="escudos/escudos_mini/AR_mini.png"> <!--flag tem width:25px!-->
+      <img src="escudos/escudos_mini/BE_mini.png">
+      <img src="escudos/escudos_mini/BR_mini.png">
+      <img src="escudos/escudos_mini/CL_mini.png">
+      <img src="escudos/escudos_mini/CN_mini.png">
+      <img src="escudos/escudos_mini/CO_mini.png">
+      <img src="escudos/escudos_mini/EC_mini.png">
+      <img src="escudos/escudos_mini/GB_mini.png">
+      <img src="escudos/escudos_mini/FR_mini.png">
+      <img src="escudos/escudos_mini/DE_mini.png">
+      <img src="escudos/escudos_mini/GR_mini.png">
+      <img src="escudos/escudos_mini/IT_mini.png">
+      <img src="escudos/escudos_mini/MX_mini.png">
+      <img src="escudos/escudos_mini/NL_mini.png">
+      <img src="escudos/escudos_mini/PY_mini.png">
+      <img src="escudos/escudos_mini/PT_mini.png">
+      <img src="escudos/escudos_mini/ES_mini.png">
+      <img src="escudos/escudos_mini/SE_mini.png">
+      <img src="escudos/escudos_mini/CH_mini.png">
+      <img src="escudos/escudos_mini/UY_mini.png">
+      <img src="escudos/escudos_mini/US_mini.png">
+      <img src="escudos/escudos_mini/flamengo_mini.png"> <!--escudo tem height:32px!-->
+      <img src="escudos/escudos_mini/vasco_mini.png">
+      <img src="escudos/escudos_mini/fluminense_mini.png">
+      <img src="escudos/escudos_mini/botafogo_mini.png">
+      <img src="escudos/escudos_mini/america_mineiro_mini.png">
+      <img src="escudos/escudos_mini/atletico_mineiro_mini.png">
+      <img src="escudos/escudos_mini/cruzeiro_mini.png">
+      <img src="escudos/escudos_mini/atletico_paranaense_mini.png">
+      <img src="escudos/escudos_mini/chapecoense_mini.png">
+      <img src="escudos/escudos_mini/gremio_mini.png">
+      <img src="escudos/escudos_mini/internacional_mini.png">
+      <img src="escudos/escudos_mini/figueirense_mini.png">
+      <img src="escudos/escudos_mini/corinthias_mini.png">
+      <img src="escudos/escudos_mini/santos_mini.png">
+      <img src="escudos/escudos_mini/palmeiras_mini.png">
+      <img src="escudos/escudos_mini/ponte_preta_mini.png">
+      <img src="escudos/escudos_mini/sao_paulo_mini.png">
+      <img src="escudos/escudos_mini/vitoria_mini.png">
+      <img src="escudos/escudos_mini/sport_mini.png">
+      <img src="escudos/escudos_mini/santa_cruz_mini.png">
+      <img src="escudos/escudos_mini/bahia_mini.png">
+      <img src="escudos/escudos_mini/goias_mini.png">
+    </div> <!--fim da div para pre-load todas as mini_flag/mini_escudo!-->
+
+
+<div class="ter">
+    <span id="MapaSpan">
+    <h1 style="color:black;margin:25px;">Select a Country to see the stocks available from that region</h1>
+    <h4 style="color:black;margin:-20px 0 0 25px;">The darker the country, more teams it has</h4>
+
+<div id="map1" style="width:90%;height:60%;margin:25px;"></div>
+  </span>
+  <button style="margin:25px;" id="BackBtn" class="hidden">Back</button>
+    <div id="ShowCountryTeamsDiv"></div>
+    <div id="StockInfoDisplay" style="width:90%;height:720px;margin:25px;background-color:#f5f7e1;" class="hidden">
+    </div>
+</div>
+
+</body>
+<script type="text/javascript">
+	window.onload = function() {
+      getPic2();
+      getName();
+      getName2();
+  };
+</script>
+</html>
