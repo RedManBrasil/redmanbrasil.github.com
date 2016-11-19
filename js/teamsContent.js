@@ -60,7 +60,9 @@ function TurnBtnForInfoAvaible(code){
               }
 			  $("#StockInfoDisplay").html(
 			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;float:left;'>" +
-			  	"<h2 style='float:left;'>" + TeamsAPI[code][n]['name'] + "</h2>"
+			  	"<span style='float:left;margin:25px;font-size:82px;'>" + TeamsAPI[code][n]['name'] + "</span>" +
+			  	"<br clear='all' /><br>" +
+			  	"<span style='margin:25px;font-size:52px;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>"
 			  	);
 			  });
           }
