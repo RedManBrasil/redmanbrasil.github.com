@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <script src="js/fbSDK.js"></script>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/first_time.css">
+  <script src="js/select_team.js"></script>
+  <script src='js/jquery-3.1.1.min.js'></script>
+  <script src="js/index.js"></script>
+  <script src="js/first_timedp.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FUT MARKET</title>
+</head>
+<body>
+
+<div class="ter">
+<div id="first_page">
+   <center id="resposta"><div></div></center>
+   <center><div id="resposta2"></div></center>
+    </div>
+    <div id="second_page" class="hidden">
+    <center style="font-size:60px;color:#3dd379;margin-top:20px;">We want to know a little bit more about you</center>
+      <br><br>
+      <div style="border-radius:20px;padding:22px;color: white;">
+      <h3>Create a Username that will name you on FutMarket</h3>
+        <input type="text" name="firmName">
+      <p>Chose your favorite Team and National Team.</p>
+  <p style="font-weight:bold;">League:</p>
+    <select id="LeagueList" onchange="check1()">
+        <option disabled selected value>Choose Your League</option>
+        <option value="BrLeague">Brazilian League</option>
+    </select>
+    <div id='FavBRTeam' class='hidden'>
+    <p  style="font-weight:bold;">Your Favorite Team:</p>
+    <select id="TeamBRList" onchange="check()">
+            <option disabled selected value>Choose Your Team</option>
+            <option value="AmeMG">América-MG</option>
+            <option value="AltPR">Atlético-PR</option>
+            <option value="AtlMG">Atlético-MG</option>
+            <option value="Bah">Bahia</option>
+            <option value="Bot">Botafogo</option>
+            <option value="Cha">Chapecoense</option>
+            <option value="Cor">Corinthias</option>
+            <option value="Coritiba">Coritiba</option>
+            <option value="Cru">Cruzeiro</option>
+            <option value="Fig">Figueirense</option>
+            <option value="Fla">Flamengo</option>
+            <option value="Flu">Fluminense</option>
+            <option value="Goi">Goiás</option>
+            <option value="Gre">Grêmio</option>
+            <option value="Int">Internacional</option>
+            <option value="Pal">Palmeiras</option>
+            <option value="Pon">Ponte Preta</option>
+            <option value="Sta">Santa Cruz</option>
+            <option value="San">Santos</option>
+            <option value="Sp">São Paulo</option>
+            <option value="Spo">Sport</option>
+            <option value="Vas">Vasco</option>
+            <option value="Vit">Vitória</option>
+    </select>
+    </div>
+  <p style="font-weight: bold;">Your Favorite National Team:</p>
+    <select id="NtlTeams" onchange="check2()">
+            <option disabled selected value>Choose Your National Team</option>
+            <option value="Arge">Argentina</option>
+            <option value="Belg">Belgium</option>
+            <option value="Braz">Brazil</option>
+            <option value="Chil">Chile</option>
+            <option value="Chin">China</option>
+            <option value="Colo">Colombia</option>
+            <option value="Ecua">Ecuador</option>
+            <option value="Engl">England</option>
+            <option value="Fran">France</option>
+            <option value="Germ">Germany</option>
+            <option value="Gree">Greece</option>
+            <option value="Ital">Italy</option>
+            <option value="Mexi">Mexico</option>
+            <option value="Neth">Netherlands</option>
+            <option value="Para">Paraguay</option>
+            <option value="Port">Portugal</option>
+            <option value="Spai">Spain</option>
+            <option value="Swed">Sweden</option>
+            <option value="Swit">Switzerland</option>
+            <option value="USA">United States</option>
+            <option value="Urua">Uruguay</option>
+    </select>
+    </div>
+    </div>
+    <div id="third_page" class="hidden">
+      <h1><center style="color:#3dd379;font-size: 60px;margin-top:20px;">Last step before you start</center></h1>
+      <br>
+      <div style="border-radius:20px;padding:22px;color: white;">
+        <h3>Confirm Your Data</h3>
+        Your Team:  <div id="escudoTime" style="display:inline-block;vertical-align: middle;">(You did not pick a Team)</div>
+        <br><br>
+        Your National Team:  <div id="escudoSelecao" style="display:inline-block;vertical-align: middle;">(You did not pick a National Team)</div>
+    </div>
+    </div>
+    <button id="previous" class="hidden">PREVIOUS</button>
+    <button id="next">NEXT</button>
+    <br>
+    <br>
+    <center><a href="home" style="text-decoration:none"><button id="start" class="hidden" style="color:white;">START</button></a></center>
+
+</div>
+
+</body>
+    <script type="text/javascript" class="pre_load3">
+        window.onload = function (){
+            getPic();
+            getName();
+            getName2();
+            $(document).scrollTop( $("#start").offset().top );  
+            $("#resposta2").css({"position":"relative","opacity": 0, "left":"+=100"});
+            $("#resposta2").animate({left:0, opacity:1},3500);
+            $("#resposta").css({"position":"relative","opacity": 0, "bottom":"+=100"});
+            $("#resposta").animate({bottom:0, opacity:1},3000);
+        };
+    </script>
+</html>
