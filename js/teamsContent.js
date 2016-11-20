@@ -62,8 +62,13 @@ function TurnBtnForInfoAvaible(code){
 			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;float:left;'>" +
 			  	"<span style='float:left;margin:25px;font-size:82px;'>" + TeamsAPI[code][n]['name'] + "</span>" +
 			  	"<br clear='all' /><br>" +
-			  	"<span style='margin:25px;font-size:52px;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>"
+			  	"<span style='margin:25px;font-size:52px;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>" +
+			  	"<br><br>" +
+			  	"<span style='margin:25px;font-size:52px;clear:left;'>Stock Value: $" + TeamsAPI[code][n]['stock'] + " Dollars</span>" +
+			  	"<div id='StockInfoChartGraph' style='margin:20px;'><canvas id='canvasStockInfo' height='320%'></canvas></div>"
 			  	);
+			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
+              	window.myLine = new Chart(ctxStockInfo, configStockInfo);
 			  });
           }
     }
