@@ -60,7 +60,7 @@ function TurnBtnForInfoAvaible(code){
               var partidTR = idTR.replace('TableTD','');  //da o nome do time clicado
               var n = 0;
               while(partidTR != TeamsAPI[code][n]['code']){
-              	n++;
+              	n++;   //n é o id pessoal de cada time dentro do seu país (um número)
               }
 			  $("#StockInfoDisplay").html(
 			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;float:left;'>" +
@@ -69,10 +69,12 @@ function TurnBtnForInfoAvaible(code){
 			  	"<span style='margin:25px;font-size:52px;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>" +
 			  	"<br><br>" +
 			  	"<span style='margin:25px;font-size:52px;clear:left;'>Stock Value: $" + TeamsAPI[code][n]['stock'] + " Dollars</span>" +
+			  	"<button style='float:right;margin:50px;font-size:25px;'>BUY</button>" +
+			  	"<button style='float:right;margin:50px;font-size:25px;'>SELL</button>" +
 			  	"<div id='StockInfoChartGraph' style='margin:20px;'><canvas id='canvasStockInfo' height='320%'></canvas></div>"
 			  	);
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
-			 	datapointsStockInfo[6] = TeamsAPI[code][n]['stock'];
+			 	datapointsStockInfo[6] = TeamsAPI[code][n]['stock'];    //altera o valor da ultima datapoint (array original em teams.js)
               	myLine = new Chart(ctxStockInfo, configStockInfo);
               	$('html,body').animate({scrollTop: 820}, 500);
 			  });
