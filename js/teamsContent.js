@@ -69,9 +69,9 @@ function TurnBtnForInfoAvaible(code){
 			  	"<span style='margin:25px;font-size:52px;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>" +
 			  	"<br><br>" +
 			  	"<span style='margin:25px;font-size:52px;clear:left;'>Stock Value: $" + TeamsAPI[code][n]['stock'] + " Dollars</span>" +
-			  	"<button style='float:right;margin:50px;font-size:25px;'>BUY</button>" +
-			  	"<button style='float:right;margin:50px;font-size:25px;'>SELL</button>" +
-			  	"<div id='StockInfoChartGraph' style='margin:20px;'><canvas id='canvasStockInfo' height='320%'></canvas></div>"
+			  	"<button style='float:right;margin:30px;font-size:25px;'>BUY</button>" +
+			  	"<button style='float:right;margin:30px;font-size:25px;'>SELL</button>" +
+			  	"<div id='StockInfoChartGraph' style='margin:20px;'><canvas id='canvasStockInfo' height='305%'></canvas></div>"
 			  	);
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
 			 	datapointsStockInfo[6] = TeamsAPI[code][n]['stock'];    //altera o valor da ultima datapoint (array original em teams.js)
