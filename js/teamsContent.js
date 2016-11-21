@@ -1,3 +1,7 @@
+function getRandomInt(min, max) { //gera numero inteiro aleatorio
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
 function CreateTableTeamAPI(code){
 var headerDivContent = //header para conter o início da tabela que só aparece uma vez, por isso não entra no for
 			 "<table id='teams" + TeamsAPI[code][0]['code'] + "TableContent'>" +
@@ -68,7 +72,9 @@ function TurnBtnForInfoAvaible(code){
 			  	"<div id='StockInfoChartGraph' style='margin:20px;'><canvas id='canvasStockInfo' height='320%'></canvas></div>"
 			  	);
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
-              	window.myLine = new Chart(ctxStockInfo, configStockInfo);
+			 	datapointsStockInfo[6] = TeamsAPI[code][n]['stock'];
+              	myLine = new Chart(ctxStockInfo, configStockInfo);
+              	$('html,body').animate({scrollTop: 820}, 500);
 			  });
           }
     }

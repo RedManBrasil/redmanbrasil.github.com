@@ -13,7 +13,7 @@
                                       getRandomInt(0, 30),
                                       getRandomInt(0, 30),
                                       getRandomInt(0, 30),
-                                      TeamsAPI['BR'][0]['stock']
+                                      getRandomInt(0, 30)
                               ];
     var configStockInfo = {
             type: 'line',
