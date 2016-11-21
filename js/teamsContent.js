@@ -74,7 +74,15 @@ function TurnBtnForInfoAvaible(code){
 			  	"<div id='StockInfoChartGraph' style='margin:20px;'><canvas id='canvasStockInfo' height='305%'></canvas></div>"
 			  	);
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
-			 	datapointsStockInfo[6] = TeamsAPI[code][n]['stock'];    //altera o valor da ultima datapoint (array original em teams.js)
+			 	var stockvalue = TeamsAPI[code][n]['stock']; //valor da acao do time puxada da API
+			 	stockvalue = parseFloat(stockvalue); //transforma em float para as operacções matemáticas a seguir
+			 	datapointsStockInfo[0] = stockvalue + 8.09;
+			 	datapointsStockInfo[1] = stockvalue - 1.43;
+			 	datapointsStockInfo[2] = stockvalue - 4.97;
+			 	datapointsStockInfo[3] = stockvalue + 7.79
+			 	datapointsStockInfo[4] = stockvalue - 0.87;
+			 	datapointsStockInfo[5] = stockvalue - 3.33;
+			 	datapointsStockInfo[6] = stockvalue;    //altera o valor da ultima datapoint para o atual valor da stock (array original em teams.js)
               	myLine = new Chart(ctxStockInfo, configStockInfo);
               	$('html,body').animate({scrollTop: 820}, 500);
 			  });
