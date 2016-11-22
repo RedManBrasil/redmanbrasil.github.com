@@ -65,6 +65,9 @@ function TurnBtnForInfoAvaible(code){
 			  $("#StockInfoDisplay").html(
 			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;float:left;'>" +
 			  	"<span style='float:left;margin:25px;font-size:82px;'>" + TeamsAPI[code][n]['name'] + "</span>" +
+			  	"<span style='float:right;margin:75px;font-size:14px;'><strong>Lucas</strong> and <strong>Tiago</strong> also bought " + TeamsAPI[code][n]['name'] + " stocks</span>" +
+			  	"<img src='4243255.png' style='float:right;width:4%;margin:25px -180px 0 0;'>" +
+			  	"<img src='12039385_10154482242763135_9017688641670703372_n.png' style='float:right;width:4%;margin:25px -130px 0 0;'>" +
 			  	"<br clear='all' /><br>" +
 			  	"<span style='margin:25px;font-size:52px;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>" +
 			  	"<br><br>" +
@@ -79,7 +82,7 @@ function TurnBtnForInfoAvaible(code){
 			 	datapointsStockInfo[0] = stockvalue + 8.09;
 			 	datapointsStockInfo[1] = stockvalue - 1.43;
 			 	datapointsStockInfo[2] = stockvalue - 4.97;
-			 	datapointsStockInfo[3] = stockvalue + 7.79
+			 	datapointsStockInfo[3] = stockvalue + 7.79;
 			 	datapointsStockInfo[4] = stockvalue - 0.87;
 			 	datapointsStockInfo[5] = stockvalue - 3.33;
 			 	datapointsStockInfo[6] = stockvalue;    //altera o valor da ultima datapoint para o atual valor da stock (array original em teams.js)
