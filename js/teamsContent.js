@@ -69,10 +69,10 @@ function TurnBtnForInfoAvaible(code){
 			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:4% 0 0 4%;max-width:20%;max-height:20%;vertical-align:middle;display:inline-block;'>" +
 			  	"<span style='margin:4% 0 0 4%;font-size:600%;vertical-align: middle;display:inline-block;'>" + TeamsAPI[code][n]['name'] + "</span>" +
 			  	"<br clear='all' /><br>" );
-			  $("#ValueStockInfoDisplay").html( TeamsAPI[code][n]['value'] );
-			  $("#VolumeStockInfoDisplay").html( volume.toFixed(2) );
-			  $("#5ChangeStockInfoDisplay").html( TeamsAPI[code][n]['last_5_games_change'] );
-			  $("#StockStockInfoDisplay").html( stockvalue );
+			  document.getElementById('ValueStockInfoDisplay').innerHTML = TeamsAPI[code][n]['value'];
+			  document.getElementById('VolumeStockInfoDisplay').innerHTML = volume.toFixed(2);
+			  document.getElementById('5ChangeStockInfoDisplay').innerHTML = TeamsAPI[code][n]['last_5_games_change'];
+			  document.getElementById('StockStockInfoDisplay').innerHTML = stockvalue;
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
 			 	datapointsStockInfo[0] = stockvalue + 8.09;  //essa funcao toFixed() faz com que apenas seja exibido duas casa decimais
 			 	datapointsStockInfo[1] = stockvalue - 1.43;
