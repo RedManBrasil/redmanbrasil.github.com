@@ -68,9 +68,13 @@ function TurnBtnForInfoAvaible(code){
 			  	"<br clear='all' /><br>" +
 			  	"<span style='margin:4%;font-size:350%;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>" +
 			  	"<br><br>" +
+			  	"<span style='margin:4%;font-size:350%;clear:left;'>Daily Volume: " + TeamsAPI[code][n]['stock'] * 11302 + " dollars</span>" +
+			  	"<br><br>" +
+			  	"<span style='margin:4%;font-size:350%;clear:left;'>Last 5 Games Change: " + TeamsAPI[code][n]['last_5_games_change'] + "%</span>" +
+			  	"<br><br>" +
 			  	"<span style='margin:4%;font-size:350%;clear:left;'>Stock Value: $" + TeamsAPI[code][n]['stock'] + " Dollars</span>" +
-			  	"<button style='float:right;margin:3%;font-size:150%'>BUY</button>" +
-			  	"<button style='float:right;margin:3%;font-size:150%'>SELL</button>" +
+			  	"<button style='float:right;margin:3%;font-size:150%;color:white;background-color:#0aa046;padding:0.5%;'>BUY</button>" +
+			  	"<button style='float:right;margin:3%;font-size:150%;color:white;background-color:#dd5056;padding:0.5%;'>SELL</button>" +
 			  	"<div id='StockInfoChartGraph' style='margin:2.5%;'><canvas id='canvasStockInfo' height='305%'></canvas></div>"
 			  	);
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
