@@ -65,16 +65,17 @@ function TurnBtnForInfoAvaible(code){
               var stockvalue = TeamsAPI[code][n]['stock']; //valor da acao do time puxada da API
 			  stockvalue = parseFloat(stockvalue); //transforma em float para as operacções matemáticas a seguir
               var volume = stockvalue * 11302; //volume fictício apenas para teste
+              volume = volume.toFixed(2); //essa funcao toFixed() faz com que apenas seja exibido duas casa decimais
 			  $("#headerInfo").html(
 			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:4% 0 0 4%;max-width:20%;max-height:20%;vertical-align:middle;display:inline-block;'>" +
 			  	"<span style='margin:4% 0 0 4%;font-size:600%;vertical-align: middle;display:inline-block;'>" + TeamsAPI[code][n]['name'] + "</span>" +
 			  	"<br clear='all' /><br>" );
 			  document.getElementById('ValueStockInfoDisplay').innerHTML = TeamsAPI[code][n]['value'];
-			  document.getElementById('VolumeStockInfoDisplay').innerHTML = volume.toFixed(2);
+			  document.getElementById('VolumeStockInfoDisplay').innerHTML = volume;
 			  document.getElementById('5ChangeStockInfoDisplay').innerHTML = TeamsAPI[code][n]['last_5_games_change'];
 			  document.getElementById('StockStockInfoDisplay').innerHTML = stockvalue;
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
-			 	datapointsStockInfo[0] = stockvalue + 8.09;  //essa funcao toFixed() faz com que apenas seja exibido duas casa decimais
+			 	datapointsStockInfo[0] = stockvalue + 8.09; 
 			 	datapointsStockInfo[1] = stockvalue - 1.43;
 			 	datapointsStockInfo[2] = stockvalue - 4.97;
 			 	datapointsStockInfo[3] = stockvalue + 7.79;
