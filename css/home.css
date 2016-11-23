@@ -45,7 +45,7 @@ ul:not(#changeslist){
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 16%;
+    width: 16vw;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
@@ -77,7 +77,7 @@ li a:hover:not(.active) {
 }
 
 .ter{
-    margin-left:15%;
+    margin-left:15vw;
     padding:1px 16px;
     min-width:90%;
 }
@@ -111,10 +111,8 @@ button, input, select, textarea {
 }
 
 ul li .icons{
-    display: block;
-    float: left;
-    position: relative;
-    left: 0.8vw;
+    color: black;
+    margin: 0.8vw;
    }
 
 ul li .icons:hover{
