@@ -81,12 +81,12 @@ function TurnBtnForInfoAvaible(code){
 			  	"<div id='StockInfoChartGraph' style='margin:2.5%;'><canvas id='canvasStockInfo' height='305%'></canvas></div>"
 			  	);
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
-			 	datapointsStockInfo[0] = stockvalue + 8.09;
-			 	datapointsStockInfo[1] = stockvalue - 1.43;
-			 	datapointsStockInfo[2] = stockvalue - 4.97;
-			 	datapointsStockInfo[3] = stockvalue + 7.79;
-			 	datapointsStockInfo[4] = stockvalue - 0.87;
-			 	datapointsStockInfo[5] = stockvalue - 3.33;
+			 	datapointsStockInfo[0] = (stockvalue + 8.09).toFixed(2);  //essa funcao toFixed() faz com que apenas seja exibido duas casa decimais
+			 	datapointsStockInfo[1] = (stockvalue - 1.43).toFixed(2);
+			 	datapointsStockInfo[2] = (stockvalue - 4.97).toFixed(2);
+			 	datapointsStockInfo[3] = (stockvalue + 7.79).toFixed(2);
+			 	datapointsStockInfo[4] = (stockvalue - 0.87).toFixed(2);
+			 	datapointsStockInfo[5] = (stockvalue - 3.33).toFixed(2);
 			 	datapointsStockInfo[6] = stockvalue;    //altera o valor da ultima datapoint para o atual valor da stock (array original em teams.js)
               	myLine = new Chart(ctxStockInfo, configStockInfo);
               	$('html,body').animate({scrollTop: 820}, 500);
