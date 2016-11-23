@@ -79,7 +79,7 @@ li a:hover:not(.active) {
 .ter{
     margin-left:15%;
     padding:1px 16px;
-    height:1000px;
+    min-width:90%;
 }
 
 .hidden {
@@ -114,7 +114,7 @@ ul li .icons{
     display: block;
     float: left;
     position: relative;
-    left: 8%;
+    left: 0.8vw;
    }
 
 ul li .icons:hover{
