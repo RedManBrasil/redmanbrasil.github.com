@@ -63,18 +63,15 @@ function TurnBtnForInfoAvaible(code){
               	n++;   //n é o id pessoal de cada time dentro do seu país (um número)
               }
 			  $("#StockInfoDisplay").html(
-			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:25px;max-width:20%;max-height:20%;float:left;'>" +
-			  	"<span style='float:left;margin:25px;font-size:82px;'>" + TeamsAPI[code][n]['name'] + "</span>" +
-			  	"<span style='float:right;margin:75px;font-size:14px;'><strong>Lucas</strong> and <strong>Tiago</strong> also bought " + TeamsAPI[code][n]['name'] + " stocks</span>" +
-			  	"<img src='4243255.png' style='float:right;width:4%;margin:25px -180px 0 0;'>" +
-			  	"<img src='12039385_10154482242763135_9017688641670703372_n.png' style='float:right;width:4%;margin:25px -130px 0 0;'>" +
+			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:4% 0 0 4%;max-width:20%;max-height:20%;float:left;'>" +
+			  	"<span style='float:left;margin:4% 0 0 4%;font-size:600%;'>" + TeamsAPI[code][n]['name'] + "</span>" +
 			  	"<br clear='all' /><br>" +
-			  	"<span style='margin:25px;font-size:52px;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>" +
+			  	"<span style='margin:4%;font-size:350%;clear:left;'>Team Value: " + TeamsAPI[code][n]['value'] + " Billion Dollars</span>" +
 			  	"<br><br>" +
-			  	"<span style='margin:25px;font-size:52px;clear:left;'>Stock Value: $" + TeamsAPI[code][n]['stock'] + " Dollars</span>" +
-			  	"<button style='float:right;margin:30px;font-size:25px;'>BUY</button>" +
-			  	"<button style='float:right;margin:30px;font-size:25px;'>SELL</button>" +
-			  	"<div id='StockInfoChartGraph' style='margin:20px;'><canvas id='canvasStockInfo' height='305%'></canvas></div>"
+			  	"<span style='margin:4%;font-size:350%;clear:left;'>Stock Value: $" + TeamsAPI[code][n]['stock'] + " Dollars</span>" +
+			  	"<button style='float:right;margin:3%;font-size:150%'>BUY</button>" +
+			  	"<button style='float:right;margin:3%;font-size:150%'>SELL</button>" +
+			  	"<div id='StockInfoChartGraph' style='margin:2.5%;'><canvas id='canvasStockInfo' height='305%'></canvas></div>"
 			  	);
 			 	var ctxStockInfo = document.getElementById("canvasStockInfo").getContext("2d");
 			 	var stockvalue = TeamsAPI[code][n]['stock']; //valor da acao do time puxada da API
