@@ -49,14 +49,19 @@ $("#BackBtn").click(function(){
  			});
 
 
-function TurnBtnForInfoAvaible(code){
+function TurnBtnForInfoAvaible(code){  //function que permite clicar na linha do time e aparecer a Info
 	var length = (TeamsAPI[code].length)
 				for(var i = 0; length > i; i++){
-			  $('#' + TeamsAPI[code][i]['code'] + 'TableTD').click(function ShowStockInfo(){
+			  $('#' + TeamsAPI[code][i]['code'] + 'TableTD').click(function(){
+			  	var idTR = $(this).closest('tr').attr('id'); //da a id do <tr> do time clicado
+			  	ShowStockInfo(code, idTR);});
+			}
+		}
+
+function ShowStockInfo(code, idTR){  //function que cria o div com a Info da Stock
 			  $("#BackBtn").show(0);
               $("#StockInfoDisplay").show(0);
               $("#ShowCountryTeamsDiv").hide(0);  
-			  var idTR = $(this).closest('tr').attr('id'); //da a id do <tr> do time clicado
               var partidTR = idTR.replace('TableTD','');  //da o nome do time clicado
               var n = 0;
               while(partidTR != TeamsAPI[code][n]['code']){
@@ -84,6 +89,4 @@ function TurnBtnForInfoAvaible(code){
 			 	datapointsStockInfo[6] = stockvalue;    //altera o valor da ultima datapoint para o atual valor da stock (array original em teams.js)
               	myLine = new Chart(ctxStockInfo, configStockInfo);
               	$('html,body').animate({scrollTop: 820}, 500);
-			  });
-          }
-    }
+			  }
