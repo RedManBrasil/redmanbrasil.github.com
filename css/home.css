@@ -50,6 +50,7 @@ ul:not(#changeslist){
     position: fixed;
     height: 100%;
     overflow: auto;
+    min-width: 16vw;
 }
 
 li a:link {

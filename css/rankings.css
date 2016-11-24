@@ -40,14 +40,17 @@ body {
     background-color: #f1f1f1; 
 }
 
-ul:not(#changeslist){
+ul:not(#resposta2){
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 16%;
+    width: 16vw;
     background-color: #f1f1f1;
     position: fixed;
     height: 100%;
+    overflow: auto;
+    text-align:center;
+    font-size: 2.5vw;
 }
 
 li a:link {
@@ -77,8 +80,7 @@ li a:hover:not(.active) {
 .ter{
     margin-left:15vw;
     padding:1px 16px;
-    min-width: 90%;
-    height: 1000px;
+    min-width:90%;
 }
 
 .hidden {
@@ -113,14 +115,7 @@ button, input, select, textarea {
     margin: 0;
 }
 
-
-ul li .icons{
-    color: black;
-    margin: 1vw;
-    font-size:2.5vw;
-   }
-
-ul li .icons:hover{
-    color: #0aa046;
-    background-color: #f1f1f1;
+.fontsf{
+    font-family: helvetica;
+    font-size: 2vw;
 }
