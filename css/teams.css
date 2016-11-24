@@ -75,9 +75,10 @@ li a:hover:not(.active) {
 }
 
 .ter{
-    margin-left:15%;
+    margin-left:15vw;
     padding:1px 16px;
-    height:1000px;
+    min-width: 90%;
+    height: 1000px;
 }
 
 .hidden {
@@ -112,11 +113,11 @@ button, input, select, textarea {
     margin: 0;
 }
 
+
 ul li .icons{
-    display: block;
-    float: left;
-    position: relative;
-    left: 8%;
+    color: black;
+    margin: 1vw;
+    font-size:2.5vw;
    }
 
 ul li .icons:hover{
