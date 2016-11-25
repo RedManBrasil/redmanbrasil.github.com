@@ -2,6 +2,9 @@
 <html>
   <script src="js/fbSDK.js"></script>
   <script src='js/jquery-3.1.1.min.js'></script>
+  <script src="js/KryogenixSorttable.js"></script>
+  <script src='js/RankingsAPItest.js'></script>
+  <script src='js/rankingsContent.js'></script>
   <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="css/rankings.css">
@@ -25,13 +28,16 @@
     </ul>
 
   <div class="ter">
-  <h1 style="margin: 4%;">1º Sempre o Pedro</h1>
-  <h2 style="margin: 4%;">Lucas</h2>
-  <h3 style="margin: 4%;">Tiago</h3>
+  <div id="RankingsTableFull" style="width:80%;">
+    
+  </div>
   </div>
 
  </body>
  <script>
+  $("#RankingsTableFull").html(CreateTableRankingsAPI());
+  var newTableObject = document.getElementById('RankingsTableContent'); 
+            sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
    window.onload = function() {
       getPic2();
       getName();
