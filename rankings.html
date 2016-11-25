@@ -5,6 +5,7 @@
   <script src="js/KryogenixSorttable.js"></script>
   <script src='js/RankingsAPItest.js'></script>
   <script src='js/rankingsContent.js'></script>
+  <script src='js/rankings.js'></script>
   <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="css/rankings.css">
@@ -28,14 +29,21 @@
     </ul>
 
   <div class="ter">
-  <div id="RankingsTableFull" style="width:80%;">
-    
+  <center style="font-size:70px;">RANKING</center>
+  <center><button style="padding:5px;margin:5px;" class="activebtn" id="STKBRKSBTN">STOCKBROKERS</button><button style="padding:5px;margin:5px;" id="FIRMBTN">FIRMS</button></center>
+  <br><br>
+  <div id="RankingsPeopleTableFull">
+  </div>
+  <div id="RankingsFirmTableFull" class="hidden">
+
+      <center style="font-size:150px;"><strong>JC É GOLPISTA</strong></center>
+
   </div>
   </div>
 
  </body>
  <script>
-  $("#RankingsTableFull").html(CreateTableRankingsAPI());
+  $("#RankingsPeopleTableFull").html(CreateTableRankingsAPI());
   var newTableObject = document.getElementById('RankingsTableContent'); 
             sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
    window.onload = function() {

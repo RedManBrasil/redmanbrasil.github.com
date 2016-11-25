@@ -136,6 +136,9 @@ table tbody tr:hover{
     background-color: white;
 }
 
+.activebtn{
+    background-color: #0aa046;
+}
 
 ::-webkit-scrollbar{width:9px;height:9px;}
 ::-webkit-scrollbar-button:start:decrement,
