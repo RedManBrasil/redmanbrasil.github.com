@@ -37,8 +37,6 @@ body {
 
 ul:not(#resposta2){
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     width: 16vw;
     background-color: #f1f1f1;
     position: fixed;
@@ -47,8 +45,8 @@ ul:not(#resposta2){
     font-size: 2.5vw;
 }
 
-ul li:not(#myInp){
-
+.centerize{
+    text-align: center;
 }
 
 li a:link {
