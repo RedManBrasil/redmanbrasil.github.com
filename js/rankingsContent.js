@@ -12,7 +12,7 @@ var headerRankDivContent = //header para conter o início da tabela que só apar
 				"</tr>" +
 			  "</thead>";
 
-var bodiesRankDivContent = ""; //necessario para nao aparecer undefined com o i=0, pois a variavel ainda estara vazia
+var bodiesRankDivContent = ""; //necessário para nao aparecer undefined com o i=0, pois a variavel ainda estara vazia
 
 	for(var i = 0; (RankingsAPI.length) > i; i++){ //for que vai criando a tabela para cada time da array
 	bodiesRankDivContent = bodiesRankDivContent + //o conteudo da array RankingsAPI esta em .../js/RankingsAPItest.js
