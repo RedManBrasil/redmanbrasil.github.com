@@ -29,7 +29,7 @@ var RankingsPeopleAPI = [
 		"countrycode": "CN",
 		"networth": "141.14",
 		"monthchange": "-14.1",
-		"firmname": "Comunist Party"
+		"firmname": "Comunnist Party"
 		},
 	{
 		"id": "4",
@@ -37,7 +37,7 @@ var RankingsPeopleAPI = [
 		"countrycode": "DE",
 		"networth": "132.51",
 		"monthchange": "-2.4",
-		"firmname": "Comunist Party"
+		"firmname": "Comunnist Party"
 		},
 	{
 		"id": "5",
@@ -59,7 +59,7 @@ var RankingsFirmAPI = [
 		},
 	{
 		"id": "1",
-		"name": "Comunist Party",
+		"name": "Comunnist Party",
 		"countrycode": "URSS",
 		"networth": "315314.23",
 		"monthchange": "-49.3"
