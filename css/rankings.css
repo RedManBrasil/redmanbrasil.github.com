@@ -77,8 +77,6 @@ li a:hover:not(.active) {
     margin-left:15vw;
     padding:1px 16px;
     min-width:870px;
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 .hidden {
