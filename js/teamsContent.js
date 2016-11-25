@@ -23,7 +23,7 @@ var bodiesDivContent = "";//necessario para nao aparecer undefined com o i=0, po
 			else   //esse if/else complementa o nome quando o time é seleção
 				{var name = TeamsAPI[code][i]['name'];}
 	bodiesDivContent = bodiesDivContent + //o conteudo da array TeamAPI esta em .../js/teamsInfoAPI.js
-				"<tr id='" + TeamsAPI[code][i]['code'] + "TableTD'>" +
+				"<tr id='" + TeamsAPI[code][i]['code'] + "TableTD' class='teamtrstockinfo'>" +
 					"<td><img src='escudos/escudos_mini/" + TeamsAPI[code][i]['code'] + "_mini.png'></td>" +
 					"<td>" + name + "</td>"+
 					"<td>" + TeamsAPI[code][i]['value'] + "Bi</td>" +
@@ -50,12 +50,9 @@ $("#BackBtn").click(function(){
 
 
 function TurnBtnForInfoAvaible(code){  //function que permite clicar na linha do time e aparecer a Info
-	var length = (TeamsAPI[code].length)
-				for(var i = 0; length > i; i++){
-			  $('#' + TeamsAPI[code][i]['code'] + 'TableTD').click(function(){
+			  $('.teamtrstockinfo').click(function(){
 			  	var idTR = $(this).closest('tr').attr('id'); //da a id do <tr> do time clicado
 			  	ShowStockInfo(code, idTR);});
-			}
 		}
 
 function ShowStockInfo(code, idTR){  //function que cria o div com a Info da Stock
