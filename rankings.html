@@ -35,17 +35,17 @@
   <div id="RankingsPeopleTableFull">
   </div>
   <div id="RankingsFirmTableFull" class="hidden">
-
-      <center style="font-size:150px;"><strong>JC É GOLPISTA</strong></center>
-
   </div>
   </div>
 
  </body>
  <script>
-  $("#RankingsPeopleTableFull").html(CreateTableRankingsAPI());
-  var newTableObject = document.getElementById('RankingsTableContent'); 
-            sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
+  $("#RankingsPeopleTableFull").html(CreateTablePeopleRankingsAPI());
+  $("#RankingsFirmTableFull").html(CreateTableFirmRankingsAPI());
+  var newTablePeopleObject = document.getElementById('PeopleRankingsTableContent'); 
+            sorttable.makeSortable(newTablePeopleObject); //faz a tabela ser sorttable(junto com a linha de cima)
+  var newTableFirmObject = document.getElementById('FirmRankingsTableContent'); 
+            sorttable.makeSortable(newTableFirmObject); //faz a tabela ser sorttable(junto com a linha de cima)
    window.onload = function() {
       getPic2();
       getName();

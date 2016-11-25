@@ -1,4 +1,4 @@
-var RankingsAPI = [
+var RankingsPeopleAPI = [
 	{
 		"id": "0",
 		"name": "Pedro Andrade",
@@ -46,13 +46,36 @@ var RankingsAPI = [
 		"networth": "92415.34",
 		"monthchange": "19.2",
 		"firmname": "Republican Party"
-		},
-	{
-		"id": "6",
-		"name": "David Gilmour",
-		"countrycode": "GB",
-		"networth": "105151.51",
-		"monthchange": "2.1",
-		"firmname": "Pink Floyd"
 		}
 ]
+
+var RankingsFirmAPI = [
+	{
+		"id": "0",
+		"name": "First Things First",
+		"countrycode": "BR",
+		"networth": "1432146424.24",
+		"monthchange": "19.3"
+		},
+	{
+		"id": "1",
+		"name": "Comunist Party",
+		"countrycode": "URSS",
+		"networth": "315314.23",
+		"monthchange": "-49.3"
+		},
+	{
+		"id": "2",
+		"name": "Republican Party",
+		"countrycode": "US",
+		"networth": "12452348.43",
+		"monthchange": "12.1"
+		},
+	{
+		"id": "3",
+		"name": "Corporis",
+		"countrycode": "BR",
+		"networth": "234098124.87",
+		"monthchange": "0.9"
+		}
+	]
