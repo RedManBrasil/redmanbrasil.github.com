@@ -62,7 +62,7 @@
 			setTimeout(
 				function () {
 			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-				document.getElementById('resposta').innerHTML = "<img src='" + response.picture.data.url + "' style='border-radius:50%;border:5px solid #0aa046;max-width:45%;margin:15px 15px 0 15px;'>";
+				document.getElementById('resposta').innerHTML = "<img src='" + response.picture.data.url + "' style='border-radius:50%;border:5px solid #0aa046;width:50%;margin-top:5px;'>";
 			});
 			} , 600);
 		}
