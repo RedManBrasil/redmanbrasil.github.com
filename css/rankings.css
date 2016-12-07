@@ -22,17 +22,17 @@ html, body {
 }
 
 #resposta1 {
-  color:black;
+  color:#dfe3e0;
   margin-top: -20px;
   font-size:1.5vw;
 }
 
 #resposta1:hover {
     color:#0aa046;
-    background-color: #f1f1f1; 
+    background-color: inherit; 
 }
 
-ul:not(#resposta2){
+ul:not(#resposta1){
     list-style-type: none;
     margin: 0;
     padding: 0;
