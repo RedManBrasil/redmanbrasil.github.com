@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+	<title>HOW MANY TIMES I HAVE TO FOLD?</title>
+	<link rel="stylesheet" href="index.css" type="text/css">
+	<h1 class="title"><center><strong>HOW MANY TIMES I HAVE TO FOLD?</strong></center></h1>
+	<h3 class="title1"><center>a piece of paper to get to...</center></h3>
+</head>
+<body>
+   	<h2 class="question">Give me the distance in <select id="Sone" name = "Unity" onchange="check()">
+   		<option value="kilometers">kilometers</option>
+   		<option value="meters">meters</option>
+   		<option value="millimeters">millimeters</option>
+   	</select></h2>
+   	<p>
+   		<input id="distance">
+   		<input type="button" onclick="calc()" value="READY">
+    </p>
+    <br><br><br>
+   	<center><p id="folds" class="TIMES"></p></center>
+   	<script src="index.js"></script>
+</body>
+</html>
+

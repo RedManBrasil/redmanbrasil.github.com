@@ -1,0 +1,21 @@
+body {
+background:#e2d5d5;
+}
+.title{
+	font-family: helvetica;
+	color:#584742;
+}
+.title1{
+	font-family: helvetica;
+	color:#584742;
+	margin-top: -20px;
+}
+.question{
+	font-family: helvetica;
+	color:#584742;
+}
+.TIMES{
+	font-family: helvetica;
+	color:#584742;
+	font-size: 22pt;
+}
