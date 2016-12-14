@@ -54,24 +54,22 @@
     <title>FUT MARKET</title>
 </head>
 <body>
-    <ul>
-      <li><input id="myInp" type="text" name="search" placeholder="Search.."></li>
-      <li><center id="resposta"></center></li>
-      <li><h3><center><a href="#" id="resposta1"></a></center></h3></li>
-      <li><a href="home">Home</a></li>
-      <li><a class="active" href="teams">Teams</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Your Firm</a></li>
-      <li><a href="#">Next Games</a></li>
-      <li><a href="rankings">Rankings</a></li>
-      <li>
-        <center>
-          <i class="fa fa-cogs icons" aria-hidden="true"></i>
-          <i class="fa fa-suitcase icons" aria-hidden="true"></i>
-          <i class="fa fa-moon-o icons" aria-hidden="true"></i>
-        </center>
-      </li>
+<ul style="display: block;">
+      <li><img src="futmarket_letreiro.png" style="width:45%;margin:15px 15px 0 15px;"></li>
+      <li style="float:right;margin:15px 15px 0 15px;" id="resposta1"></li>
+      <li style="float:right;" id="resposta"></li>
     </ul>
+<div style="text-align: center;">
+   <ul style="display: inline-block;">
+      <li><a class="fa fa-home centerize" href="home"> <span class="fontsf">Home</span></a></li>
+      <li><a class="fa fa-globe centerize" href="teams"> <span class="fontsf">Teams</span></a></li>
+      <li><a class="fa fa-pie-chart centerize" href="#"> <span class="fontsf">Portfolio</span></a></li>
+      <li><a class="fa fa-suitcase centerize" href="#"> <span class="fontsf">Your Firm</span></a></li>
+      <li><a class="fa fa-list active centerize" href="rankings"> <span class="fontsf">Rankings</span></a></li>
+      <li><a class="fa fa-shopping-cart centerize" href="#"> <span class="fontsf">Store</span></a></li>
+      <li><a class="fa fa-cogs centerize" href="#"> <span class="fontsf">Settings</span></a></li>
+    </ul>
+</div>
     <div class="hidden">   <!--div para pre-load todas as mini_flag!-->
       <img src="escudos/escudos_mini/AR_mini.png"> <!--flag tem width:25px!-->
       <img src="escudos/escudos_mini/BE_mini.png">
@@ -119,12 +117,11 @@
     </div> <!--fim da div para pre-load todas as mini_flag/mini_escudo!-->
 
 
-<div class="ter">
     <span id="MapaSpan">
     <h1 style="color:black;margin:25px;">Select a Country to see the stocks available from that region</h1>
     <h4 style="color:black;margin:-20px 0 0 25px;">The darker the country, more teams it has</h4>
 
-<div id="map1" style="width:90%;height:60%;margin:25px;"></div>
+<center><div id="map1" style="width:90vw;height:40vw;margin:25px;"></div></center>
   </span>
   <button style="margin:25px;" id="BackBtn" class="hidden">Back</button>
     <div id="ShowCountryTeamsDiv"></div>
@@ -141,7 +138,7 @@
     <button style='float:right;margin:3% 1% 3% 3%;font-size:150%;color:white;background-color:#dd5056;padding:0.5%;'>SELL</button>
     <div id='StockInfoChartGraph' style='margin:2.5%;'><canvas id='canvasStockInfo' height='305%'></canvas></div>
     </div>
-</div>
+
 
 </body>
 <script type="text/javascript">

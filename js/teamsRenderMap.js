@@ -8,7 +8,7 @@ jQuery.noConflict();
             $("#ShowCountryTeamsDiv").html(CreateTableTeamAPI(code)); //cria a tabela e coloca na div destacada pela id (o conteudo da funcao CreateTableTeamAPI esta em ../js/teamsContent.js)
             var newTableObject = document.getElementById('teams' + code +'TableContent'); 
             sorttable.makeSortable(newTableObject); //faz a tabela ser sorttable(junto com a linha de cima)
-             $('html,body').animate({scrollTop: 300}, 500); //maneira alternativa de scroll sem o div
+             $('html,body').animate({scrollTop: 450}, 500); //maneira alternativa de scroll sem o div
              //$("html, body").scrollTop($('#ShowCountryTeamsDiv').offset().top);  //scrol ate as info
              $("#BackBtn").hide(0); //essa call e mais as duas de baixo servem parap permitiqquer que vc saia do quadro das info detalhado apenas clicando em outro lugar no mapa mundi
              $("#StockInfoDisplay").hide(0);
