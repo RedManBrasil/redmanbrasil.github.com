@@ -94,6 +94,10 @@ li a:hover:not(.active) {
     font-family: helvetica;
 }
 
+.StockInfoDisplaySpan{
+    font-size:5vw;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;
