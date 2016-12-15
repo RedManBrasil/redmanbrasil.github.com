@@ -55,6 +55,8 @@ function TurnBtnForInfoAvaible(code){  //function que permite clicar na linha do
 			  	ShowStockInfo(code, idTR);});
 		}
 
+var TeamNameFromAPI;
+
 function ShowStockInfo(code, idTR){  //function que cria o div com a Info da Stock
 			  $("#BackBtn").show(0);
               $("#StockInfoDisplay").show(0);
@@ -68,9 +70,10 @@ function ShowStockInfo(code, idTR){  //function que cria o div com a Info da Sto
 			  stockvalue = parseFloat(stockvalue); //transforma em float para as operacções matemáticas a seguir
               var volume = stockvalue * 11302; //volume fictício apenas para teste
               volume = volume.toFixed(2); //essa funcao toFixed() faz com que apenas seja exibido duas casa decimais
+              TeamNameFromAPI = TeamsAPI[code][n]['name'];
 			  $("#headerInfo").html(
 			  	"<img src='escudos/"+ TeamsAPI[code][0]['name'] + "/"+ partidTR +".png'" + "style='margin:4% 0 0 4%;max-width:20%;max-height:20%;vertical-align:middle;display:inline-block;'>" +
-			  	"<span style='margin:4% 0 0 4%;font-size:600%;vertical-align: middle;display:inline-block;'>" + TeamsAPI[code][n]['name'] + "</span>" +
+			  	"<span style='margin:4% 0 0 4%;font-size:600%;vertical-align: middle;display:inline-block;'>" + TeamNameFromAPI + "</span>" +
 			  	"<br clear='all' /><br>" );
 			  document.getElementById('ValueStockInfoDisplay').innerHTML = TeamsAPI[code][n]['value'];
 			  document.getElementById('VolumeStockInfoDisplay').innerHTML = volume;
