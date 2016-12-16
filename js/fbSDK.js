@@ -53,7 +53,8 @@
   			setTimeout(
 				function () {
 					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
-						return response.name;
+						var namets = response.name
+						return namets;
 						});
 				} , 600);
 		}

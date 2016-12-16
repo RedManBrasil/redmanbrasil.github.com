@@ -174,10 +174,8 @@ function changeValue(value) {
 	window.onload = function() {
       getPic2(); //script do fbSDK.js
       getName(); //script do fbSDK.js
-      nameFBuser = getNameforUser();
-      name2 = getName();
+      var nameFBuser = getNameforUser();
       alert(nameFBuser);
-      alert(name2);
       changeValue(nameFBuser);
       getName2(); //script do fbSDK.js
       ["buy","sell"].map(function(c){ //script do p2p.js
