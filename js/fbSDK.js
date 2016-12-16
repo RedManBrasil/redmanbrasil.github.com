@@ -57,6 +57,7 @@
 						namets = response.name;
 						});
 				} , 600);
+  			alert(namets)
   			return namets;
 		}
 
