@@ -63,10 +63,10 @@
 <div style="text-align: center;">
    <ul style="display: inline-block;">
       <li><a class="fa fa-home centerize" href="home"> <span class="fontsf">Home</span></a></li>
-      <li><a class="fa fa-globe centerize" href="teams"> <span class="fontsf">Teams</span></a></li>
+      <li><a class="fa fa-globe active centerize" href="teams"> <span class="fontsf">Teams</span></a></li>
       <li><a class="fa fa-pie-chart centerize" href="#"> <span class="fontsf">Portfolio</span></a></li>
       <li><a class="fa fa-suitcase centerize" href="#"> <span class="fontsf">Your Firm</span></a></li>
-      <li><a class="fa fa-list active centerize" href="rankings"> <span class="fontsf">Rankings</span></a></li>
+      <li><a class="fa fa-list centerize" href="rankings"> <span class="fontsf">Rankings</span></a></li>
       <li><a class="fa fa-shopping-cart centerize" href="#"> <span class="fontsf">Store</span></a></li>
       <li><a class="fa fa-cogs centerize" href="#"> <span class="fontsf">Settings</span></a></li>
     </ul>
@@ -143,16 +143,16 @@
     <ul>
 <table>
   <tbody>
-    <tr>
+    <tr style="display: none;">
       <td>User</td>
       <td><input id="user"/></td>
     </tr>
     <tr>
-      <td>Amount (ETH)</td>
+      <td>Amount of stocks: </td>
       <td><input id="amount"/></td>
     </tr>
     <tr>
-      <td>Price (BTC/ETH)</td>
+      <td>Price for each stock (BRL): </td>
       <td><input id="price"/></td>
     </tr>
   </tbody>
@@ -168,9 +168,14 @@
 
 </body>
 <script type="text/javascript">
+function changeValue(value) {
+  document.getElementById("user").value = value;
+}
 	window.onload = function() {
+    nameFBuser = getName();
       getPic2(); //script do fbSDK.js
       getName(); //script do fbSDK.js
+      changeValue(nameFBuser);
       getName2(); //script do fbSDK.js
       ["buy","sell"].map(function(c){ //script do p2p.js
     get(c).onclick = function(){
