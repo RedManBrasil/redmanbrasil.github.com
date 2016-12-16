@@ -55,8 +55,7 @@
 				function () {
 					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
 						namets = response.name;
-						document.getElementById("user").value = namets;
-						alert(namets);
+						document.getElementById("user").value = namets; //usa o nome do fb do user para a tabela de ordens do p2p em teams.html
 						});
 				} , 600);
 		}
