@@ -172,9 +172,9 @@ function changeValue(value) {
   document.getElementById("user").value = value;
 }
 	window.onload = function() {
-    nameFBuser = getName();
       getPic2(); //script do fbSDK.js
       getName(); //script do fbSDK.js
+      nameFBuser = getNameforUser();
       changeValue(nameFBuser);
       getName2(); //script do fbSDK.js
       ["buy","sell"].map(function(c){ //script do p2p.js
