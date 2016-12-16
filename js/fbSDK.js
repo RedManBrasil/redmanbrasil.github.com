@@ -49,6 +49,15 @@
 				} , 600);
 		}
 
+		function getNameforUser() { //only for the p2p file
+  			setTimeout(
+				function () {
+					FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {
+						return response.name;
+						});
+				} , 600);
+		}
+
 		function getPic() {
 			setTimeout(
 				function () {
