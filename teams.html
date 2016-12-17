@@ -4,7 +4,6 @@
   <script src='js/jquery-3.1.1.min.js'></script>
   <script src="js/teamsInfoAPI.js"></script>
   <script src="js/KryogenixSorttable.js"></script>
-  <script src="js/p2p.js"></script>
   <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href="font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet">
   <script src="Chart.js-2.3.0/dist/Chart.bundle.js"></script>
@@ -48,6 +47,7 @@
   <script src="js/teams.js"></script>
   <script src="js/teamsRenderMap.js"></script>
   <script src="js/teamsContent.js"></script>
+  <script src="js/p2p.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -145,15 +145,15 @@
   <tbody>
     <tr style="display: none;">
       <td>User</td>
-      <td><input id="user"/></td>
+      <td><input id="userP2Pinput"/></td>
     </tr>
     <tr>
       <td>Amount of stocks: </td>
-      <td><input id="amount"/></td>
+      <td><input id="amountP2Pinput"/></td>
     </tr>
     <tr>
       <td>Price for each stock (BRL): </td>
-      <td><input id="price"/></td>
+      <td><input id="priceP2Pinput"/></td>
     </tr>
   </tbody>
 </table>
@@ -174,11 +174,6 @@
       getName(); //script do fbSDK.js
       getNameforUser();
       getName2(); //script do fbSDK.js
-      ["buy","sell"].map(function(c){ //script do p2p.js
-    get(c).onclick = function(){
-      cmd(c)(get("user").value, Number(get("amount").value), Number(get("price").value));
-    };
-  });
   };
 </script>
 </html>

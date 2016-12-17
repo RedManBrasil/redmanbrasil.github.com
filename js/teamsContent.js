@@ -53,6 +53,14 @@ function TurnBtnForInfoAvaible(code){  //function que permite clicar na linha do
 			  $('.teamtrstockinfo').click(function(){
 			  	var idTR = $(this).closest('tr').attr('id'); //da a id do <tr> do time clicado
 			  	ShowStockInfo(code, idTR);});
+			  document.getElementById("amountP2Pinput").value = "";
+			  document.getElementById("priceP2Pinput").value = "";
+			  document.getElementById("book").value = "";
+			  ["buy","sell"].map(function(c){ //script do p2p.js
+    	get(c).onclick = function(){
+      	cmd(c)(get("userP2Pinput").value, Number(get("amountP2Pinput").value), Number(get("priceP2Pinput").value));
+    };
+  });
 		}
 
 var TeamNameFromAPI;

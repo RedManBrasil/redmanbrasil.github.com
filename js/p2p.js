@@ -91,7 +91,8 @@ Book = function(){
 var get = function(id){ 
   return document.getElementById(id) 
 };
-var book = Book.Book("BTC", "ETH");
+
+var book = Book.Book("BRL", TeamNameFromAPI);
 var trades = [];
 
 var cmd = function (cmd){
