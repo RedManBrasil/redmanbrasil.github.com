@@ -92,7 +92,7 @@ var get = function(id){
   return document.getElementById(id) 
 };
 
-var book = Book.Book("BRL", "Team");
+var book = Book.Book("BRL", "FUT");
 var trades = [];
 
 var cmd = function (cmd){
