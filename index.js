@@ -27,11 +27,11 @@ function calc() {
 	var ras = check(ras);
 	if (ras == 1){
 			if ( dist <= 0.000001 && dist > 0){
-		folds.innerHTML = "You don't need to fucking fold your sheet";
+		folds.innerHTML = "You don't need to fold your sheet";
 		}
 		else if( dist <= 0)
 		{
-			folds.innerHTML = "Just enter a correct value, you prick";
+			folds.innerHTML = "Enter a correct value";
 		}
 		else{
 		while ( x < dist)
@@ -43,29 +43,29 @@ function calc() {
 		{
 			if(times==2)
 			{
-				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time, to reach "+dist+" kilometer";
+				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time to reach "+dist+" kilometer";
 			}
 			else
 			{
-				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times, to reach "+dist+" kilometer";
+				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times to reach "+dist+" kilometer";
 			}
 		}
 		else if(times==2)
 		{
-			folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time, to reach "+dist+" kilometers";
+			folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time to reach "+dist+" kilometers";
 		}
 		else
-		folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times, to reach "+dist+" kilometers";
+		folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times to reach "+dist+" kilometers";
 			}
 }
 
 	if (ras == 2){
 		if ( dist <= 0.001 && dist > 0){
-			folds.innerHTML = "You don't need to fucking fold your sheet";
+			folds.innerHTML = "You don't need to fold your sheet";
 		}
 		else if( dist <= 0)
 		{
-			folds.innerHTML = "Just enter a correct value, you prick";
+			folds.innerHTML = "Enter a correct value";
 		}
 		else{
 		while ( x < dist)
@@ -77,30 +77,30 @@ function calc() {
 		{
 			if(times==2)
 			{
-				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time, to reach "+dist+" meter";
+				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time to reach "+dist+" meter";
 			}
 			else
 			{
-				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times, to reach "+dist+" meter";
+				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times to reach "+dist+" meter";
 			}
 		}
 		else if(times==2)
 		{
-			folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time, to reach "+dist+" meters";
+			folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time to reach "+dist+" meters";
 		}
 		else
-		folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times, to reach "+dist+" meters";
+		folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times to reach "+dist+" meters";
 		}
 	}
 
 
 	if (ras == 3){
 		if ( dist <= 1 && dist > 0){
-		folds.innerHTML = "You don't need to fucking fold your sheet";
+		folds.innerHTML = "You don't need to fold your sheet";
 		}
 		else if( dist <= 0)
 		{
-			folds.innerHTML = "Just enter a correct value, you prick";
+			folds.innerHTML = "Enter a correct value";
 		}
 		else{
 		while ( x < dist)
@@ -111,13 +111,13 @@ function calc() {
 		if(times==2)
 		{
 			if(dist==1){
-				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time, to reach "+dist+" millimeter";
+				folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time to reach "+dist+" millimeter";
 			}
 			else
-			folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time, to reach "+dist+" millimeters";
+			folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" time to reach "+dist+" millimeters";
 		}
 		else
-		folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times, to reach "+dist+" millimeters";
+		folds.innerHTML = "You have to fold your piece of paper "+(times-1)+" times to reach "+dist+" millimeters";
 		}
 	}
 }
