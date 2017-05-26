@@ -1,168 +1,36 @@
-$(function (){
+function showNumbers(a, b, c) {
+    $('#'+b+'-price').append("<h3>" + c + "</h3>");
+    if(a > 0){ //maior que zero é verde
+                $('#'+b).append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( '+ a +'%)</h2>');
+            }  
+    else if (a < 0){ //menor que zero é vermelho
+                $('#'+b).append('<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#dd5056;">( '+ a +'%)</h2>');
+            }
+    else{ //igual a zero é cinza
+                $('#'+b).append('<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)</h2>');
+            }
+}
 
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/bitcoin/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('bitcoin').innerHTML = change.percent_change_24h;
-                a = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/ethereum/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('ethereum').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
 
 $(function (){
 
     $.ajax({
         type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/decred/",
+        url: "https://api.coinmarketcap.com/v1/ticker/?limit=200",
         success: function(response) {
             $.each(response, function(i, change) {
-                document.getElementById('decred').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/shift/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('shift').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/ubiq/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('ubiq').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/digixdao/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('digixdao').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/digixdao/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('digixdao').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/zcash/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('zcash').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/counterparty/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('counterparty').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/chronobank/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('chronobank').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/storjcoin-x/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('storjcoin-x').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/wings/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('wings').innerHTML = change.percent_change_24h;
-            });
-        }
-    });
-});
-
-$(function (){
-
-    $.ajax({
-        type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/golem-network-tokens/",
-        success: function(response) {
-            $.each(response, function(i, change) {
-                document.getElementById('golem-network-tokens').innerHTML = change.percent_change_24h;
+                if ( change.id == 'bitcoin' ){ showNumbers(change.percent_change_24h, change.id, change.price_usd) }
+                else if ( change.id == 'ethereum' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'decred' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'shift' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'ubiq' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'digixdao' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'zcash' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'counterparty' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'chronobank' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'storjcoin-x' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'wings' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }  
+                else if ( change.id == 'golem-network-tokens' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }  
             });
         }
     });
