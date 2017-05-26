@@ -1,5 +1,18 @@
 function showNumbers(a, b, c) {
-    $('#'+b+'-price').append("<h3>" + c + "</h3>");
+    if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
+        $('#'+b+'-price').append("<h3>" + c + " USD</h3>");
+    }
+    else {
+        $('#'+b+'-price').append("<h3>" + c + " BTC</h3>");
+    }
+    if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
+        $('#'+b+'-total').append("<h3>" + c * document.getElementById ( b+'-amount' ).innerText + " USD</h3>");
+    }
+    else{
+        if ( ($('#'+b+'-amount').html()) ) {
+            $('#'+b+'-total').append("<h3>" + c * document.getElementById ( b+'-amount' ).innerText + " BTC</h3>");
+        }
+    }
     if(a > 0){ //maior que zero é verde
                 $('#'+b).append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( '+ a +'%)</h2>');
             }  
@@ -22,6 +35,7 @@ $(function (){
                 if ( change.id == 'bitcoin' ){ showNumbers(change.percent_change_24h, change.id, change.price_usd) }
                 else if ( change.id == 'ethereum' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
                 else if ( change.id == 'decred' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                else if ( change.id == 'ripple' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
                 else if ( change.id == 'shift' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
                 else if ( change.id == 'ubiq' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
                 else if ( change.id == 'digixdao' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
