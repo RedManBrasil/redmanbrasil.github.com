@@ -1,3 +1,4 @@
+
 function showNumbers(a, b, c) {
     if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
         $('#'+b+'-price').append("<h3>" + c + " USD</h3>");
@@ -49,3 +50,8 @@ $(function (){
         }
     });
 });
+
+function hide(){
+    $("#Ptable").toggle(500);
+
+}
