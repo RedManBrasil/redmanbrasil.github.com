@@ -1,19 +1,21 @@
 
 function showNumbers(a, b, c) {
+
     if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
-        $('#'+b+'-price').append("<h3>" + c + " USD</h3>");
+        $('#'+ b +'-price').append( c + " USD");
     }
     else {
-        $('#'+b+'-price').append("<h3>" + c + " BTC</h3>");
+        $('#'+ b +'-price').append( c + " BTC");
     }
     if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
-        $('#'+b+'-total').append("<h3>" + c * document.getElementById ( b+'-amount' ).innerText + " USD</h3>");
+        $('#' + b + '-total').append( c * document.getElementById ( b +'-amount' ).innerText + " USD");
     }
     else{
-        if ( ($('#'+b+'-amount').html()) ) {
-            $('#'+b+'-total').append("<h3>" + c * document.getElementById ( b+'-amount' ).innerText + " BTC</h3>");
+        if ( ($('#'+ b +'-amount').html()) ) { //tem que checar se existe a caixinha com a id requirida
+            $('#'+ b +'-total').append( c * document.getElementById ( b +'-amount' ).innerText + " BTC");
         }
     }
+
     if(a > 0){ //maior que zero é verde
                 $('#'+b).append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( '+ a +'%)</h2>');
             }  
@@ -24,7 +26,6 @@ function showNumbers(a, b, c) {
                 $('#'+b).append('<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)</h2>');
             }
 }
-
 
 $(function (){
 
@@ -49,6 +50,14 @@ $(function (){
             });
         }
     });
+});
+
+$( document ).ajaxComplete(function() { //faz a soma do valor em btc dos portfolios, para o total
+    var tot = 0;
+    $('#Ptable .Pbtcvalue').each(function() {
+    tot += parseFloat($(this).text());
+    });
+    $('#total-total').append('<strong>'+ tot +' BTC</strong>');
 });
 
 function toggle(a){
