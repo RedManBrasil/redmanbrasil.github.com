@@ -9,139 +9,10 @@
 		<link rel="stylesheet" href="css/mine.css">
 
 	<body>
-		<div style="margin:1vw;background-color:#f2f5f3;float:left;">
-			<table>
-			<thead>
-			  <tr style="font-size:28px;">
-			    <th>NAME</th> 
-			    <th>PRICE</th> 
-			    <th>CHANGE</th> 
-			  </tr>
-			</thead>
-			<tbody>
-			  <tr>
-			    <td>
-			    	Bitcoin (BTC)
-			    </td>
-			    <td id="bitcoin-price">
-			    </td>
-			    <td id="bitcoin">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Ethereum (ETH)
-			    </td>
-			    <td id="ethereum-price">
-			    </td>
-			    <td id="ethereum">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Decred (DCR)
-			    </td>
-			    <td id="decred-price">
-			    </td>
-			    <td id="decred">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Ripple (XRP)
-			    </td>
-			    <td id="ripple-price">
-			    </td>
-			    <td id="ripple">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Shift (SHIFT)
-			    </td>
-			    <td id="shift-price">
-			    </td>
-			    <td id="shift">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Ubiq (UBQ)
-			    </td>
-			    <td id="ubiq-price">
-			    </td>
-			    <td id="ubiq">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	DigixDAO (DGD)
-			    </td>
-			    <td id="digixdao-price">
-			    </td>
-			    <td id="digixdao">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Zcash (ZEC)
-			    </td>
-			    <td id="zcash-price">
-			    </td>
-			    <td id="zcash">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Counterparty (XCP)
-			    </td>
-			    <td id="counterparty-price">
-			    </td>
-			    <td id="counterparty">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Chronobank (TIME)
-			    </td>
-			    <td id="chronobank-price">
-			    </td>
-			    <td id="chronobank">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Storjcoin X (SJCX)
-			    </td>
-			    <td id="storjcoin-x-price">
-			    </td>
-			    <td id="storjcoin-x">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Wings (WINGS)
-			    </td>
-			    <td id="wings-price">
-			    </td>
-			    <td id="wings">
-			    </td>
-			  </tr>
-			  <tr>
-			    <td>
-			    	Golem (GNT)
-			    </td>
-			    <td id="golem-network-tokens-price">
-			    </td>
-			    <td id="golem-network-tokens">
-			    </td>
-			  </tr>
-			</tbody>
-			</table>
-		</div>
+		
 
 		<div style="background-color:#f2f5f3;margin:1vw;float:left;">
-  				<div id='Pname' onclick="hide();">Pedro</div>
+  				<div id='Pname' onclick="toggle('Ptable');">Pedro</div>
   			<div id='Ptable'>
 				<table>
 					<thead>
@@ -208,9 +79,269 @@
 		</div>
 
 		<div style="clear:left;background-color:#f2f5f3;float:left;margin:1vw;">
+			<div id='Cname' onclick="toggle('Ctable');">Carlos</div>
+				<div id='Ctable'>
+					<table>
+						<thead>
+						  <tr style="font-size:28px;">
+						    <th>NAME</th> 
+						    <th>AMOUNT</th> 
+						    <th>TOTAL</th> 
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+						    <td>
+						    	Decred (DCR)
+						    </td>
+						    <td id="decred-amount">
+						    	1977.17946
+						    </td>
+						    <td id="decred-total">
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>
+						    	Ethereum (ETH)
+						    </td>
+						    <td id="ethereum-amount">
+						    	115.873547
+						    </td>
+						    <td id="ethereum-total">
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>
+						    	Bitcoin (BTC)
+						    </td>
+						    <td id="bitcoin-amount">
+						    	0.50474772
+						    </td>
+						    <td id="bitcoin-total">
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>
+						    	SHIFT (SHIFT)
+						    </td>
+						    <td id="shift-amount">
+						    	3103.76386
+						    </td>
+						    <td id="shift-total">
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>
+						    	Ubiq (UBQ)
+						    </td>
+						    <td id="ubiq-amount">
+						    	1611.000000
+						    </td>
+						    <td id="ubiq-total">
+						    </td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
 		</div>
 
-		<div style="background-color:#f2f5f3;float:left;margin:1vw;">
+		<div style="clear:left;background-color:#f2f5f3;float:left;margin:1vw;">
+			<div id='Mname' onclick="toggle('Mtable');">Mariana</div>
+				<div id='Mtable'>
+					<table>
+						<thead>
+						  <tr style="font-size:28px;">
+						    <th>NAME</th> 
+						    <th>AMOUNT</th> 
+						    <th>TOTAL</th> 
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+						    <td>
+						    	Decred (DCR)
+						    </td>
+						    <td id="decred-amount">
+						    	1977.17946
+						    </td>
+						    <td id="decred-total">
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>
+						    	Ethereum (ETH)
+						    </td>
+						    <td id="ethereum-amount">
+						    	115.873547
+						    </td>
+						    <td id="ethereum-total">
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>
+						    	Bitcoin (BTC)
+						    </td>
+						    <td id="bitcoin-amount">
+						    	0.50474772
+						    </td>
+						    <td id="bitcoin-total">
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>
+						    	SHIFT (SHIFT)
+						    </td>
+						    <td id="shift-amount">
+						    	3103.76386
+						    </td>
+						    <td id="shift-total">
+						    </td>
+						  </tr>
+						  <tr>
+						    <td>
+						    	Ubiq (UBQ)
+						    </td>
+						    <td id="ubiq-amount">
+						    	1611.000000
+						    </td>
+						    <td id="ubiq-total">
+						    </td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+		</div>
+
+		<div style="clear:left;margin:1vw;background-color:#f2f5f3;float:left;">
+			<div id='CoinsName' onclick="toggle('CoinsTable');">Coins</div>
+			<table id='CoinsTable'>
+				<thead>
+				  <tr style="font-size:28px;">
+				    <th>NAME</th> 
+				    <th>PRICE</th> 
+				    <th>CHANGE</th> 
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+				    <td>
+				    	Bitcoin (BTC)
+				    </td>
+				    <td id="bitcoin-price">
+				    </td>
+				    <td id="bitcoin">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Ethereum (ETH)
+				    </td>
+				    <td id="ethereum-price">
+				    </td>
+				    <td id="ethereum">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Decred (DCR)
+				    </td>
+				    <td id="decred-price">
+				    </td>
+				    <td id="decred">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Ripple (XRP)
+				    </td>
+				    <td id="ripple-price">
+				    </td>
+				    <td id="ripple">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Shift (SHIFT)
+				    </td>
+				    <td id="shift-price">
+				    </td>
+				    <td id="shift">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Ubiq (UBQ)
+				    </td>
+				    <td id="ubiq-price">
+				    </td>
+				    <td id="ubiq">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	DigixDAO (DGD)
+				    </td>
+				    <td id="digixdao-price">
+				    </td>
+				    <td id="digixdao">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Zcash (ZEC)
+				    </td>
+				    <td id="zcash-price">
+				    </td>
+				    <td id="zcash">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Counterparty (XCP)
+				    </td>
+				    <td id="counterparty-price">
+				    </td>
+				    <td id="counterparty">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Chronobank (TIME)
+				    </td>
+				    <td id="chronobank-price">
+				    </td>
+				    <td id="chronobank">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Storjcoin X (SJCX)
+				    </td>
+				    <td id="storjcoin-x-price">
+				    </td>
+				    <td id="storjcoin-x">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Wings (WINGS)
+				    </td>
+				    <td id="wings-price">
+				    </td>
+				    <td id="wings">
+				    </td>
+				  </tr>
+				  <tr>
+				    <td>
+				    	Golem (GNT)
+				    </td>
+				    <td id="golem-network-tokens-price">
+				    </td>
+				    <td id="golem-network-tokens">
+				    </td>
+				  </tr>
+				</tbody>
+			</table>
 		</div>
 	</body>
 

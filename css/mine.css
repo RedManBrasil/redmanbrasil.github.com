@@ -143,7 +143,7 @@ td.text-right {
   text-align: right;
 }
 
-#Pname{
+#Pname, #Mname, #Cname, #CoinsName{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
   background-color: #ed3138;
@@ -151,4 +151,24 @@ td.text-right {
   font-weight: bold;
   padding: 10px;
   text-align: center;
+}
+
+#Ptable, #Mtable, #Ctable, #CoinsTable{
+  display: none;
+}
+
+#Pname{
+  background-color: #008a49;
+}
+
+#Cname{
+  background-color: #fdb813;
+}
+
+#Mname{
+  background-color: #ed3138;
+}
+
+#CoinsName{
+  background-color: #07162d;
 }

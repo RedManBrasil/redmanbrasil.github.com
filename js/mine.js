@@ -51,7 +51,7 @@ $(function (){
     });
 });
 
-function hide(){
-    $("#Ptable").toggle(500);
+function toggle(a){
+    $("#"+a).toggle(500);
 
 }
