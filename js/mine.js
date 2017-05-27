@@ -7,7 +7,7 @@ var Cvalues = new Array();   //array com os valores em BTC(e do BTC é em USD) d
 function showNumbers(a, b, c) {
 
     if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
-        $('#'+ b +'-price').append( c + " USD");
+        $('#'+ b +'-price').append( "US$" + c );
     }
     else {
         $('#'+ b +'-price').append( c + " BTC");
@@ -117,6 +117,7 @@ $(function (){
         success: function(resposta) {
             $.each(JSON.parse(resposta), function(n, tick) {
                 btc_real = tick.last;
+                $('#bitcoin-price_real').append('R$' + btc_real.toFixed(2) );
                  });  
             }
         });
