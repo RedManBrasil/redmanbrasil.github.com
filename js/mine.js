@@ -88,6 +88,8 @@ $(document).ajaxComplete(function(event,xhr,settings){
     console.log("URL",settings.url);
     if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=200")
     { //faz a soma do valor em btc dos portfolios, para o total
+        var tot_btc_geral = 0; //valor em btc somando todos os users
+        var tot_real_geral = 0; //valor em reais somando todos os users
 
         //Para o Pedro
         var tot_btc = 0; //valor total do user em Bitcoins
@@ -99,7 +101,8 @@ $(document).ajaxComplete(function(event,xhr,settings){
             id_aux = $(this).attr('id').replace("-total-pedro", "").replace("-amount-pedro", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
             aux_real = (aux_btc * btc_real);
-            //Pvalues[id_aux] = aux_btc; //aloca na array quanto vale determinada moeda do user
+            tot_btc_geral += aux_btc;
+            tot_real_geral += aux_real;
             tot_btc += aux_btc;
             tot_real += aux_real;
             $('#' + id_aux + '-real-pedro').append('R$' + aux_real.toFixed(2) );
@@ -116,9 +119,9 @@ $(document).ajaxComplete(function(event,xhr,settings){
         $('#Ctable .Cbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-carlos", "").replace("-amount-carlos", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
-            //alert(aux_btc);
             aux_real = (aux_btc * btc_real);
-            //Cvalues[id_aux] = aux_btc; //aloca na array quanto vale determinada moeda do user
+            tot_btc_geral += aux_btc;
+            tot_real_geral += aux_real;
             tot_btc += aux_btc;
             tot_real += aux_real;
             $('#' + id_aux + '-real-carlos').append('R$' + aux_real.toFixed(2) );
@@ -135,9 +138,9 @@ $(document).ajaxComplete(function(event,xhr,settings){
         $('#Mtable .Mbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-mariana", "").replace("-amount-mariana", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
-            //alert(aux_btc);
             aux_real = (aux_btc * btc_real);
-            //Cvalues[id_aux] = aux_btc; //aloca na array quanto vale determinada moeda do user
+            tot_btc_geral += aux_btc;
+            tot_real_geral += aux_real;
             tot_btc += aux_btc;
             tot_real += aux_real;
             $('#' + id_aux + '-real-mariana').append('R$' + aux_real.toFixed(2) );
@@ -145,4 +148,6 @@ $(document).ajaxComplete(function(event,xhr,settings){
         $('#total-mariana-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-mariana-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
     }
+    $('#total-em-btc').append('<strong>'+  tot_btc_geral.toFixed(8) +' BTC</strong>');
+    $('#total-em-real').append('<strong>R$'+ tot_real_geral.toFixed(2) +'</strong>');
 });
