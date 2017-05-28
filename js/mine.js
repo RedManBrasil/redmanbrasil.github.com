@@ -147,7 +147,8 @@ $(document).ajaxComplete(function(event,xhr,settings){
         });
         $('#total-mariana-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-mariana-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
+        //APOS TUDO FAZ A SOMA E O APPEND COM OS VALORES DE TODOS JUNTOS
+        $('#total-em-btc').append('<strong>'+  tot_btc_geral.toFixed(8) +' BTC</strong>');
+        $('#total-em-real').append('<strong>R$'+ tot_real_geral.toFixed(2) +'</strong>');
     }
-    $('#total-em-btc').append('<strong>'+  tot_btc_geral.toFixed(8) +' BTC</strong>');
-    $('#total-em-real').append('<strong>R$'+ tot_real_geral.toFixed(2) +'</strong>');
 });
