@@ -14,7 +14,7 @@
 		
 
 		<div style="background-color:#f2f5f3;margin:1vw;float:left;">
-  				<div id='Pname' onclick="toggle('Ptable');">Pedro</div>
+  				<div id='Pname' onclick="toggle('Ptable');toggle('Pvariat');">Pedro<span id="Pvariat"></span></div>
   			<div id='Ptable'>
 				<table>
 					<thead>
@@ -104,7 +104,7 @@
 		</div>
 
 		<div style="clear:left;background-color:#f2f5f3;float:left;margin:1vw;">
-			<div id='Cname' onclick="toggle('Ctable');">Carlos</div>
+			<div id='Cname' onclick="toggle('Ctable');toggle('Cvariat');">Carlos<span id="Cvariat"></span></div>
 				<div id='Ctable'>
 					<table>
 						<thead>
@@ -294,7 +294,7 @@
 		</div>
 
 		<div style="clear:left;background-color:#f2f5f3;float:left;margin:1vw;">
-			<div id='Mname' onclick="toggle('Mtable');">Mariana</div>
+			<div id='Mname' onclick="toggle('Mtable');toggle('Mvariat');">Mariana<span id="Mvariat"></span></div>
   			<div id='Mtable'>
 				<table>
 					<thead>
@@ -387,7 +387,8 @@
 					  <tr style="font-size:28px;">
 					    <th>NAME</th> 
 					    <th>PRICE</th> 
-					    <th>CHANGE</th> 
+					    <th>CHANGE(BTC)</th>
+					    <th>CHANGE(REAL)</th> 
 					  </tr>
 					</thead>
 					<tbody>
@@ -399,7 +400,9 @@
 					    	<span id="bitcoin-price"></span><br><br>
 					    	<span id="bitcoin-price_real"></span>
 					    </td>
-					    <td id="bitcoin">
+					    <td id="bitcoin-change-btc">
+					    </td>
+					    <td id="bitcoin-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -408,7 +411,9 @@
 					    </td>
 					    <td id="ethereum-price">
 					    </td>
-					    <td id="ethereum">
+					    <td id="ethereum-change-btc">
+					    </td>
+					    <td id="ethereum-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -417,7 +422,9 @@
 					    </td>
 					    <td id="decred-price">
 					    </td>
-					    <td id="decred">
+					    <td id="decred-change-btc">
+					    </td>
+					    <td id="decred-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -426,7 +433,9 @@
 					    </td>
 					    <td id="ripple-price">
 					    </td>
-					    <td id="ripple">
+					    <td id="ripple-change-btc">
+					    </td>
+					    <td id="ripple-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -435,7 +444,9 @@
 					    </td>
 					    <td id="shift-price">
 					    </td>
-					    <td id="shift">
+					    <td id="shift-change-btc">
+					    </td>
+					    <td id="shift-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -444,7 +455,9 @@
 					    </td>
 					    <td id="ubiq-price">
 					    </td>
-					    <td id="ubiq">
+					    <td id="ubiq-change-btc">
+					    </td>
+					    <td id="ubiq-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -453,7 +466,9 @@
 					    </td>
 					    <td id="digixdao-price">
 					    </td>
-					    <td id="digixdao">
+					    <td id="digixdao-change-btc">
+					    </td>
+					    <td id="digixdao-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -462,7 +477,9 @@
 					    </td>
 					    <td id="zcash-price">
 					    </td>
-					    <td id="zcash">
+					    <td id="zcash-change-btc">
+					    </td>
+					    <td id="zcash-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -471,7 +488,9 @@
 					    </td>
 					    <td id="counterparty-price">
 					    </td>
-					    <td id="counterparty">
+					    <td id="counterparty-change-btc">
+					    </td>
+					    <td id="counterparty-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -480,7 +499,9 @@
 					    </td>
 					    <td id="chronobank-price">
 					    </td>
-					    <td id="chronobank">
+					    <td id="chronobank-change-btc">
+					    </td>
+					    <td id="chronobank-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -489,7 +510,9 @@
 					    </td>
 					    <td id="storjcoin-x-price">
 					    </td>
-					    <td id="storjcoin-x">
+					    <td id="storjcoin-x-change-btc">
+					    </td>
+					    <td id="storjcoin-x-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -498,7 +521,9 @@
 					    </td>
 					    <td id="wings-price">
 					    </td>
-					    <td id="wings">
+					    <td id="wings-change-btc">
+					    </td>
+					    <td id="wings-change-real">
 					    </td>
 					  </tr>
 					  <tr>
@@ -507,7 +532,9 @@
 					    </td>
 					    <td id="golem-network-tokens-price">
 					    </td>
-					    <td id="golem-network-tokens">
+					    <td id="golem-network-tokens-change-btc">
+					    </td>
+					    <td id="golem-network-tokens-change-real">
 					    </td>
 					  </tr>
 					</tbody>

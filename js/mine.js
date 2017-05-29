@@ -1,45 +1,4 @@
-//var PriceA = new Array();     //array com os preços
-//var ChangeA = new Array();   //array com as porcentagens de variações diárias
-//var Pvalues = new Array();   //array com os valores em BTC(e do BTC é em USD) das moedas do Pedro
-//var Mvalues = new Array();   //array com os valores em BTC(e do BTC é em USD) das moedas da Mariana 
-//var Cvalues = new Array();   //array com os valores em BTC(e do BTC é em USD) das moedas do Carlos
-
-function showNumbers(a, b, c) {
-
-    if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
-        $('#'+ b +'-price').append( "US$" + c );
-    }
-    else {
-        $('#'+ b +'-price').append( c + " BTC");
-    }
-
-    if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
-        $('#' + b + '-total-pedro').append( "US$" + (c * document.getElementById ( b +'-amount-pedro' ).innerText).toFixed(2));
-        $('#' + b + '-total-mariana').append( "US$" + (c * document.getElementById ( b +'-amount-mariana' ).innerText).toFixed(2));
-        $('#' + b + '-total-carlos').append( "US$" + (c * document.getElementById ( b +'-amount-carlos' ).innerText).toFixed(2));
-    }
-    else{
-        if ( ($('#'+ b +'-amount-pedro').html()) ) { //tem que checar se existe a caixinha com a id requirida
-            $('#'+ b +'-total-pedro').append( (c * document.getElementById ( b +'-amount-pedro' ).innerText).toFixed(8) + " BTC");
-        }
-        if ( ($('#'+ b +'-amount-carlos').html()) ) { //tem que checar se existe a caixinha com a id requirida
-            $('#' + b + '-total-carlos').append( (c * document.getElementById ( b +'-amount-carlos' ).innerText).toFixed(8) + " BTC");
-        }
-        if ( ($('#'+ b +'-amount-mariana').html()) ) { //tem que checar se existe a caixinha com a id requirida
-            $('#' + b + '-total-mariana').append( (c * document.getElementById ( b +'-amount-mariana' ).innerText).toFixed(8) + " BTC");
-        }
-    }
-
-    if(a > 0){ //maior que zero é verde
-                $('#'+ b).append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( '+ a +'%)</h2>');
-            }  
-    else if (a < 0){ //menor que zero é vermelho
-                $('#'+ b).append('<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#dd5056;">( '+ a +'%)</h2>');
-            }
-    else{ //igual a zero é cinza
-                $('#'+ b).append('<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)</h2>');
-            }
-    }
+var btc_change;
 
 $(function (){
 
@@ -48,7 +7,7 @@ $(function (){
         url: "https://api.coinmarketcap.com/v1/ticker/?limit=200",
         success: function(response) {
             $.each(response, function(i, change) {
-                if ( change.id == 'bitcoin' ){ showNumbers(change.percent_change_24h, change.id, change.price_usd) }
+                if ( change.id == 'bitcoin' ){ btc_change = change.percent_change_24h; showNumbers(btc_change, change.id, change.price_usd) }
                 else if ( change.id == 'ethereum' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
                 else if ( change.id == 'decred' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
                 else if ( change.id == 'ripple' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
@@ -83,6 +42,56 @@ $(function (){
 function toggle(a){
     $("#" + a).toggle(500);
 }
+
+function showNumbers(a, b, c) {
+
+    if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
+        $('#'+ b +'-price').append( "US$" + c );
+    }
+    else {
+        $('#'+ b +'-price').append( c + " BTC");
+    }
+
+    if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
+        $('#' + b + '-total-pedro').append( "US$" + (c * document.getElementById ( b +'-amount-pedro' ).innerText).toFixed(2));
+        $('#' + b + '-total-mariana').append( "US$" + (c * document.getElementById ( b +'-amount-mariana' ).innerText).toFixed(2));
+        $('#' + b + '-total-carlos').append( "US$" + (c * document.getElementById ( b +'-amount-carlos' ).innerText).toFixed(2));
+    }
+    else{
+        if ( ($('#'+ b +'-amount-pedro').html()) ) { //tem que checar se existe a caixinha com a id requirida
+            $('#'+ b +'-total-pedro').append( (c * document.getElementById ( b +'-amount-pedro' ).innerText).toFixed(8) + " BTC");
+        }
+        if ( ($('#'+ b +'-amount-carlos').html()) ) { //tem que checar se existe a caixinha com a id requirida
+            $('#' + b + '-total-carlos').append( (c * document.getElementById ( b +'-amount-carlos' ).innerText).toFixed(8) + " BTC");
+        }
+        if ( ($('#'+ b +'-amount-mariana').html()) ) { //tem que checar se existe a caixinha com a id requirida
+            $('#' + b + '-total-mariana').append( (c * document.getElementById ( b +'-amount-mariana' ).innerText).toFixed(8) + " BTC");
+        }
+    }
+
+    each_coin_real_change = a - btc_change;//variacao de cada moeda em real (variação dela em real menos a variação do bitcoin)
+    //(CHANGE BTC)Muda a cor da variação diaria e coloca as setas indicando o sentido da variação
+        if(each_coin_real_change > 0){ //maior que zero é verde
+                $('#'+ b + '-change-btc').append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( ' + each_coin_real_change.toFixed(2) +'%)</h2>');
+            }  
+        else if (each_coin_real_change < 0){ //menor que zero é vermelho
+                $('#'+ b + '-change-btc').append('<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#dd5056;">( '+ each_coin_real_change.toFixed(2) +'%)</h2>');
+            }
+        else{ //igual a zero é cinza
+                $('#'+ b + '-change-btc').append('<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)</h2>');
+            }
+
+    //(CHANGE REAL)Muda a cor da variação diaria e coloca as setas indicando o sentido da variação
+        if(a > 0){ //maior que zero é verde
+                $('#'+ b + '-change-real').append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( '+ a +'%)</h2>');
+            }  
+        else if (a < 0){ //menor que zero é vermelho
+                $('#'+ b + '-change-real').append('<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#dd5056;">( '+ a +'%)</h2>');
+            }
+        else{ //igual a zero é cinza
+                $('#'+ b + '-change-real').append('<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)</h2>');
+            }
+    }
 
 $(document).ajaxComplete(function(event,xhr,settings){
     console.log("URL",settings.url);
