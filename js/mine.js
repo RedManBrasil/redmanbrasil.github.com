@@ -1,4 +1,22 @@
-var btc_change;
+function add_zero(x){
+    if (x < 10){
+        return '0'+x;
+    }
+    else
+        return x;
+}
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+var hours = today.getHours();
+var minutes = today.getMinutes();
+dd = add_zero(dd);
+mm = add_zero(mm);
+minutes = add_zero(minutes);
+
+time_now = dd + '/' + mm + '/' + yyyy + ' ' + hours + ':' + minutes;
 
 $(function (){
 
@@ -118,7 +136,9 @@ $(document).ajaxComplete(function(event,xhr,settings){
         });
         $('#total-pedro-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-pedro-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
-
+        console.log('Pedro:');
+        console.log(time_now + ' ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
+    
         //Para o CARLOS
         tot_btc = 0; //valor total do user em Bitcoins
         tot_real = 0; //valor total do user em Reais
@@ -137,6 +157,8 @@ $(document).ajaxComplete(function(event,xhr,settings){
         });
         $('#total-carlos-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-carlos-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
+        console.log('Carlos:');
+        console.log(time_now + ' ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
 
         //Para a MARIANA
         tot_btc = 0; //valor total do user em Bitcoins
@@ -156,8 +178,13 @@ $(document).ajaxComplete(function(event,xhr,settings){
         });
         $('#total-mariana-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-mariana-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
+        console.log('Mariana:');
+        console.log(time_now + ' ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
+
         //APOS TUDO FAZ A SOMA E O APPEND COM OS VALORES DE TODOS JUNTOS
         $('#total-em-btc').append('<strong>'+  tot_btc_geral.toFixed(8) +' BTC</strong>');
         $('#total-em-real').append('<strong>R$'+ tot_real_geral.toFixed(2) +'</strong>');
+        console.log('TOTAL:');
+        console.log(time_now + ' ' + tot_btc_geral.toFixed(8) + 'BTC || R$' + tot_real_geral.toFixed(2));
     }
 });
