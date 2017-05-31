@@ -137,7 +137,7 @@ $(document).ajaxComplete(function(event,xhr,settings){
         $('#total-pedro-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-pedro-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
         console.log('Pedro:');
-        console.log(time_now + ' ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
+        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
     
         //Para o CARLOS
         tot_btc = 0; //valor total do user em Bitcoins
@@ -158,7 +158,7 @@ $(document).ajaxComplete(function(event,xhr,settings){
         $('#total-carlos-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-carlos-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
         console.log('Carlos:');
-        console.log(time_now + ' ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
+        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
 
         //Para a MARIANA
         tot_btc = 0; //valor total do user em Bitcoins
@@ -179,12 +179,12 @@ $(document).ajaxComplete(function(event,xhr,settings){
         $('#total-mariana-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-mariana-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
         console.log('Mariana:');
-        console.log(time_now + ' ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
+        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
 
         //APOS TUDO FAZ A SOMA E O APPEND COM OS VALORES DE TODOS JUNTOS
         $('#total-em-btc').append('<strong>'+  tot_btc_geral.toFixed(8) +' BTC</strong>');
         $('#total-em-real').append('<strong>R$'+ tot_real_geral.toFixed(2) +'</strong>');
         console.log('TOTAL:');
-        console.log(time_now + ' ' + tot_btc_geral.toFixed(8) + 'BTC || R$' + tot_real_geral.toFixed(2));
+        console.log(time_now + ' || ' + tot_btc_geral.toFixed(8) + 'BTC || R$' + tot_real_geral.toFixed(2));
     }
 });
