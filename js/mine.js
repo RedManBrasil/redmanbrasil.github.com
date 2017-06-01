@@ -159,14 +159,15 @@ $(document).ajaxComplete(function(event,xhr,settings){
     { //faz a soma do valor em btc dos portfolios, para o total
         var tot_btc_geral = 0; //valor em btc somando todos os users
         var tot_real_geral = 0; //valor em reais somando todos os users
+        var porcet_geral_de_todos = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio de todos os users somados
 
         //Para o Pedro
         var tot_btc = 0; //valor total do user em Bitcoins
-        var tot_real = 0; //valor total do user em Reais
+        var tot_real_P = 0; //valor total do user em Reais
         var aux_btc = 0; //puxa o valor do amount da table em Bitcoin
         var aux_real = 0; //puxa o valor do amount em reais
         var id_aux; //a id da moeda em cada .each
-        var porcet_geral = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
+        var porcet_geral_P = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
         $('#Ptable .Pbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-pedro", "").replace("-amount-pedro", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
@@ -174,34 +175,34 @@ $(document).ajaxComplete(function(event,xhr,settings){
             tot_btc_geral += aux_btc;
             tot_real_geral += aux_real;
             tot_btc += aux_btc;
-            tot_real += aux_real;
+            tot_real_P += aux_real;
             $('#' + id_aux + '-real-pedro').append('R$' + aux_real.toFixed(2) );
         });
         $('#Ptable .Pbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-pedro", "").replace("-amount-pedro", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
-            porcet_geral += ( CoinsChange[id_aux] ) * ( aux_btc / tot_btc ); //vai somando a porcentagem (já com uma media ponderada, com o peso de cada moeda sobre o portfolio) (porcentagem de variação em BTC)
+            porcet_geral_P += ( CoinsChange[id_aux] ) * ( aux_btc / tot_btc ); //vai somando a porcentagem (já com uma media ponderada, com o peso de cada moeda sobre o portfolio) (porcentagem de variação em BTC)
         });
-        porcet_geral = porcet_geral.toFixed(2); //passa a variacao geral do port em btc para apenas 2 casa decimais
-        aux_btc = tot_real * porcet_geral / (100 + parseFloat(porcet_geral));
-        if (porcet_geral > 0){ porcet_geral = '+' + porcet_geral; }
+        porcet_geral_P = porcet_geral_P.toFixed(2); //passa a variacao geral do port em btc para apenas 2 casa decimais
+        aux_btc = tot_real_P * porcet_geral_P / (100 + parseFloat(porcet_geral_P)); //uso o aux_btc apenas como auxiliar, não está em seu uso padrão
+        if (porcet_geral_P > 0){ porcet_geral_P = '+' + porcet_geral_P; }
         if (aux_btc > 0){ aux_btc = '+R$' + aux_btc.toFixed(2); }
         else if (aux_btc < 0){ aux_btc = aux_btc.toFixed(2).replace("-", "-R$"); }
         else{ aux_btc = '-';}
-        $('#total-pedro-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
-        $('#total-pedro-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
-        $('#Pvariat_percent').append('<strong>('+ porcet_geral +'%)</strong>');
+        $('#Pvariat_percent').append('<strong>('+ porcet_geral_P +'%)</strong>');
         $('#Pvariat_money').append('<strong>('+ aux_btc +')</strong>');
+        $('#total-pedro-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
+        $('#total-pedro-real').append('<strong>R$'+ tot_real_P.toFixed(2) +'</strong>');
         console.log('Pedro:');
-        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
+        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real_P.toFixed(2));
     
         //Para o CARLOS
         tot_btc = 0; //valor total do user em Bitcoins
-        tot_real = 0; //valor total do user em Reais
+        tot_real_C = 0; //valor total do user em Reais
         aux_btc = 0; //puxa o valor do amount da table amount anterior em Bitcoin
         aux_real = 0; //puxa o valor do amount em reais
         id_aux; //a id da moeda em cada .each
-        porcet_geral = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
+        porcet_geral_C = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
         $('#Ctable .Cbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-carlos", "").replace("-amount-carlos", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
@@ -209,21 +210,34 @@ $(document).ajaxComplete(function(event,xhr,settings){
             tot_btc_geral += aux_btc;
             tot_real_geral += aux_real;
             tot_btc += aux_btc;
-            tot_real += aux_real;
+            tot_real_C += aux_real;
             $('#' + id_aux + '-real-carlos').append('R$' + aux_real.toFixed(2) );
         });
+        $('#Ctable .Cbtcvalue').each(function() {
+            id_aux = $(this).attr('id').replace("-total-carlos", "").replace("-amount-carlos", ""); //nome da moeda a qual se pega a informação
+            aux_btc = parseFloat($(this).text());
+            porcet_geral_C += ( CoinsChange[id_aux] ) * ( aux_btc / tot_btc ); //vai somando a porcentagem (já com uma media ponderada, com o peso de cada moeda sobre o portfolio) (porcentagem de variação em BTC)
+        });
+        porcet_geral_C = porcet_geral_C.toFixed(2); //passa a variacao geral do port em btc para apenas 2 casa decimais
+        aux_btc = tot_real_C * porcet_geral_C / (100 + parseFloat(porcet_geral_C)); //uso o aux_btc apenas como auxiliar, não está em seu uso padrão
+        if (porcet_geral_C > 0){ porcet_geral_C = '+' + porcet_geral_C; }
+        if (aux_btc > 0){ aux_btc = '+R$' + aux_btc.toFixed(2); }
+        else if (aux_btc < 0){ aux_btc = aux_btc.toFixed(2).replace("-", "-R$"); }
+        else{ aux_btc = '-';}
+        $('#Cvariat_percent').append('<strong>('+ porcet_geral_C +'%)</strong>');
+        $('#Cvariat_money').append('<strong>('+ aux_btc +')</strong>');
         $('#total-carlos-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
-        $('#total-carlos-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
+        $('#total-carlos-real').append('<strong>R$'+ tot_real_C.toFixed(2) +'</strong>');
         console.log('Carlos:');
-        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
+        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real_C.toFixed(2));
 
         //Para a MARIANA
         tot_btc = 0; //valor total do user em Bitcoins
-        tot_real = 0; //valor total do user em Reais
+        tot_real_M = 0; //valor total do user em Reais
         aux_btc = 0; //puxa o valor do amount da table amount anterior em Bitcoin
         aux_real = 0; //puxa o valor do amount em reais
         id_aux; //a id da moeda em cada .each
-        porcet_geral = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
+        porcet_geral_M = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
         $('#Mtable .Mbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-mariana", "").replace("-amount-mariana", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
@@ -231,15 +245,37 @@ $(document).ajaxComplete(function(event,xhr,settings){
             tot_btc_geral += aux_btc;
             tot_real_geral += aux_real;
             tot_btc += aux_btc;
-            tot_real += aux_real;
+            tot_real_M += aux_real;
             $('#' + id_aux + '-real-mariana').append('R$' + aux_real.toFixed(2) );
         });
+        $('#Mtable .Mbtcvalue').each(function() {
+            id_aux = $(this).attr('id').replace("-total-mariana", "").replace("-amount-mariana", ""); //nome da moeda a qual se pega a informação
+            aux_btc = parseFloat($(this).text());
+            porcet_geral_M += ( CoinsChange[id_aux] ) * ( aux_btc / tot_btc ); //vai somando a porcentagem (já com uma media ponderada, com o peso de cada moeda sobre o portfolio) (porcentagem de variação em BTC)
+        });
+        porcet_geral_M = porcet_geral_M.toFixed(2); //passa a variacao geral do port em btc para apenas 2 casa decimais
+        aux_btc = tot_real_M * porcet_geral_M / (100 + parseFloat(porcet_geral_M)); //uso o aux_btc apenas como auxiliar, não está em seu uso padrão
+        if (porcet_geral_M > 0){ porcet_geral_M = '+' + porcet_geral_M; }
+        if (aux_btc > 0){ aux_btc = '+R$' + aux_btc.toFixed(2); }
+        else if (aux_btc < 0){ aux_btc = aux_btc.toFixed(2).replace("-", "-R$"); }
+        else{ aux_btc = '-';}
+        $('#Mvariat_percent').append('<strong>('+ porcet_geral_M +'%)</strong>');
+        $('#Mvariat_money').append('<strong>('+ aux_btc +')</strong>');
         $('#total-mariana-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
-        $('#total-mariana-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
+        $('#total-mariana-real').append('<strong>R$'+ tot_real_M.toFixed(2) +'</strong>');
         console.log('Mariana:');
-        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
+        console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real_M.toFixed(2));
 
         //APOS TUDO FAZ A SOMA E O APPEND COM OS VALORES DE TODOS JUNTOS
+        porcet_geral_de_todos = porcet_geral_P * ( tot_real_P / tot_real_geral) + porcet_geral_C * ( tot_real_C / tot_real_geral) + porcet_geral_M * ( tot_real_M / tot_real_geral); //soma de todas as porcentagens, de maneira ponderada
+        aux_btc = tot_real_geral * porcet_geral_de_todos / (100 + porcet_geral_de_todos); //uso o aux_btc apenas como auxiliar, não está em seu uso padrão
+        porcet_geral_de_todos = porcet_geral_de_todos.toFixed(2); //passa a variacao geral do port em btc para apenas 2 casa decimais
+        if (porcet_geral_de_todos > 0){ porcet_geral_de_todos = '+' + porcet_geral_de_todos; }
+        if (aux_btc > 0){ aux_btc = '+R$' + aux_btc.toFixed(2); }
+        else if (aux_btc < 0){ aux_btc = aux_btc.toFixed(2).replace("-", "-R$"); }
+        else{ aux_btc = '-';}
+        $('#Tvariat_percent').append('<strong>('+ porcet_geral_de_todos +'%)</strong>');
+        $('#Tvariat_money').append('<strong>('+ aux_btc +')</strong>');
         $('#total-em-btc').append('<strong>'+  tot_btc_geral.toFixed(8) +' BTC</strong>');
         $('#total-em-real').append('<strong>R$'+ tot_real_geral.toFixed(2) +'</strong>');
         console.log('TOTAL:');
