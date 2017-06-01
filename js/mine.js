@@ -1,3 +1,6 @@
+var CoinsChange = []; //guarda a variação de cada moeda, sendo o seu nome pela api a key
+//var CoinsPrice = [] //guarda o preço de cada moeda, sendo o seu nome pela api a key
+
 function add_zero(x){
     if (x < 10){
         return '0'+x;
@@ -25,19 +28,58 @@ $(function (){
         url: "https://api.coinmarketcap.com/v1/ticker/?limit=200",
         success: function(response) {
             $.each(response, function(i, change) {
-                if ( change.id == 'bitcoin' ){ btc_change = change.percent_change_24h; showNumbers(btc_change, change.id, change.price_usd) }
-                else if ( change.id == 'ethereum' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'decred' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'ripple' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'shift' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'ubiq' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'digixdao' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'zcash' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'counterparty' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'chronobank' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'storjcoin-x' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'wings' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
-                else if ( change.id == 'golem-network-tokens' ){ showNumbers(change.percent_change_24h, change.id, change.price_btc) }
+                if ( change.id == 'bitcoin' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_usd)
+                }
+                else if ( change.id == 'ethereum' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'decred' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'ripple' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'shift' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'ubiq' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'digixdao' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'zcash' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'counterparty' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'chronobank' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'storjcoin-x' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'wings' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
+                else if ( change.id == 'golem-network-tokens' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                }
             });
         }
     });
@@ -87,7 +129,7 @@ function showNumbers(a, b, c) {
         }
     }
 
-    each_coin_real_change = a - btc_change;//variacao de cada moeda em real (variação dela em real menos a variação do bitcoin)
+    each_coin_real_change = a - CoinsChange["bitcoin"];//variacao de cada moeda em real (variação dela em real menos a variação do bitcoin)
     //(CHANGE BTC)Muda a cor da variação diaria e coloca as setas indicando o sentido da variação
         if(each_coin_real_change > 0){ //maior que zero é verde
                 $('#'+ b + '-change-btc').append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( ' + each_coin_real_change.toFixed(2) +'%)</h2>');
@@ -121,9 +163,10 @@ $(document).ajaxComplete(function(event,xhr,settings){
         //Para o Pedro
         var tot_btc = 0; //valor total do user em Bitcoins
         var tot_real = 0; //valor total do user em Reais
-        var aux_btc = 0; //puxa o valor do amount da table amount anterior em Bitcoin
+        var aux_btc = 0; //puxa o valor do amount da table em Bitcoin
         var aux_real = 0; //puxa o valor do amount em reais
         var id_aux; //a id da moeda em cada .each
+        var porcet_geral = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
         $('#Ptable .Pbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-pedro", "").replace("-amount-pedro", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
@@ -134,8 +177,21 @@ $(document).ajaxComplete(function(event,xhr,settings){
             tot_real += aux_real;
             $('#' + id_aux + '-real-pedro').append('R$' + aux_real.toFixed(2) );
         });
+        $('#Ptable .Pbtcvalue').each(function() {
+            id_aux = $(this).attr('id').replace("-total-pedro", "").replace("-amount-pedro", ""); //nome da moeda a qual se pega a informação
+            aux_btc = parseFloat($(this).text());
+            porcet_geral += ( CoinsChange[id_aux] ) * ( aux_btc / tot_btc ); //vai somando a porcentagem (já com uma media ponderada, com o peso de cada moeda sobre o portfolio) (porcentagem de variação em BTC)
+        });
+        porcet_geral = porcet_geral.toFixed(2); //passa a variacao geral do port em btc para apenas 2 casa decimais
+        aux_btc = tot_real * porcet_geral / (100 + parseFloat(porcet_geral));
+        if (porcet_geral > 0){ porcet_geral = '+' + porcet_geral; }
+        if (aux_btc > 0){ aux_btc = '+R$' + aux_btc.toFixed(2); }
+        else if (aux_btc < 0){ aux_btc = aux_btc.toFixed(2).replace("-", "-R$"); }
+        else{ aux_btc = '-';}
         $('#total-pedro-bitcoin').append('<strong>'+ tot_btc.toFixed(8) +' BTC</strong>');
         $('#total-pedro-real').append('<strong>R$'+ tot_real.toFixed(2) +'</strong>');
+        $('#Pvariat_percent').append('<strong>('+ porcet_geral +'%)</strong>');
+        $('#Pvariat_money').append('<strong>('+ aux_btc +')</strong>');
         console.log('Pedro:');
         console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real.toFixed(2));
     
@@ -145,6 +201,7 @@ $(document).ajaxComplete(function(event,xhr,settings){
         aux_btc = 0; //puxa o valor do amount da table amount anterior em Bitcoin
         aux_real = 0; //puxa o valor do amount em reais
         id_aux; //a id da moeda em cada .each
+        porcet_geral = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
         $('#Ctable .Cbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-carlos", "").replace("-amount-carlos", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());
@@ -166,6 +223,7 @@ $(document).ajaxComplete(function(event,xhr,settings){
         aux_btc = 0; //puxa o valor do amount da table amount anterior em Bitcoin
         aux_real = 0; //puxa o valor do amount em reais
         id_aux; //a id da moeda em cada .each
+        porcet_geral = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio do user
         $('#Mtable .Mbtcvalue').each(function() {
             id_aux = $(this).attr('id').replace("-total-mariana", "").replace("-amount-mariana", ""); //nome da moeda a qual se pega a informação
             aux_btc = parseFloat($(this).text());

@@ -153,7 +153,7 @@ td.text-right {
   text-align: center;
 }
 
-#Ptable, #Mtable, #Ctable, #CoinsTable, #Ttable, #Pvariat, #Cvariat, #Mvariat{
+#Ptable, #Mtable, #Ctable, #CoinsTable, #Ttable, #Pvariat_percent, #Pvariat_money{
   display: none;
 }
 
