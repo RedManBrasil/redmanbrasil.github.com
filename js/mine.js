@@ -17,6 +17,7 @@ var hours = today.getHours();
 var minutes = today.getMinutes();
 dd = add_zero(dd);
 mm = add_zero(mm);
+hours = add_zero(hours);
 minutes = add_zero(minutes);
 
 time_now = dd + '/' + mm + '/' + yyyy + ' ' + hours + ':' + minutes;
