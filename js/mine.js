@@ -31,59 +31,59 @@ $(function (){
             $.each(response, function(i, change) {
                 if ( change.id == 'bitcoin' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_usd)
+                showNumbers(change.percent_change_24h, change.id, change.price_usd);
                 }
                 else if ( change.id == 'ethereum' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'decred' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'ripple' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'shift' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'ubiq' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'digixdao' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'zcash' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'counterparty' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'chronobank' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'storjcoin-x' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'wings' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'golem-network-tokens' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'basic-attention-token'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc)
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
             });
         }
