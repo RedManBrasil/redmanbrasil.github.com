@@ -85,6 +85,10 @@ $(function (){
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
+                else if ( change.id == 'iota'){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
+                }
             });
         }
     });
