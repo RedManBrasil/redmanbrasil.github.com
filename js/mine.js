@@ -30,8 +30,8 @@ $(function (){
         success: function(resposta) {
             $.each(resposta, function(n, tick) {
                 if ( n == 'ticker_24h' ){
-                    btc_real = tick.exchanges.FOX.open / tick.exchanges.FOX.last; //calcular quanto o btc variou em reais nas ultiams 24hrs
-                    CoinsChange['bitcoin'] = (1 - btc_real) * 100;
+                    btc_real = parseFloat(tick.exchanges.FOX.open / tick.exchanges.FOX.last); //calcular quanto o btc variou em reais nas ultiams 24hrs
+                    CoinsChange['bitcoin'] = ((1 - btc_real) * 100).toFixed(2);
                     btc_real = tick.exchanges.FOX.last;
                     $('#bitcoin-price_real').append('R$' + btc_real.toFixed(2) );
                 }
@@ -49,7 +49,7 @@ $(function (){
         success: function(response) {
             $.each(response, function(i, change) {
                 if ( change.id == 'bitcoin' ){
-                showNumbers(change.percent_change_24h, change.id, change.price_usd);
+                showNumbers(CoinsChange["bitcoin"], change.id, change.price_usd);
                 }
                 else if ( change.id == 'ethereum' ){
                 CoinsChange[change.id] = change.percent_change_24h;
@@ -115,7 +115,6 @@ $(function (){
         }
     });
 }
-   
 });
 
 function toggle(a){
@@ -148,7 +147,7 @@ function showNumbers(a, b, c) {
         }
     }
 
-    each_coin_real_change = a - CoinsChange["bitcoin"];//variacao de cada moeda em real (variação dela em real menos a variação do bitcoin)
+    each_coin_real_change = a - CoinsChange["bitcoin"];//variacao de cada moeda em real (variação dela em real menos a variação do bitcoin) 
     //(CHANGE BTC)Muda a cor da variação diaria e coloca as setas indicando o sentido da variação
         if(each_coin_real_change > 0){ //maior que zero é verde
                 $('#'+ b + '-change-btc').append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( ' + each_coin_real_change.toFixed(2) +'%)</h2>');
