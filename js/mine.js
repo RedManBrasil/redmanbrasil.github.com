@@ -26,7 +26,7 @@ $(function (){
 
     $.ajax({
         type: 'GET',
-        url: "http://cors-anywhere.herokuapp.com/https://api.bitvalor.com/v1/ticker.json",
+        url: "https://cors-anywhere.herokuapp.com/https://api.bitvalor.com/v1/ticker.json",
         success: function(resposta) {
             $.each(resposta, function(n, tick) {
                 if ( n == 'ticker_24h' ){
