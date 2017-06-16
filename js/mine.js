@@ -36,16 +36,15 @@ $(function (){
                     $('#bitcoin-price_real').append('R$' + btc_real.toFixed(2) );
                 }
                  });  
+            continueExecution();
             }
         });
 });
 
-$(function (){  
-    setTimeout(continueExecution, 2500) //espera um tempo para dar tempo da api do bitvalor chegar antes dele
-    function continueExecution(){
+function continueExecution(){ //essa função só será chamada quando o primiero AJAX acabar
      $.ajax({
         type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/?limit=300",
+        url: "https://api.coinmarketcap.com/v1/ticker/?limit=170",
         success: function(response) {
             $.each(response, function(i, change) {
                 if ( change.id == 'bitcoin' ){
@@ -115,7 +114,6 @@ $(function (){
         }
     });
 }
-});
 
 function toggle(a){
     $("#" + a).toggle(500);
@@ -173,7 +171,7 @@ function showNumbers(a, b, c) {
 
 $(document).ajaxComplete(function(event,xhr,settings){
     console.log("URL",settings.url);
-    if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=300")
+    if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=170")
     { //faz a soma do valor em btc dos portfolios, para o total
         var tot_btc_geral = 0; //valor em btc somando todos os users
         var tot_real_geral = 0; //valor em reais somando todos os users
