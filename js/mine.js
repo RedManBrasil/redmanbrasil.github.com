@@ -82,7 +82,7 @@ function continueExecution(){ //essa função só será chamada quando o primier
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
-                else if ( change.id == 'storjcoin-x' ){
+                else if ( change.id == 'STORJ' ){
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
@@ -149,11 +149,11 @@ function showNumbers(a, b, c) {
         }
     }
 
-    each_coin_real_change = a - CoinsChange["bitcoin"];//variacao de cada moeda em real (variação dela em real menos a variação do bitcoin) 
+    each_coin_real_change = a - CoinsChange["bitcoin"];//variacao de cada moeda em real (variação dela em real menos a variação do bitcoin)
     //(CHANGE BTC)Muda a cor da variação diaria e coloca as setas indicando o sentido da variação
         if(each_coin_real_change > 0){ //maior que zero é verde
                 $('#'+ b + '-change-btc').append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( ' + each_coin_real_change.toFixed(2) +'%)</h2>');
-            }  
+            }
         else if (each_coin_real_change < 0){ //menor que zero é vermelho
                 $('#'+ b + '-change-btc').append('<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#dd5056;">( '+ each_coin_real_change.toFixed(2) +'%)</h2>');
             }
@@ -164,7 +164,7 @@ function showNumbers(a, b, c) {
     //(CHANGE REAL)Muda a cor da variação diaria e coloca as setas indicando o sentido da variação
         if(a > 0){ //maior que zero é verde
                 $('#'+ b + '-change-real').append('<img src="css/imgs/UpGreen.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#0aa046;">( '+ a +'%)</h2>');
-            }  
+            }
         else if (a < 0){ //menor que zero é vermelho
                 $('#'+ b + '-change-real').append('<img src="css/imgs/DownRed.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h3 style="display:inline-block;color:#dd5056;">( '+ a +'%)</h2>');
             }
@@ -215,7 +215,7 @@ $(document).ajaxComplete(function(event,xhr,settings){
         $('#total-pedro-real').append('<strong>R$'+ tot_real_P.toFixed(2) +'</strong>');
         console.log('Pedro:');
         console.log(time_now + ' || ' + tot_btc.toFixed(8) + 'BTC || R$' + tot_real_P.toFixed(2));
-    
+
         //Para o CARLOS
         tot_btc = 0; //valor total do user em Bitcoins
         tot_real_C = 0; //valor total do user em Reais
