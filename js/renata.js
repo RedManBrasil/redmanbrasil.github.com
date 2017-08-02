@@ -46,6 +46,10 @@ function continueExecution(){ //essa função só será chamada quando o primier
                 if ( change.id == 'bitcoin' ){
                 showNumbers(CoinsChange["bitcoin"], change.id, change.price_usd);
                 }
+                else if ( change.id == 'bitcoin-cash'){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
+                }
             });
         }
     });
