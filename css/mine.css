@@ -16,32 +16,6 @@ div.table-title {
   width: 100%;
 }
 
-.table-title h3 {
-   color: #fafafa;
-   font-size: 30px;
-   font-weight: 400;
-   font-style:normal;
-   font-family: "Roboto", helvetica, arial, sans-serif;
-   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
-   text-transform:uppercase;
-}
-
-
-/*** Table Styles **/
-
-.table-fill {
-  background: white;
-  border-radius:3px;
-  border-collapse: collapse;
-  height: 320px;
-  margin: auto;
-  max-width: 600px;
-  padding:5px;
-  width: 100%;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  animation: float 5s infinite;
-}
- 
 th {
   color:#D5DDE5;;
   background:#1b1e24;
@@ -58,12 +32,12 @@ th {
 th:first-child {
   border-top-left-radius:3px;
 }
- 
+
 th:last-child {
   border-top-right-radius:3px;
   border-right:none;
 }
-  
+
 tr {
   border-top: 1px solid #C1C3D1;
   border-bottom-: 1px solid #C1C3D1;
@@ -72,14 +46,14 @@ tr {
   font-weight:normal;
   text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
- 
+
 tr:hover td {
   background:#4E5066;
   color:#FFFFFF;
   border-top: 1px solid #22262e;
   border-bottom: 1px solid #22262e;
 }
- 
+
 tr:first-child {
   border-top:none;
 }
@@ -87,11 +61,11 @@ tr:first-child {
 tr:last-child {
   border-bottom:none;
 }
- 
+
 tr:nth-child(odd) td {
   background:#EBEBEB;
 }
- 
+
 tr:nth-child(odd):hover td {
   background:#4E5066;
 }
@@ -99,11 +73,11 @@ tr:nth-child(odd):hover td {
 tr:last-child td:first-child {
   border-bottom-left-radius:3px;
 }
- 
+
 tr:last-child td:last-child {
   border-bottom-right-radius:3px;
 }
- 
+
 td {
   background:#FFFFFF;
   padding:20px;
@@ -146,26 +120,34 @@ td.text-right {
 #Pname, #Mname, #Cname, #CoinsName, #Tname{
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: white;
-  background-color: #ed3138;
   font-size: 30px;
   font-weight: bold;
   padding: 10px;
   text-align: center;
 }
 
-#Ptable, #Mtable, #Ctable, #CoinsTable, #Ttable, #Pvariat_percent, #Pvariat_money, #Cvariat_percent, #Cvariat_money,#Mvariat_percent, #Mvariat_money, #Tvariat_percent, #Tvariat_money{
+#Pname_profit{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px;
+  text-align: center;
+}
+
+#Ptable, #Mtable, #Ctable, #CoinsTable, #Ttable, #Pvariat_percent, #Pvariat_money, #Cvariat_percent, #Cvariat_money,#Mvariat_percent, #Mvariat_money, #Tvariat_percent, #Tvariat_money, #Ptable_profit{
   display: none;
 }
 
-#Pname{
+#Pname, #Ptable, #Ptable_profit, #Pname_profit{
   background-color: #008a49;
 }
 
-#Cname{
+#Cname, #Ctable{
   background-color: #fdb813;
 }
 
-#Mname{
+#Mname, #Mtable{
   background-color: #ed3138;
 }
 
@@ -173,7 +155,7 @@ td.text-right {
   background-color: #07162d;
 }
 
-#Tname{
+#Tname, #Ttable{
   color: black;
   background-color: white;
 }

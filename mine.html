@@ -14,7 +14,7 @@
 
 
 		<div style="background-color:#f2f5f3;margin:1vw;float:left;">
-  				<div id='Pname' onclick="toggle('Ptable');toggle('Pvariat_percent');toggle('Pvariat_money');">Pedro
+  				<div id='Pname' onclick="toggle('Ptable');toggle('Pvariat_percent');toggle('Pvariat_money');toggle('Pvariat_profit');">Pedro
   				<span id="Pvariat_percent"></span>
   				<span id="Pvariat_money"></span>
   				</div>
@@ -140,6 +140,75 @@
 					</tbody>
 				</table>
 			</div>
+		</div>
+
+		<div style="background-color:#f2f5f3;margin:1vw;float:left;">
+  				<div id='Pname_profit' onclick="toggle('Ptable_profit');">Profit
+						<div id='Ptable_profit'>
+						<table>
+							<thead>
+							  <tr style="font-size:28px;">
+							    <th>NAME</th>
+							    <th>BUY PRICE(USD)</th>
+							    <th>BUY PRICE(BTC)</th>
+									<th>USD Gain</th>
+									<th>BTC Gain</th>
+							  </tr>
+							</thead>
+							<tbody>
+								<tr>
+							    <td>Decred</td>
+									<td id="decred-actual-pedro-usd">US$5.64</td>
+									<td id="decred-actual-pedro-btc">0.00345937BTC</td>
+									<td id="decred-profit-pedro-usd" class="Pusd"></td>
+									<td id="decred-profit-pedro-btc" class="Pbtc"></td>
+							  </tr>
+								<tr>
+							    <td>Ethereum</td>
+									<td id="ethereum-actual-pedro-usd">US$13.60</td>
+									<td id="ethereum-actual-pedro-btc">0.03007855BTC</td>
+									<td id="ethereum-profit-pedro-usd" class="Pusd"></td>
+									<td id="ethereum-profit-pedro-btc" class="Pbtc"></td>
+							  </tr>
+								<tr>
+							    <td>Bitcoin</td>
+									<td id="bitcoin-actual-pedro-usd">US$1340.21</td>
+									<td id="bitcoin-actual-pedro-btc">1.000000000BTC</td>
+									<td id="bitcoin-profit-pedro-usd" class="Pusd"></td>
+									<td>-</td>
+							  </tr>
+								<tr>
+							    <td>SHIFT</td>
+									<td id="shift-actual-pedro-usd">US$0.3569</td>
+									<td id="shift-actual-pedro-btc">0.00024653BTC</td>
+									<td id="shift-profit-pedro-usd" class="Pusd"></td>
+									<td id="shift-profit-pedro-btc" class="Pbtc"></td>
+							  </tr>
+								<tr>
+							    <td>Ubiq</td>
+									<td id="ubiq-actual-pedro-usd">US$0.278</td>
+									<td id="ubiq-actual-pedro-btc">0.00014009BTC</td>
+									<td id="ubiq-profit-pedro-usd" class="Pusd"></td>
+									<td id="ubiq-profit-pedro-btc" class="Pbtc"></td>
+							  </tr>
+								<tr>
+							    <td>IOTA</td>
+									<td id="iota-actual-pedro-usd">US$0.408</td>
+									<td id="iota-actual-pedro-btc">0.00016807337BTC</td>
+									<td id="iota-profit-pedro-usd" class="Pusd"></td>
+									<td id="iota-profit-pedro-btc" class="Pbtc"></td>
+							  </tr>
+								<tr>
+							    <td>Status</td>
+									<td id="status-actual-pedro-usd">US$0.0386</td>
+									<td id="status-actual-pedro-btc">0.00001169142</td>
+									<td id="status-profit-pedro-usd" class="Pusd"></td>
+									<td id="status-profit-pedro-btc" class="Pbtc"></td>
+							  </tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
 		</div>
 
 		<div style="clear:left;background-color:#f2f5f3;float:left;margin:1vw;">
