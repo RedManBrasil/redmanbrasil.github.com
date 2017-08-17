@@ -355,15 +355,27 @@ $(document).ajaxComplete(function(event,xhr,settings){
         //Fazer o profit aparecer na tela
         var perct_usd = 0;
         var perct_btc = 0;
+        var value_usd = 0;
+        var value_btc = 0;
         $('#Ptable_profit .Pusd').each(function() {
           id_aux = $(this).attr('id').replace("-profit-pedro-usd", ""); //nome da moeda a qual se pega a informação
-          perct_usd = ((CoinsPriceUsd[id_aux]/parseFloat($("#"+id_aux+"-actual-pedro-usd").text().replace("US$", "")))*100).toFixed(2);
-          perct_btc = ((CoinsPriceBtc[id_aux]/parseFloat($("#"+id_aux+"-actual-pedro-btc").text().replace("US$", "")))*100).toFixed(2);
-          
-          $("#"+id_aux+"-profit-pedro-usd").html("+"+perct_usd+"%");
-          $("#"+id_aux+"-profit-pedro-btc").html("+"+perct_btc+"%");
-        });
-
+          value_usd = parseFloat(CoinsPriceUsd[id_aux]/parseFloat($("#"+id_aux+"-actual-pedro-usd").text().replace("US$", "")));
+          value_btc = parseFloat(CoinsPriceBtc[id_aux]/parseFloat($("#"+id_aux+"-actual-pedro-btc").text().replace("US$", "")));
+          perct_usd = ((value_usd*100)-100).toFixed(2);
+          perct_btc = ((value_btc*100)-100).toFixed(2);
+          if(perct_usd < 0){
+            $("#"+id_aux+"-profit-pedro-usd").html(perct_usd+"%");
+          }
+          else{
+            $("#"+id_aux+"-profit-pedro-usd").html("+"+perct_usd+"%");
+          }
+          if(perct_btc < 0){
+            $("#"+id_aux+"-profit-pedro-btc").html(perct_btc+"%");
+          }
+          else{
+            $("#"+id_aux+"-profit-pedro-btc").html("+"+perct_btc+"%");
+          }
+});
 
     }
 });
