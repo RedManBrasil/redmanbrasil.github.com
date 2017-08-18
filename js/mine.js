@@ -163,6 +163,18 @@ function continueExecution(){ //essa função só será chamada quando o primier
                 CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
+                else if ( change.id == 'mothership'){
+                CoinsChange[change.id] = change.percent_change_24h;
+                CoinsPriceUsd[change.id] = change.price_usd;
+                CoinsPriceBtc[change.id] = change.price_btc;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
+                }
+                else if ( change.id == 'district0x'){
+                CoinsChange[change.id] = change.percent_change_24h;
+                CoinsPriceUsd[change.id] = change.price_usd;
+                CoinsPriceBtc[change.id] = change.price_btc;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
+                }
             });
         }
     });
