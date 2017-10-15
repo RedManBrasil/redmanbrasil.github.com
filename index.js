@@ -1,6 +1,6 @@
 
 var distance = document.getElementById("distance");
-var folds = document.getElementById("folds"); 
+var folds = document.getElementById("folds");
 
 function check(){
 	var val = document.getElementById('Sone').value;

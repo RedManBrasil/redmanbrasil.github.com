@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PARABÉNS</title>
+  </head>
+  <body>
+    <div style="width: 100%; height: 0%;" id="ifs">
+      <h2>QUAL A SENHA?</h2>
+      <input id="distance">
+      <input type="button" onclick="calc()" value="READY">
+      <p id="msg"></p>
+      <div style="display: none;" id="gifWR">
+        <iframe src="https://giphy.com/embed/3oz8xLd9DJq2l2VFtu" width="480" height="287" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/election2016-donald-trump-election-2016-3oz8xLd9DJq2l2VFtu">via GIPHY</a></p>
+      </div>
+    </div>
+    <div style="display: none;" id="els">
+      <center>
+        <h1>VOCE FOI SELECIONADO PARA SER <span style="color: #f72072">VIP</span> DA MELHOR FESTA DO ANO</h1><bR />
+        <h1>ENVIE UM EMAIL COM O SEU NOME E O DE 2 ACOMPANHANTES PARA <span style="color: #1d7c55">pandrade@empresajunior.com.br</span></h1><br />
+        <h3>APENAS O PRIMEIRO A MANDAR O EMAIL TEM DIREITO AO PREMIO</h3><br />
+      </center>
+      <br />
+      <center>
+        <iframe src="https://giphy.com/embed/g9582DNuQppxC" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hero0fwar-karmawhore-rhyming-g9582DNuQppxC">via GIPHY</a></p>
+      </center>
+  </div>
+  </body>
+  <script>
+    function calc(){
+      var dist = distance.value;
+      if (dist == 'THEbestLEVA'){
+        document.getElementById('ifs').style.display = 'none';
+        document.getElementById('els').style.display = '';
+    }
+      else {
+        document.getElementById('gifWR').style.display = '';
+      }
+    }
+  </script>
+  <style>
+    *{
+      background-color: #c3d0e5;
+    }
+  </style>
+</html>
