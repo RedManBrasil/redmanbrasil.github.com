@@ -6,7 +6,8 @@
   </head>
   <body>
     <div style="width: 100%; height: 0%;" id="ifs">
-      <center><h1 style="font-size:60px;">QUAL A SENHA?</h1>
+      <center><h1 style="font-size:60px;">QUAL A SENHA?</h1><br />
+        <h4>EM LETRAS MAIÚSCULAS E TUDO JUNTO</h4>
       <input id="distance">
       <input type="button" onclick="calc()" value="CONFIRMAR">
       <p id="msg"></p>
@@ -18,9 +19,10 @@
     <div style="display: none;" id="els">
       <center>
         <h1>VOCE FOI SELECIONADO PARA SER <span style="color: #f72072">VIP</span> DA MELHOR FESTA DO ANO</h1><bR />
-        <h1>ENVIE UM EMAIL COM O SEU NOME E O DE 2 ACOMPANHANTES PARA <span style="color: #1d7c55">pandrade@empresajunior.com.br</span></h1><br />
-        <h2>ENVIE JUNTO COM UM PRINT DESSA TELA PARA COMPROVAR QUE VOCE CHEGOU ATE AQUI</h2><br />
-        <h3>APENAS O PRIMEIRO A MANDAR O EMAIL TEM DIREITO AO PREMIO</h3><br />
+        <h1>COPIE E COLE NO GRUPO DO WHATSAPP "ALL-EJ" A SEGUINTE MENSAGEM QUE ESTA EM VERDE</h1><br />
+        <span style="color: green;"><h2>AMANHÃ IRÁ COMEÇAR A ARRECADAÇÃO DO DINHEIRO PARA A MELHOR FESTA DOS TRAINEES DA HISTÓRIA. OS 10 PRIMEIROS QUE PAGAREM O VALOR DE R$40,00 TERÃO ACESSO À EXCLUSIVA *ÁREA VIP*. QUE COMECE A CORRIDA!</h2><br /></span>
+        <h2>AO FINAL DA MENSAGEM MARQUE 2 ACOMPANHANTES QUE TAMBEM TERÃO ACESSO À ÁREA VIP </h2><br />
+        <h3>APENAS O PRIMEIRO A MANDAR A MENSAGEM TEM DIREITO AO PREMIO</h3>
       </center>
       <br />
       <center>
@@ -31,7 +33,7 @@
   <script>
     function calc(){
       var dist = distance.value;
-      if (dist == 'THEbestLEVA'){
+      if (dist == 'THEBESTLEVA'){
         document.getElementById('ifs').style.display = 'none';
         document.getElementById('els').style.display = '';
     }
