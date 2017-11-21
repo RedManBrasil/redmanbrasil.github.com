@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Portfolio</title>
+		<link rel="shortcut icon" href="logo_mine.png">
+		<link rel="apple-touch-icon" sizes="150x150" href="apple-touch-icon.png" />
+	</head>
+
+		<script src='js/jquery-3.1.1.min.js'></script>
+		<script src="js/resenha.js"></script>
+		<link rel="stylesheet" href="css/resenha.css">
+
+<body>
+
+      <div style="background-color:#f2f5f3;margin:1vw;float:left;">
+            <div id='Rname' onclick="toggle('Rtable');toggle('Rvariat_percent');toggle('Rvariat_money');">Resenha
+            <span id="Rvariat_percent"></span>
+            <span id="Rvariat_money"></span>
+            </div>
+          <div id='Rtable'>
+          <table>
+            <thead>
+              <tr style="font-size:28px;">
+                <th>NAME</th>
+                <th>AMOUNT</th>
+                <th>VALOR</th>
+                <th>REAL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Decred (DCR)
+                </td>
+                <td id="decred-amount-resenha" class="Rbtcvalue">
+                  2.67243768
+                </td>
+                <td id="decred-total-resenha">
+                </td>
+                <td id="decred-real-resenha">
+                </td>
+              </tr>
+							<tr>
+								<td>
+									DOGE (DOGE)
+								</td>
+								<td id="dogecoin-amount-resenha">
+									115256.60691176
+								</td>
+								<td id="dogecoin-total-resenha" class="Rbtcvalue">
+								</td>
+								<td id="dogecoin-real-resenha">
+								</td>
+							</tr>
+              <tr>
+                <td>
+                  <strong>TOTAL</strong>
+                </td>
+                <td id="total-resenha-amount">
+                  <strong><center>-</center></strong>
+                </td>
+                <td id="total-resenha-bitcoin">
+                </td>
+                <td id="total-resenha-real">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div style="clear:left;background-color:#f2f5f3;float:left;margin:1vw;">
+        <div id='CoinsName' onclick="toggle('CoinsTable');">Coins</div>
+          <div id='CoinsTable'>
+            <table>
+            <thead>
+              <tr style="font-size:28px;">
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>CHANGE(BTC)</th>
+                <th>CHANGE(REAL)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  Bitcoin (BTC)
+                </td>
+                <td>
+                  <span id="bitcoin-price"></span><br><br>
+                  <span id="bitcoin-price_real"></span>
+                </td>
+                <td id="bitcoin-change-btc">
+                </td>
+                <td id="bitcoin-change-real">
+                </td>
+              </tr>
+							<tr>
+								<td>
+									Decred (DCR)
+								</td>
+								<td id="decred-price">
+								</td>
+								<td id="decred-change-btc">
+								</td>
+								<td id="decred-change-real">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									DOGE (DOGE)
+								</td>
+								<td id="dogecoin-price">
+								</td>
+								<td id="dogecoin-change-btc">
+								</td>
+								<td id="dogecoin-change-real">
+								</td>
+							</tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</body>
