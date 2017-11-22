@@ -72,7 +72,7 @@ function showNumbers(a, b, c) {
     }
 
     if( b == 'bitcoin'){ //se a moeda for o BTC exibir USD ao invés de BTC
-        $('#' + b + '-total-resenha').append( "US$" + (c * document.getElementById ( b +'-amount-resenha' ).innerText).toFixed(2));
+        //$('#' + b + '-total-resenha').append( "US$" + (c * document.getElementById ( b +'-amount-resenha' ).innerText).toFixed(2));
         }
     else{
         if ( ($('#'+ b +'-amount-resenha').html()) ) { //tem que checar se existe a caixinha com a id requirida
@@ -106,13 +106,13 @@ function showNumbers(a, b, c) {
 
 $(document).ajaxComplete(function(event,xhr,settings){
     console.log("URL",settings.url);
-    if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=30")
+    if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=80")
     { //faz a soma do valor em btc dos portfolios, para o total
         var tot_btc_geral = 0; //valor em btc somando todos os users
         var tot_real_geral = 0; //valor em reais somando todos os users
         var porcet_geral_de_todos = 0; //porcentagem geral de variação nas ultimas 24hrs do portfolio de todos os users somados
 
-        //Para a resenha
+        //Para a Resenha
         var tot_btc = 0; //valor total do user em Bitcoins
         var tot_real_R = 0; //valor total do user em Reais
         var aux_btc = 0; //puxa o valor do amount da table em Bitcoin
