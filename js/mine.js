@@ -45,134 +45,82 @@ function continueExecution(){ //essa função só será chamada quando o primier
         success: function(response) {
             $.each(response, function(i, change) {
                 if ( change.id == 'bitcoin' ){
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(CoinsChange["bitcoin"], change.id, change.price_usd);
                 }
                 else if ( change.id == 'ethereum' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'decred' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'ripple' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'shift' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'ubiq' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc);
-                }
-                else if ( change.id == 'digixdao' ){
-                CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'zcash' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'counterparty' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc);
-                }
-                else if ( change.id == 'chronobank' ){
-                CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'storj' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'wings' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'golem-network-tokens' ){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'basic-attention-token'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'iota'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'bancor'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc);
-                }
-                else if ( change.id == 'numeraire'){
-                CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'status'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'bitcoin-cash'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'omisego'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'mothership'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'district0x'){
                 CoinsChange[change.id] = change.percent_change_24h;
-                CoinsPriceUsd[change.id] = change.price_usd;
-                CoinsPriceBtc[change.id] = change.price_btc;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
+                }
+                else if ( change.id == 'bitcoin-gold'){
+                CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
             });
@@ -361,33 +309,6 @@ $(document).ajaxComplete(function(event,xhr,settings){
         $('#total-em-real').append('<strong>R$'+ tot_real_geral.toFixed(2) +'</strong>');
         console.log('TOTAL:');
         console.log(time_now + ' || ' + tot_btc_geral.toFixed(8) + 'BTC || R$' + tot_real_geral.toFixed(2));
-
-
-
-        //Fazer o profit aparecer na tela
-        var perct_usd = 0;
-        var perct_btc = 0;
-        var value_usd = 0;
-        var value_btc = 0;
-        $('#Ptable_profit .Pusd').each(function() {
-          id_aux = $(this).attr('id').replace("-profit-pedro-usd", ""); //nome da moeda a qual se pega a informação
-          value_usd = parseFloat(CoinsPriceUsd[id_aux]/parseFloat($("#"+id_aux+"-actual-pedro-usd").text().replace("US$", "")));
-          value_btc = parseFloat(CoinsPriceBtc[id_aux]/parseFloat($("#"+id_aux+"-actual-pedro-btc").text().replace("US$", "")));
-          perct_usd = ((value_usd*100)-100).toFixed(2);
-          perct_btc = ((value_btc*100)-100).toFixed(2);
-          if(perct_usd < 0){
-            $("#"+id_aux+"-profit-pedro-usd").html(perct_usd+"%");
-          }
-          else{
-            $("#"+id_aux+"-profit-pedro-usd").html("+"+perct_usd+"%");
-          }
-          if(perct_btc < 0){
-            $("#"+id_aux+"-profit-pedro-btc").html(perct_btc+"%");
-          }
-          else{
-            $("#"+id_aux+"-profit-pedro-btc").html("+"+perct_btc+"%");
-          }
-});
 
     }
 });
