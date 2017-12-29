@@ -55,10 +55,6 @@ function continueExecution(){ //essa função só será chamada quando o primier
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
-                else if ( change.id == 'ripple' ){
-                CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc);
-                }
                 else if ( change.id == 'shift' ){
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
