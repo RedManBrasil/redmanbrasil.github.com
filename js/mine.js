@@ -41,7 +41,7 @@ $(function (){
 function continueExecution(){ //essa função só será chamada quando o primiero AJAX acabar
      $.ajax({
         type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/?limit=310",
+        url: "https://api.coinmarketcap.com/v1/ticker/?limit=600",
         success: function(response) {
             $.each(response, function(i, change) {
                 if ( change.id == 'bitcoin' ){
@@ -64,10 +64,6 @@ function continueExecution(){ //essa função só será chamada quando o primier
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == 'zcash' ){
-                CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc);
-                }
-                else if ( change.id == 'counterparty' ){
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
@@ -124,6 +120,18 @@ function continueExecution(){ //essa função só será chamada quando o primier
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
                 else if ( change.id == '0x'){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
+                }
+                else if ( change.id == 'opus' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
+                }
+                else if ( change.id == 'ellaism' ){
+                CoinsChange[change.id] = change.percent_change_24h;
+                showNumbers(change.percent_change_24h, change.id, change.price_btc);
+                }
+                else if ( change.id == 'mywish' ){
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
@@ -188,7 +196,7 @@ function showNumbers(a, b, c) {
 
 $(document).ajaxComplete(function(event,xhr,settings){
     console.log("URL",settings.url);
-    if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=310")
+    if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=600")
     { //faz a soma do valor em btc dos portfolios, para o total
         var tot_btc_geral = 0; //valor em btc somando todos os users
         var tot_real_geral = 0; //valor em reais somando todos os users
