@@ -2,44 +2,54 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>PARABÉNS</title>
+    <title>#######</title>
+    <link rel="shortcut icon" href="b7d.png">
   </head>
   <body>
-    <div style="width: 100%; height: 0%;" id="ifs">
+    <div id="gif30">
+      <center><h1 style="font-size:60px;">SELECIONE UM DOS GIF's</h1><br />
+        <video onclick="transform()" src="https://media.giphy.com/media/MwOuiiTfWfWgM/giphy.mp4" autoplay="" loop="" playsinline="" style="width: 480px; height: 486.417px; left: 0px; top: 0px;"></video>
+        <video onclick="retransform()" src="https://media0.giphy.com/media/3o7TKUM3IgJBX2as9O/giphy.mp4" autoplay="" loop="" playsinline="" style="width: 480px; height: 359.551px; left: 0px; top: 0px; padding-left: 10px;"></video>
+      </center>
+    </div>
+    <div style="width: 100%; height: 0%; display: none;" id="ifs">
       <center><h1 style="font-size:60px;">QUAL A SENHA?</h1><br />
         <h4>EM LETRAS MAIÚSCULAS E TUDO JUNTO</h4>
       <input id="distance">
       <input type="button" onclick="calc()" value="CONFIRMAR">
       <p id="msg"></p>
       <div style="display: none;" id="gifWR">
-        <iframe src="https://giphy.com/embed/3oz8xLd9DJq2l2VFtu" width="480" height="287" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/election2016-donald-trump-election-2016-3oz8xLd9DJq2l2VFtu">via GIPHY</a></p>
+        <video src="https://media.giphy.com/media/3oz8xLd9DJq2l2VFtu/giphy.mp4" autoplay="" loop="" playsinline="" style="width: 480px; height: 287px; left: 0px; top: 0px;"></video>
       </div>
       </center>
     </div>
     <div style="display: none;" id="els">
       <center>
-        <h1>VOCE FOI SELECIONADO PARA SER <span style="color: #f72072">VIP</span> DA MELHOR FESTA DO ANO</h1><bR />
-        <h1>O PRÊMIO SERÁ DADO AO PRIMEIRO QUE COPIAR E COLAR NO GRUPO DO WHATSAPP "ALL-EJ" A SEGUINTE MENSAGEM QUE ESTÁ EM VERDE</h1><br />
-        <span style="color: green;"><h2>AMANHÃ IRÁ COMEÇAR A ARRECADAÇÃO DO DINHEIRO PARA A MELHOR FESTA DOS TRAINEES DA HISTÓRIA. OS 10 PRIMEIROS QUE PAGAREM O VALOR DE R$40,00 TERÃO ACESSO À EXCLUSIVA *ÁREA VIP*. QUE COMECE A CORRIDA!</h2><br /></span>
-        <h2>AO FINAL DA MENSAGEM MARQUE 2 ACOMPANHANTES QUE TAMBEM TERÃO ACESSO À ÁREA VIP COM VOCÊ</h2><br />
-        <h3>APENAS O PRIMEIRO A MANDAR A MENSAGEM TEM DIREITO AO PRÊMIO</h3>
+        text
       </center>
-      <br />
-      <center>
-        <iframe src="https://giphy.com/embed/g9582DNuQppxC" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/hero0fwar-karmawhore-rhyming-g9582DNuQppxC">via GIPHY</a></p>
-      </center>
-  </div>
+    </div>
+    <div id="image30" style="display: none;">
+    <center><img style="padding-top: 7vw;"src="b7d.png"/></center>
+    </div>
   </body>
   <script>
     function calc(){
       var dist = distance.value;
-      if (dist == 'THEBESTLEVA'){
+      if (dist == 'semi'){
         document.getElementById('ifs').style.display = 'none';
         document.getElementById('els').style.display = '';
     }
       else {
         document.getElementById('gifWR').style.display = '';
       }
+    }
+    function transform(){
+        document.getElementById('gif30').style.display = 'none';
+        document.getElementById('image30').style.display = '';
+    }
+    function retransform(){
+        document.getElementById('gif30').style.display = 'none';
+        document.getElementById('ifs').style.display = '';
     }
   </script>
   <style>
