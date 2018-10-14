@@ -64,7 +64,7 @@ $(function (){
                     return a - b;}
                     function sortNumberDecresc(a,b) { // coloca os valores na ordem decrescente
                     return b - a;}
-                    ChangessList.sort(sortNumberDecresc); 
+                    ChangessList.sort(sortNumberDecresc);
                     for (var n = 0; n != 45; ++n) { //o numero apos o != representa o numero de diferentes times
                                 if (ChangessList[n] == ChangeCoinArray[0]){nameChangessList[n] = "   Flamengo"}
                                 if (ChangessList[n] == ChangeCoinArray[1]){nameChangessList[n] = "   Santos"}
@@ -122,10 +122,9 @@ $(function (){
                 else{ //igual a zero é cinza
                     ChangeDivArray[n].append('<img src="css/imgs/EqualGray.png" style="margin-bottom:-2px;width:10%;">&nbsp;&nbsp;<h2 style="display:inline-block;color:#9a9090;">( '+ 0 +'%)</h2>');
                     $('#namediv'+n).append('<h2 style="display:inline-block;color:#9a9090;">' + nameChangessList[n]);}
-                }   
+                }
          }
             });
             }
         });
 });
-

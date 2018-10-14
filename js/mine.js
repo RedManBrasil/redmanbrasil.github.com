@@ -29,9 +29,9 @@ $(function (){
         type: 'GET',
         url: "https://cors-anywhere.herokuapp.com/https://api.bitvalor.com/v1/ticker.json",
         success: function(resposta) {
-            btc_real = parseFloat(resposta.ticker_24h.exchanges.FOX.open / resposta.ticker_24h.exchanges.FOX.last); //calcular quanto o btc variou em reais nas ultiams 24hrs
+            btc_real = parseFloat(resposta.ticker_24h.exchanges.CAM.open / resposta.ticker_24h.exchanges.CAM.last); //calcular quanto o btc variou em reais nas ultiams 24hrs
             CoinsChange['bitcoin'] = ((1 - btc_real) * 100).toFixed(2);
-            btc_real = resposta.ticker_24h.exchanges.FOX.last;
+            btc_real = resposta.ticker_24h.exchanges.CAM.last;
             $('#bitcoin-price_real').append('R$' + btc_real.toFixed(2) );
             continueExecution();
             }
@@ -41,7 +41,7 @@ $(function (){
 function continueExecution(){ //essa função só será chamada quando o primiero AJAX acabar
      $.ajax({
         type: 'GET',
-        url: "https://api.coinmarketcap.com/v1/ticker/?limit=950",
+        url: "https://api.coinmarketcap.com/v1/ticker/?limit=1300",
         success: function(response) {
             $.each(response, function(i, change) {
                 if ( change.id == 'bitcoin' ){
@@ -143,14 +143,6 @@ function continueExecution(){ //essa função só será chamada quando o primier
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
                 }
-                else if ( change.id == 'creativecoin' ){
-                CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc);
-                }
-                else if ( change.id == 'creativecoin' ){
-                CoinsChange[change.id] = change.percent_change_24h;
-                showNumbers(change.percent_change_24h, change.id, change.price_btc);
-                }
                 else if ( change.id == 'cardano' ){
                 CoinsChange[change.id] = change.percent_change_24h;
                 showNumbers(change.percent_change_24h, change.id, change.price_btc);
@@ -216,7 +208,7 @@ function showNumbers(a, b, c) {
 
 $(document).ajaxComplete(function(event,xhr,settings){
     console.log("URL",settings.url);
-    if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=950")
+    if(settings.url === "https://api.coinmarketcap.com/v1/ticker/?limit=1300")
     { //faz a soma do valor em btc dos portfolios, para o total
         var tot_btc_geral = 0; //valor em btc somando todos os users
         var tot_real_geral = 0; //valor em reais somando todos os users
