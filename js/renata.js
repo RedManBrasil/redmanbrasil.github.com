@@ -28,9 +28,9 @@ $(function (){
         type: 'GET',
         url: "https://cors-anywhere.herokuapp.com/https://api.bitvalor.com/v1/ticker.json",
         success: function(resposta) {
-            btc_real = parseFloat(resposta.ticker_24h.exchanges.FOX.open / resposta.ticker_24h.exchanges.FOX.last); //calcular quanto o btc variou em reais nas ultiams 24hrs
+            btc_real = parseFloat(resposta.ticker_24h.exchanges.CAM.open / resposta.ticker_24h.exchanges.CAM.last); //calcular quanto o btc variou em reais nas ultiams 24hrs
             CoinsChange['bitcoin'] = ((1 - btc_real) * 100).toFixed(2);
-            btc_real = resposta.ticker_24h.exchanges.FOX.last;
+            btc_real = resposta.ticker_24h.exchanges.CAM.last;
             $('#bitcoin-price_real').append('R$' + btc_real.toFixed(2) );
             continueExecution();
             }
